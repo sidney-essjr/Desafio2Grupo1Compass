@@ -4,7 +4,7 @@ import React from "react";
 const Header = () => {
   return (
     <div className="flex w-full justify-between bg-gelo items-center" >
-      <img className="ml-10 w-50px"
+      <img className="ml-20"
         
         src="/plantPeaceIcon.svg"
         alt="the plantPeace logo"
@@ -26,7 +26,7 @@ const Header = () => {
           </li>
         </ul>
       </nav>
-      <img className="mr-10" src="/userIcon.svg" alt="user icon" />
+      <img className="mr-20" src="/userIcon.svg" alt="user icon" />
     </div>
   );
 };

@@ -8,7 +8,9 @@ export default {
       lunar: "#354733",
     },
     fontFamily: {
-      raleway: ['"Raleway"', "normal"],
+      raleway: ['"Raleway"'],
+      garamond: ['"EB Garamond"'],
+      lato: ['"Lato"']
     },
     extend: {},
   },
