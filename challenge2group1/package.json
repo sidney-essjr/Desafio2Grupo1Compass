@@ -10,8 +10,15 @@
     "server": "json-server --watch data/plants.json"
   },
   "dependencies": {
+<<<<<<< HEAD
     "preact": "^10.19.3",
     "react-router-dom": "^6.21.1"
+=======
+    "@hookform/resolvers": "^3.3.3",
+    "preact": "^10.19.3",
+    "react-hook-form": "^7.49.2",
+    "zod": "^3.22.4"
+>>>>>>> feat/registration-form
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.7.0",
