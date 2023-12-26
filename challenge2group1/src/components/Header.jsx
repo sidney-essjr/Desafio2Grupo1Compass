@@ -3,15 +3,15 @@ import React from "react";
 
 const Header = () => {
   return (
-    <div className="flex">
-      <img
-        className="flex"
+    <div className="flex w-full justify-between bg-gelo items-center" >
+      <img className="ml-10 w-50px"
+        
         src="/plantPeaceIcon.svg"
         alt="the plantPeace logo"
       />
-      <nav className="flex">
+      <nav >
         {" "}
-        <ul>
+        <ul className="flex font-raleway gap-6 text-lunar text-xs">
           <li>
             <a href="#">Home</a>
           </li>
@@ -26,7 +26,7 @@ const Header = () => {
           </li>
         </ul>
       </nav>
-      <img src="/userIcon.svg" alt="user icon" />
+      <img className="mr-10" src="/userIcon.svg" alt="user icon" />
     </div>
   );
 };
