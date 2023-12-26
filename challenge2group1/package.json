@@ -9,7 +9,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "preact": "^10.19.3"
+    "@hookform/resolvers": "^3.3.3",
+    "preact": "^10.19.3",
+    "react-hook-form": "^7.49.2",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.7.0",
