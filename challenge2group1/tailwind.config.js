@@ -6,6 +6,8 @@ export default {
       gelo: "#F0F1EE",
       abacate: "#8A9B6E",
       lunar: "#354733",
+      white: "#ffffff",
+      accent: "#DDDEA0",
     },
     fontFamily: {
       raleway: ['"Raleway"'],
@@ -15,4 +17,5 @@ export default {
     extend: {},
   },
   plugins: [],
+  
 };
