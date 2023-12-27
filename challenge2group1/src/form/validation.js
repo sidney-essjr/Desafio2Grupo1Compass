@@ -1,22 +1,34 @@
 import zod from "zod";
 
 export const createRegistrationFormSchema = zod.object({
-  name: zod.string().trim().min(1, "O campo Plant name é obrigatório!"),
-  subtitle: zod.string().trim().min(1, "O campo Subtitle é obrigatório!"),
-  type: zod.string().trim().min(1, "O campo Plant type é obrigatório!"),
+  name: zod.string().trim().min(1, "The Plant name field is mandatory!"),
+  subtitle: zod.string().trim().min(1, "The Subtitle field is mandatory!"),
+  type: zod.string().trim().min(1, "The Type field is mandatory!"),
   price: zod
     .string()
     .transform((val, ctx) =>
-      stringToFloat(val, ctx, "O valor precisa ser maior que 0", val < 1)
+      stringToFloat(val, ctx, "The value must be greater than 0", val < 1)
     ),
   discountPercentage: zod
     .string()
     .transform((val, ctx) =>
-      stringToFloat(val, ctx, "O valor precisa ser maior ou igual a 0", val < 0)
+      stringToFloat(
+        val,
+        ctx,
+        "The value must be greater than or equal to 0",
+        val < 0
+      )
     ),
-  label: zod.string().trim().min(1, "O campo Label é obrigatório!"),
-  features: zod.string().trim().min(1, "O campo Features é obrigatório!"),
-  description: zod.string().trim().min(1, "O campo Description é obrigatório!"),
+  label: zod.enum(["indoor", "outdoor"], {
+    invalid_type_error: "You need to select an option",
+    required_error: "You need to select an option",
+  }),
+
+  features: zod.string().trim().min(1, "The Features field is mandatory!"),
+  description: zod
+    .string()
+    .trim()
+    .min(1, "The Description field is mandatory!"),
 });
 
 const stringToFloat = (val, ctx, message, validation) => {

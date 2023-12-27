@@ -11,12 +11,16 @@ export default function RegistrationForm() {
     resolver: zodResolver(createRegistrationFormSchema),
   });
 
-  function validateInputs(data) {
+  function checkOnSale(data) {
+    data.discountPercentage > 0
+      ? (data.isInSale = true)
+      : (data.isInSale = false);
+
     console.log(data);
   }
 
   return (
-    <form onSubmit={handleSubmit(validateInputs)}>
+    <form onSubmit={handleSubmit(checkOnSale)}>
       <fieldset>
         <h1>Plant registration</h1>
         <div>
@@ -53,11 +57,21 @@ export default function RegistrationForm() {
         <div>
           <label htmlFor="">Label</label>
           <div>
-            <input id="indor" {...register("label")} type="checkbox" />
+            <input
+              id="indor"
+              {...register("label")}
+              type="radio"
+              value="indoor"
+            />
             <label htmlFor="indor">Indoor</label>
           </div>
           <div>
-            <input id="outdoor" {...register("label")} type="checkbox" />
+            <input
+              id="outdoor"
+              {...register("label")}
+              type="radio"
+              value="outdoor"
+            />
             <label htmlFor="outdoor">Outdoor</label>
           </div>
           {errors.label && <span>{errors.label.message}</span>}
