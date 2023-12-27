@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import { createRegistrationFormSchema } from "./validation";
+import { createRegistrationFormSchema } from "../form/validation";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 export default function RegistrationForm() {
