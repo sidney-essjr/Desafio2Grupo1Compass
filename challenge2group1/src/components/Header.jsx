@@ -1,5 +1,6 @@
-import { Fragment } from "preact";
 import React from "react";
+import { Link } from "react-router-dom";
+
 
 const Header = () => {
   return (
@@ -13,16 +14,16 @@ const Header = () => {
         {" "}
         <ul className="flex font-raleway gap-6 text-lunar text-xs">
           <li>
-            <a href="#">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <a href="#">Register</a>
+            <Link to="registrationForm">Register</Link>
           </li>
           <li>
-            <a href="#">Products</a>
+            <Link to="products">Products</Link>
           </li>
           <li>
-            <a href="#">About us</a>
+            <Link to="about">About us</Link>
           </li>
         </ul>
       </nav>
