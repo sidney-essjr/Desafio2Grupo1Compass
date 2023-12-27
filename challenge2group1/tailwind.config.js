@@ -8,11 +8,13 @@ export default {
       lunar: "#354733",
       white: "#ffffff",
       accent: "#DDDEA0",
+      linegray: "#AFB2AA"
     },
     fontFamily: {
       raleway: ['"Raleway"'],
       garamond: ['"EB Garamond"'],
-      lato: ['"Lato"']
+      lato: ['"Lato"'],
+      inter: ['"Inter"']
     },
     extend: {},
   },
