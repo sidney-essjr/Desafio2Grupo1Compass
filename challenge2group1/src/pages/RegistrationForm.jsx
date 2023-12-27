@@ -44,10 +44,14 @@ export default function RegistrationForm() {
               type="text"
               placeholder="Echinocereus Cactus"
             />
-            {errors.name && <span>{errors.name.message}</span>}
+            {errors.name && (
+              <span className="errormessage">{errors.name.message}</span>
+            )}
           </div>
           <div>
-            <label className="labelstyle" htmlFor="subtitle">Plant subtitle</label>
+            <label className="labelstyle" htmlFor="subtitle">
+              Plant subtitle
+            </label>
             <input
               className="inputstyle"
               id="subtitle"
@@ -55,10 +59,14 @@ export default function RegistrationForm() {
               type="text"
               placeholder="A majestic addition to your plant collection"
             />
-            {errors.subtitle && <span>{errors.subtitle.message}</span>}
+            {errors.subtitle && (
+              <span className="errormessage">{errors.subtitle.message}</span>
+            )}
           </div>
           <div>
-            <label className="labelstyle" htmlFor="type">Plant type</label>
+            <label className="labelstyle" htmlFor="type">
+              Plant type
+            </label>
             <input
               className="inputstyle"
               id="type"
@@ -66,11 +74,15 @@ export default function RegistrationForm() {
               type="text"
               placeholder="Cactus"
             />
-            {errors.type && <span>{errors.type.message}</span>}
+            {errors.type && (
+              <span className="errormessage">{errors.type.message}</span>
+            )}
           </div>
           <div className="flex gap-5 ">
             <div className="w-[233px]">
-              <label className="labelstyle" htmlFor="price">Price</label>
+              <label className="labelstyle" htmlFor="price">
+                Price
+              </label>
               <input
                 className="inputstyle"
                 id="price"
@@ -78,10 +90,14 @@ export default function RegistrationForm() {
                 type="number"
                 placeholder="$139.99"
               />
-              {errors.price && <span>{errors.price.message}</span>}
+              {errors.price && (
+                <span className="errormessage">{errors.price.message}</span>
+              )}
             </div>
             <div className="w-[224px]">
-              <label className="labelstyle" htmlFor="discountPercentage">Discount percentage</label>
+              <label className="labelstyle" htmlFor="discountPercentage">
+                Discount percentage
+              </label>
               <input
                 className=" inputstyle "
                 id="discountPercentage"
@@ -90,7 +106,9 @@ export default function RegistrationForm() {
                 placeholder="20%"
               />
               {errors.discountPercentage && (
-                <span>{errors.discountPercentage.message}</span>
+                <span className="errormessage">
+                  {errors.discountPercentage.message}
+                </span>
               )}
             </div>
           </div>
@@ -107,7 +125,9 @@ export default function RegistrationForm() {
                   type="radio"
                   value="indoor"
                 />
-                <label className="labelstyle" htmlFor="indoor">Indoor</label>
+                <label className="labelstyle" htmlFor="indoor">
+                  Indoor
+                </label>
               </div>
               <div>
                 <input
@@ -117,13 +137,19 @@ export default function RegistrationForm() {
                   type="radio"
                   value="outdoor"
                 />
-                <label className="labelstyle" htmlFor="outdoor">Outdoor</label>
+                <label className="labelstyle" htmlFor="outdoor">
+                  Outdoor
+                </label>
               </div>
             </div>
-            {errors.label && <span>{errors.label.message}</span>}
+            {errors.label && (
+              <span className="errormessage">{errors.label.message}</span>
+            )}
           </div>
           <div>
-            <label  className="labelstyle" htmlFor="features">Features</label>
+            <label className="labelstyle" htmlFor="features">
+              Features
+            </label>
             <textarea
               className=" inputstyle h-[125px]"
               {...register("features")}
@@ -132,10 +158,14 @@ export default function RegistrationForm() {
               rows="10"
               placeholder="Species: Echinocereus..."
             ></textarea>
-            {errors.features && <span>{errors.features.message}</span>}
+            {errors.features && (
+              <span className="errormessage">{errors.features.message}</span>
+            )}
           </div>
           <div>
-            <label  className="labelstyle" htmlFor="description">Description</label>
+            <label className="labelstyle" htmlFor="description">
+              Description
+            </label>
             <textarea
               className=" inputstyle h-[125px]"
               {...register("description")}
@@ -144,7 +174,9 @@ export default function RegistrationForm() {
               rows="10"
               placeholder="Ladyfinger cactus..."
             ></textarea>
-            {errors.description && <span>{errors.description.message}</span>}
+            {errors.description && (
+              <span className="errormessage">{errors.description.message}</span>
+            )}
           </div>
         </fieldset>
 

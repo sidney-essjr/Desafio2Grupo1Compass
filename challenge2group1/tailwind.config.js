@@ -8,7 +8,8 @@ export default {
       lunar: "#354733",
       white: "#ffffff",
       accent: "#DDDEA0",
-      linegray: "#AFB2AA"
+      linegray: "#AFB2AA",
+      errorred: "#e20000"
     },
     fontFamily: {
       raleway: ['"Raleway"'],
