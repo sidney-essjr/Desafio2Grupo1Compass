@@ -4,14 +4,14 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <div className="flex w-full justify-between bg-gelo items-center" >
+    <div className="flex  justify-between bg-gelo items-center w-screen"  >
       <img className="ml-20"
         
         src="/plantPeaceIcon.svg"
         alt="the plantPeace logo"
       />
       <nav >
-        {" "}
+      
         <ul className="flex font-raleway gap-6 text-lunar text-xs">
           <li>
             <Link to="/">Home</Link>

@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <div
-      className="flex-col justify-between  bg-lunar pb-11 "
+      className="flex-col justify-between  bg-lunar pb-11 w-screen"
       style="background-image: url(footerBG.svg)"
     > 
       <div className=" flex justify-between pt-10 pb-10 bg-local  text-white ">

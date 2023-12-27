@@ -20,8 +20,8 @@ export default function RegistrationForm() {
   }
 
   return (
-    <div className="flex justify-center gap-5 bg-gelo">
-      <form className="ml-40 mt-10 w-2/5 " onSubmit={handleSubmit(checkOnSale)}>
+    <div className="flex justify-center gap-5 bg-gelo w-screen overflow-hidden	">
+      <form className=" ml-80 mt-10 w-2/5 " onSubmit={handleSubmit(checkOnSale)}>
         <fieldset>
           <h1 className="text-lunar font-inter font-semibold ">
             Plant registration
@@ -79,7 +79,7 @@ export default function RegistrationForm() {
             )}
           </div>
           <div className="flex gap-5 ">
-            <div className="w-[233px]">
+            <div className="w-1/2">
               <label className="labelstyle" htmlFor="price">
                 Price
               </label>
@@ -94,7 +94,7 @@ export default function RegistrationForm() {
                 <span className="errormessage">{errors.price.message}</span>
               )}
             </div>
-            <div className="w-[224px]">
+            <div className="w-1/2">
               <label className="labelstyle" htmlFor="discountPercentage">
                 Discount percentage
               </label>
@@ -181,13 +181,13 @@ export default function RegistrationForm() {
         </fieldset>
 
         <button
-          className=" ml-4 bg-lunar text-white px-48 py-3 mb-20 mt-10"
+          className="flex mx-auto justify-center bg-lunar text-white  py-3 mb-20 mt-10 md:px-28 px-14 lg:px-56"
           type="submit"
         >
           Register
         </button>
       </form>
-      <img className="grayscale w-3/5" src="homePlantBW.svg" />
+      <img className="grayscale h-full align-middle -mt-16" src="homePlantBW.svg" />
     </div>
   );
 }
