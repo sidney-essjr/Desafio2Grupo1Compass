@@ -20,85 +20,142 @@ export default function RegistrationForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit(checkOnSale)}>
-      <fieldset>
-        <h1>Plant registration</h1>
-        <div>
-          <label htmlFor="name">Plant name</label>
-          <input id="name" {...register("name")} type="text" />
-          {errors.name && <span>{errors.name.message}</span>}
-        </div>
-        <div>
-          <label htmlFor="subtitle">Plant subtitle</label>
-          <input id="subtitle" {...register("subtitle")} type="text" />
-          {errors.subtitle && <span>{errors.subtitle.message}</span>}
-        </div>
-        <div>
-          <label htmlFor="type">Plant type</label>
-          <input id="type" {...register("type")} type="text" />
-          {errors.type && <span>{errors.type.message}</span>}
-        </div>
-        <div>
-          <label htmlFor="price">Price</label>
-          <input id="price" {...register("price")} type="number" />
-          {errors.price && <span>{errors.price.message}</span>}
-        </div>
-        <div>
-          <label htmlFor="discountPercentage">Discount percentage</label>
-          <input
-            id="discountPercentage"
-            {...register("discountPercentage")}
-            type="number"
-          />
-          {errors.discountPercentage && (
-            <span>{errors.discountPercentage.message}</span>
-          )}
-        </div>
-        <div>
-          <label htmlFor="">Label</label>
+    <div className="flex justify-center gap-5 bg-gelo">
+      <form className="ml-40 mt-10 w-2/5 " onSubmit={handleSubmit(checkOnSale)}>
+        <fieldset>
+          <h1 className="text-lunar font-inter font-semibold ">
+            Plant registration
+          </h1>
+          <hr
+            className="text-linegray mt-2 mb-5"
+            size="10"
+            width="100%"
+            aling="center"
+          />{" "}
           <div>
+            <label className="labelstyle" htmlFor="name">
+              Plant name
+            </label>{" "}
+            <br />
             <input
-              id="indor"
-              {...register("label")}
-              type="radio"
-              value="indoor"
+              className="inputstyle"
+              id="name"
+              {...register("name")}
+              type="text"
+              placeholder="Echinocereus Cactus"
             />
-            <label htmlFor="indor">Indoor</label>
+            {errors.name && <span>{errors.name.message}</span>}
           </div>
           <div>
+            <label className="labelstyle" htmlFor="subtitle">Plant subtitle</label>
             <input
-              id="outdoor"
-              {...register("label")}
-              type="radio"
-              value="outdoor"
+              className="inputstyle"
+              id="subtitle"
+              {...register("subtitle")}
+              type="text"
+              placeholder="A majestic addition to your plant collection"
             />
-            <label htmlFor="outdoor">Outdoor</label>
+            {errors.subtitle && <span>{errors.subtitle.message}</span>}
           </div>
-          {errors.label && <span>{errors.label.message}</span>}
-        </div>
-        <div>
-          <label htmlFor="features">Features</label>
-          <textarea
-            {...register("features")}
-            id="features"
-            cols="30"
-            rows="10"
-          ></textarea>
-          {errors.features && <span>{errors.features.message}</span>}
-        </div>
-        <div>
-          <label htmlFor="description">Description</label>
-          <textarea
-            {...register("description")}
-            id="description"
-            cols="30"
-            rows="10"
-          ></textarea>
-          {errors.description && <span>{errors.description.message}</span>}
-        </div>
-      </fieldset>
+          <div>
+            <label className="labelstyle" htmlFor="type">Plant type</label>
+            <input
+              className="inputstyle"
+              id="type"
+              {...register("type")}
+              type="text"
+              placeholder="Cactus"
+            />
+            {errors.type && <span>{errors.type.message}</span>}
+          </div>
+          <div className="flex gap-5 ">
+            <div className="w-[233px]">
+              <label className="labelstyle" htmlFor="price">Price</label>
+              <input
+                className="inputstyle"
+                id="price"
+                {...register("price")}
+                type="number"
+                placeholder="$139.99"
+              />
+              {errors.price && <span>{errors.price.message}</span>}
+            </div>
+            <div className="w-[224px]">
+              <label className="labelstyle" htmlFor="discountPercentage">Discount percentage</label>
+              <input
+                className=" inputstyle "
+                id="discountPercentage"
+                {...register("discountPercentage")}
+                type="number"
+                placeholder="20%"
+              />
+              {errors.discountPercentage && (
+                <span>{errors.discountPercentage.message}</span>
+              )}
+            </div>
+          </div>
+          <div className=" flex flex-col mb-4">
+            <label className="mb-2 font-semibold" htmlFor="">
+              Label:
+            </label>
+            <div className=" flex flex-row gap-3">
+              <div>
+                <input
+                  className=" h-4 w-4 mr-1"
+                  id="indoor"
+                  {...register("label")}
+                  type="radio"
+                  value="indoor"
+                />
+                <label className="labelstyle" htmlFor="indoor">Indoor</label>
+              </div>
+              <div>
+                <input
+                  className=" h-4 w-4 mr-1"
+                  id="outdoor"
+                  {...register("label")}
+                  type="radio"
+                  value="outdoor"
+                />
+                <label className="labelstyle" htmlFor="outdoor">Outdoor</label>
+              </div>
+            </div>
+            {errors.label && <span>{errors.label.message}</span>}
+          </div>
+          <div>
+            <label  className="labelstyle" htmlFor="features">Features</label>
+            <textarea
+              className=" inputstyle h-[125px]"
+              {...register("features")}
+              id="features"
+              cols="30"
+              rows="10"
+              placeholder="Species: Echinocereus..."
+            ></textarea>
+            {errors.features && <span>{errors.features.message}</span>}
+          </div>
+          <div>
+            <label  className="labelstyle" htmlFor="description">Description</label>
+            <textarea
+              className=" inputstyle h-[125px]"
+              {...register("description")}
+              id="description"
+              cols="30"
+              rows="10"
+              placeholder="Ladyfinger cactus..."
+            ></textarea>
+            {errors.description && <span>{errors.description.message}</span>}
+          </div>
+        </fieldset>
 
-      <button type="submit">Register</button>
-    </form>
+        <button
+          className=" ml-4 bg-lunar text-white px-48 py-3 mb-20 mt-10"
+          type="submit"
+        >
+          Register
+        </button>
+      </form>
+      <img className="grayscale w-3/5" src="homePlantBW.svg" />
+    </div>
   );
 }
