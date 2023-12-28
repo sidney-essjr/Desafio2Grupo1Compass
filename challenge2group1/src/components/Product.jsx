@@ -1,4 +1,4 @@
-export function Product({name, subtitle, label, price, features, description}) {
+export function Product({imgUrl, name, subtitle, label, price, features, description}) {
     return (
     <li>
         <h1>{name}</h1>
@@ -7,6 +7,7 @@ export function Product({name, subtitle, label, price, features, description}) {
         <p>{price}</p>
         <p>{features}</p>
         <p>{description}</p>
+        <img src={imgUrl} alt={name} />
     </li>
     );
 }
