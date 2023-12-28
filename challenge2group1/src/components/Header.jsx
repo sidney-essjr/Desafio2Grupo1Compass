@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 
 const Header = () => {
@@ -14,16 +14,28 @@ const Header = () => {
       
         <ul className="flex font-raleway gap-6 text-lunar text-xs">
           <li>
-            <Link to="/">Home</Link>
+            <NavLink 
+              to="/"
+              style={({isActive}) => ({color: isActive ? "#8A9B6E" : undefined})} end
+            >Home</NavLink>
           </li>
           <li>
-            <Link to="registrationForm">Register</Link>
+            <NavLink 
+              to="registrationForm"
+              style={({isActive}) => ({color: isActive ? "#8A9B6E" : undefined})}
+            >Register</NavLink>
           </li>
           <li>
-            <Link to="products">Products</Link>
+            <NavLink 
+              to="products"
+              style={({isActive}) => ({color: isActive ? "#8A9B6E" : undefined})}  
+            >Products</NavLink>
           </li>
           <li>
-            <Link to="about">About us</Link>
+            <NavLink 
+              to="about"
+              style={({isActive}) => ({color: isActive ? "#8A9B6E" : undefined})}
+            >About us</NavLink>
           </li>
         </ul>
       </nav>
