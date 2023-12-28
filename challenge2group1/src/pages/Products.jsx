@@ -1,4 +1,4 @@
-import { Products } from "../components/Products";
+import Products from "../components/ProductComponents/Products";
 
 export default function Product(){
     return (
