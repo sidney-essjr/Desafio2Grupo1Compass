@@ -12,6 +12,8 @@
   "dependencies": {
     "@hookform/resolvers": "^3.3.3",
     "@tailwindcss/forms": "^0.5.7",
+    "@splidejs/react-splide": "^0.7.12",
+    "@splidejs/splide": "^4.1.4",
     "json-server": "^0.17.4",
     "preact": "^10.19.3",
     "react-hook-form": "^7.49.2",
