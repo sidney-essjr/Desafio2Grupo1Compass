@@ -6,7 +6,10 @@ export function App() {
   return (
     <>
       {/* <RouterProvider router={router}/> */}
-      <Slidercards />
+      <Slidercards
+        title={"this weeks Most Popular and best selling"}
+        onSale={false}
+      />
     </>
   );
 }

@@ -1,7 +1,7 @@
 export default function Card({ plant }) {
   const price = parseFloat(plant.price.split("$")[1]);
 
-  const discountPrice = price + price * (plant.discountPercentage / 100);
+  const discountPrice = (price - price * (plant.discountPercentage / 100)).toLocaleString('en-US',{style: 'currency', currency: 'USD'});
 
   // const dispatch = useDispatch()
 
@@ -10,8 +10,8 @@ export default function Card({ plant }) {
   // }
 
   return (
-    <button type="button">
-      <div id={plant.id}>
+    <div id={plant.id}>
+      <button type="button">
         {console.log(plant)}
         <img src={`src/${plant.imgUrl}`} alt={plant.name} />
         <div>
@@ -20,7 +20,7 @@ export default function Card({ plant }) {
           {plant.isInSale && <p>{plant.price}</p>}
           <span>{plant.label}</span>
         </div>
-      </div>
-    </button>
+      </button>
+    </div>
   );
 }

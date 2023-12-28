@@ -3,8 +3,9 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import Card from "./Card.jsx";
 import { useState, useEffect } from "react";
 import "@splidejs/react-splide/css";
+import "../css/splide.css";
 
-export default function SliderCards() {
+export default function SliderCards({ title, onSale }) {
   const [isFetching, setIsFetching] = useState(false);
   const [availablePlants, setAvailablePlants] = useState([]);
   const [error, setError] = useState();
@@ -14,7 +15,14 @@ export default function SliderCards() {
       setIsFetching(true);
 
       try {
-        const plants = await fetchAvailablePlants();
+        let plants = await fetchAvailablePlants();
+
+        if (onSale) {
+          plants = plants.filter((plant) => plant.isInSale === true);
+        } else {
+          plants = plants.filter((plant) => plant.isInSale !== true);
+        }
+
         setAvailablePlants(plants);
       } catch (error) {
         setError({
@@ -34,19 +42,27 @@ export default function SliderCards() {
 
   return (
     <div>
-      <Splide aria-label="Testimonials" options={{ fixedWidth: "300px" }}>
-        {!isFetching ? (
-          <p>Fetching place data...</p>
-        ) : (
-          availablePlants.map((plant) => {
-            return (
-              <SplideSlide>
-                <Card plant={plant} />
-              </SplideSlide>
-            );
-          })
-        )}
-      </Splide>
+      <div>
+        <h1>{title}</h1>
+      </div>
+      <div>
+        <Splide
+          aria-label="Testimonials"
+          options={{ fixedWidth: "300px", isNavigation: true }}
+        >
+          {!isFetching ? (
+            <p>Fetching place data...</p>
+          ) : (
+            availablePlants.map((plant) => {
+              return (
+                <SplideSlide id={plant.id}>
+                  <Card plant={plant} />
+                </SplideSlide>
+              );
+            })
+          )}
+        </Splide>
+      </div>
     </div>
   );
 }
