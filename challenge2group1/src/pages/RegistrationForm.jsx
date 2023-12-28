@@ -20,8 +20,11 @@ export default function RegistrationForm() {
   }
 
   return (
-    <div className="flex justify-center gap-5 bg-gelo w-screen overflow-hidden	">
-      <form className=" ml-80 mt-10 w-2/5 " onSubmit={handleSubmit(checkOnSale)}>
+    <div className="flex 2xl:justify-center gap-5 bg-gelo overflow-hidden	">
+      <form
+        className=" ml-20 mt-10  "
+        onSubmit={handleSubmit(checkOnSale)}
+      >
         <fieldset>
           <h1 className="text-lunar font-inter font-semibold ">
             Plant registration
@@ -187,7 +190,10 @@ export default function RegistrationForm() {
           Register
         </button>
       </form>
-      <img className="grayscale h-full align-middle -mt-16" src="homePlantBW.svg" />
+      <img
+        className="hidden  md:flex grayscale h-full align-middle  "
+        src="homePlantBW.svg"
+      />
     </div>
   );
 }

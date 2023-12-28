@@ -2,6 +2,7 @@
 export default {
   content: ["./src/**/*.{html,js,jsx}"],
   theme: {
+  
     colors: {
       gelo: "#F0F1EE",
       abacate: "#8A9B6E",
@@ -15,7 +16,8 @@ export default {
       raleway: ['"Raleway"'],
       garamond: ['"EB Garamond"'],
       lato: ['"Lato"'],
-      inter: ['"Inter"']
+      inter: ['"Inter"'],
+      pacifico: ['"Pacifico"']
     },
     extend: {},
   },
