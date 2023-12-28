@@ -10,7 +10,9 @@ export default {
       white: "#ffffff",
       accent: "#DDDEA0",
       linegray: "#AFB2AA",
-      errorred: "#e20000"
+      textgray: "#808276",
+      errorred: "#e20000",
+
     },
     fontFamily: {
       raleway: ['"Raleway"'],

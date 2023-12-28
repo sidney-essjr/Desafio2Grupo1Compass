@@ -20,9 +20,9 @@ export default function RegistrationForm() {
   }
 
   return (
-    <div className="flex 2xl:justify-center gap-5 bg-gelo overflow-hidden	">
+    <div className="flex 2xl:justify-center gap-5 bg-gelo overflow-hidden	w-screen">
       <form
-        className=" ml-20 mt-10  "
+        className=" mx-20 mt-10  "
         onSubmit={handleSubmit(checkOnSale)}
       >
         <fieldset>
@@ -192,7 +192,7 @@ export default function RegistrationForm() {
       </form>
       <img
         className="hidden  md:flex grayscale h-full align-middle  "
-        src="homePlantBW.svg"
+        src="homePlant.svg"
       />
     </div>
   );
