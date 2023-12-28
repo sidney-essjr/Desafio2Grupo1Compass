@@ -1,8 +1,9 @@
-export default function CardAboutUs({name, age, city, description}){
+export default function CardAboutUs({dev}){
   return (
-    <section>
-      <p>{name}, {age}, {city}</p>
-      <p>{description}</p>
+    <section key={dev.id}>
+      {/* <img src="" alt="" /> */}
+      <p>{dev.name}, {dev.idade}, {dev.cidade}</p>
+      <p>{dev.aboutMe}</p>
     </section>
   )
 }
