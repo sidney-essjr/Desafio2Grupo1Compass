@@ -5,14 +5,15 @@ export default function Card({ plant }) {
 
   // const dispatch = useDispatch()
 
-  function displayMoreInformation() {
-    // dispatch(changeToProductsPage(plant));
-  }
+  // function displayMoreInformation() {
+  //   dispatch(changeToProductsPage(plant));
+  // }
 
   return (
-    <button onClick={displayMoreInformation}>
+    <button type="button">
       <div id={plant.id}>
-        <img src={plant.imgUrl} alt={plant.name} />
+        {console.log(plant)}
+        <img src={`src/${plant.imgUrl}`} alt={plant.name} />
         <div>
           <h1>{plant.name}</h1>
           <p>{discountPrice}</p>

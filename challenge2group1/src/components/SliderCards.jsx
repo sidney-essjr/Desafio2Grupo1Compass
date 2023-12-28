@@ -1,7 +1,10 @@
 import { fetchAvailablePlants } from "../data/https";
-import Card from "../Card.jsx";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import Card from "./Card.jsx";
+import { useState, useEffect } from "react";
+import "@splidejs/react-splide/css";
 
-export default function Slidercards() {
+export default function SliderCards() {
   const [isFetching, setIsFetching] = useState(false);
   const [availablePlants, setAvailablePlants] = useState([]);
   const [error, setError] = useState();
@@ -31,13 +34,19 @@ export default function Slidercards() {
 
   return (
     <div>
-      {isFetching ? (
-        <p>Fetching place data...</p>
-      ) : (
-        availablePlants.map((plant) => {
-          <Card plant={plant} />;
-        })
-      )}
+      <Splide aria-label="Testimonials" options={{ fixedWidth: "300px" }}>
+        {!isFetching ? (
+          <p>Fetching place data...</p>
+        ) : (
+          availablePlants.map((plant) => {
+            return (
+              <SplideSlide>
+                <Card plant={plant} />
+              </SplideSlide>
+            );
+          })
+        )}
+      </Splide>
     </div>
   );
 }

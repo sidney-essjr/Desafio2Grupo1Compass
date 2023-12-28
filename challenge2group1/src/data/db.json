@@ -13,7 +13,7 @@
         "discountPercentage": 20,
         "features": "Species: Echinocereus spp. Mature Size: Up to 18 in. tall, 3 in. wide. Blooming Season: Spring. Pot Size: Available in various pot sizes to suit your preference and needs. Shipping: Our Echinocereus Cacti are carefully packaged and shipped with the utmost care to ensure they arrive in excellent condition.",
         "description": "Ladyfinger cactus (*Echinocereus pentalophus*) is also known as Alice, Devil's Fingers, and Dog Tail. It needs bright sunlight, light fertilizer, and is prone to root rot. The root system is shallow and weak. Aphids and mealybugs are also a danger. Avoiding wet soil can help with success with a ladyfinger cactus.",
-        "imgUrl": "assets/echinocereusCactus.svg"
+        "imgUrl": "assets/EchinocereusCactus.svg"
       },
       {
         "id": 2,
@@ -28,7 +28,7 @@
         "discountPercentage": 10,
         "features": "Species: Eucalyptus Cinerea. Mature Size: 6–53 ft. tall, 2–15 ft. wide. Blooming Season: Summer. Pot Size: Available in various pot sizes to suit your preference and needs. Shipping: Our Echinocereus Cacti are carefully packaged and shipped with the utmost care to ensure they arrive in excellent condition.",
         "description": "Argyle apple (Eucalyptus cinerea) is an evergreen tree that will grow from 6 to 15 m tall and 6 to 12 m wide. Its aromatic foliage is silver-gray and resembles large coins. It blooms profusely in spring with clusters of white flowers. It will be the focal point of any garden with its beautiful bark and leaves. Thrives in full sun with dry to medium moist, well-drained soil. It is drought tolerant. Toxic to Pets",
-        "imgUrl": "assets/eucalyptusCinerea.svg"
+        "imgUrl": "assets/EucalyptusCinerea.svg"
       },
       {
         "id": 3,
@@ -43,7 +43,7 @@
         "discountPercentage": 20,
         "features": "Species: Rhaphidophora Tetrasperma. Mature Size: 6-8 ft. tall (indoors), 15-20 ft. tall (outdoors). Blooming Season: Spring, Summer. Pot Size: Available in various pot sizes to suit your preference and needs. Shipping: Our Echinocereus Cacti are carefully packaged and shipped with the utmost care to ensure they arrive in excellent condition.",
         "description": "Rhaphidophora Tetrasperma, also commonly known as Mini Monstera, is a tropical plant known for its climbing nature. Mini Monstera grows best in indoor conditions and requires partial sunlight, acidic or neutral soil, and temperatures between 65 and 80 degrees. Mini monstera can be propagated easily from clippings and is known for its ability to climb, making it a gorgeous cascading addition to bookcases and more.",
-        "imgUrl": "assets/rhaphidophoraTetrasperma.svg"
+        "imgUrl": "assets/RhaphidophoraTetrasperma.svg"
       },
       {
         "id": 4,
@@ -58,7 +58,7 @@
         "discountPercentage": 20,
         "features": "Species: Adromischus Cristatus. Mature Size: 6 in. tall, 3 in. wide. Blooming Season: Spring. Pot Size: Available in various pot sizes to suit your preference and needs. Shipping: Our Echinocereus Cacti are carefully packaged and shipped with the utmost care to ensure they arrive in excellent condition.",
         "description": "Crinkle leaf plants (Adromischus cristatus) are easygoing, unique-looking succulents that make excellent additions to your home or garden. The crinkle lead plant is a small and slow grower characterized by its fleshy, triangular, gray-green leaves that grow upward out of a central base and are crinkled at the top. The leaves of the crinkle leaf plant are covered in tiny hairs, giving them a fuzzy appearance. The succulent is best planted in the spring, but if grown indoors, it can be planted in any season.",
-        "imgUrl": "assets/adromischusCristatus.svg"
+        "imgUrl": "assets/AdromischusCristatus.svg"
       },
       {
         "id": 5,
@@ -73,7 +73,7 @@
         "discountPercentage": 20,
         "features": "Species: Ixora Spp. Mature Size: 10-15 ft. tall, 4-10 ft. wide. wide. Blooming Season: Spring, Summer, Fall, Winter. Pot Size: Available in various pot sizes to suit your preference and needs. Shipping: Our Echinocereus Cacti are carefully packaged and shipped with the utmost care to ensure they arrive in excellent condition.",
         "description": "Ixora spp. is a genus of small tropical flowering shrubs with large clusters of four-petaled flowers. Ixora grows best in tropical conditions outdoors and in somewhat humid spaces indoors. Ixora requires full sun, and moist, acidic soil, and thrives in temperatures above 60 degrees Fahrenheit.",
-        "imgUrl": "assets/ixoraSpp.svg"
+        "imgUrl": "assets/IxoraSpp.svg"
       },
       {
         "id": 6,
@@ -88,7 +88,7 @@
         "discountPercentage": 20,
         "features": "Species: Monstera Pinnatipartita. Mature Size: 6 in. tall, 3 in. wide. Blooming Season: Spring. Pot Size: Available in various pot sizes to suit your preference and needs. Shipping: Our Echinocereus Cacti are carefully packaged and shipped with the utmost care to ensure they arrive in excellent condition.",
         "description": "Monsteras are favorite houseplants in interior design. The Monstera pinnatipartita is one such out-of-the-ordinary example. This evergreen climbs with epiphytic aerial roots and can grow up to 2 feet a year if indoor growing conditions are optimal. What sets this rare species apart is that the fenestration extends further up the dark green, heart-shaped leaves than you see in some of the more familiar monsteras. Despite their show-stopping appearance, these plants are surprisingly easy-to-care-for.",
-        "imgUrl": "assets/monsteraPinnatipartita.svg"
+        "imgUrl": "assets/MonsteraPinnatipartita.svg"
       }
     ]
 
