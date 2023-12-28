@@ -90,6 +90,36 @@
         "description": "Monsteras are favorite houseplants in interior design. The Monstera pinnatipartita is one such out-of-the-ordinary example. This evergreen climbs with epiphytic aerial roots and can grow up to 2 feet a year if indoor growing conditions are optimal. What sets this rare species apart is that the fenestration extends further up the dark green, heart-shaped leaves than you see in some of the more familiar monsteras. Despite their show-stopping appearance, these plants are surprisingly easy-to-care-for.",
         "imgUrl": "assets/monsteraPinnatipartita.svg"
       }
-    ]
+    ],
 
+    "devs": [
+      {
+        "id": 1,
+        "name": "Mateus Maciulevicius",
+        "idade": "24",
+        "cidade": "São Paulo-SP",
+        "aboutMe": "Escrevo mais daqui a pouco"
+      },
+      {
+        "id": 2,
+        "name": "Sidney Souza",
+        "idade": "31",
+        "cidade": "São José-SC",
+        "aboutMe": "Escrevo mais daqui a pouco"
+      },
+      {
+        "id": 3,
+        "name": "Vívian Oliveira",
+        "idade": "39",
+        "cidade": "Recife-PE",
+        "aboutMe": "Escrevo mais daqui a pouco"
+      },
+      {
+        "id": 4,
+        "name": "William Pereira",
+        "idade": "31",
+        "cidade": "Santa Vitória do Palmar-RS",
+        "aboutMe": "Escrevo mais daqui a pouco"
+      }
+      ]
   }
