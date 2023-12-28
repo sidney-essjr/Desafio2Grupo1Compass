@@ -8,7 +8,7 @@ export default function Home(){
     <main>
      <HomeContainer>
        <HomeItemContainer>
-        <p>love for nature</p>
+        <p className=" font-pacifico">love for nature</p>
         <h1>Discover Your Green Side</h1>
         <p>We are your one-stop destination for all things green and growing. Our website offers a wide array of stunning plants, ranging from vibrant flowers to lush indoor foliage, allowing you to create your very own green oasis. </p>
         <HomeButton text="Shop now" />
