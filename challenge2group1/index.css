@@ -10,13 +10,13 @@
 
 @layer components {
   .inputstyle {
-    @apply border rounded w-full mt-2 mb-1 py-2 px-3 text-linegray bg-gelo;
+    @apply border rounded w-full mt-2 mb-3  py-2 px-3 text-linegray bg-gelo invalid:border-errorred;
   }
   .labelstyle {
     @apply font-inter font-medium text-base;
   }
   .errormessage {
-    @apply text-errorred my-2;
+    @apply text-errorred font-light text-base my-2;
   }
   .pstyle {
     @apply font-raleway text-textgray text-base;

@@ -31,30 +31,39 @@ export default function RegistrationForm() {
             size="10"
             width="100%"
             aling="center"
-          />{" "}
+          />
           <div>
-            <label className="labelstyle" htmlFor="name">
-              Plant name
-            </label>{" "}
-            <br />
+            <div className="flex justify-between">
+              <label className="labelstyle" htmlFor="name">
+                Plant name
+              </label>
+              <p className="mb-2">
+                {errors.name && (
+                  <span className="errormessage">{errors.name.message}</span>
+                )}
+              </p>
+            </div>
             <input
-              className="inputstyle"
+              className="inputstyle "
               id="name"
               {...register("name")}
               type="text"
               placeholder="Echinocereus Cactus"
             />
-            <p className="mb-2">
-              {errors.name && (
-                <span className="errormessage">{errors.name.message}</span>
-              )}
-              <br />
-            </p>
           </div>
           <div>
-            <label className="labelstyle" htmlFor="subtitle">
-              Plant subtitle
-            </label>
+            <div className="flex justify-between">
+              <label className="labelstyle" htmlFor="subtitle">
+                Plant subtitle
+              </label>
+              <p className="mb-2">
+                {errors.subtitle && (
+                  <span className="errormessage">
+                    {errors.subtitle.message}
+                  </span>
+                )}
+              </p>
+            </div>
             <input
               className="inputstyle"
               id="subtitle"
@@ -62,17 +71,18 @@ export default function RegistrationForm() {
               type="text"
               placeholder="A majestic addition to your plant collection"
             />
-            <p className="mb-2">
-              {errors.subtitle && (
-                <span className="errormessage">{errors.subtitle.message}</span>
-              )}{" "}
-              <br />
-            </p>
           </div>
           <div>
-            <label className="labelstyle" htmlFor="type">
-              Plant type
-            </label>
+            <div className="flex justify-between">
+              <label className="labelstyle" htmlFor="type">
+                Plant type
+              </label>
+              <p className="mb-2">
+                {errors.type && (
+                  <span className="errormessage">{errors.type.message}</span>
+                )}
+              </p>
+            </div>
             <input
               className="inputstyle"
               id="type"
@@ -80,19 +90,19 @@ export default function RegistrationForm() {
               type="text"
               placeholder="Cactus"
             />
-            <p className="mb-2">
-              {" "}
-              {errors.type && (
-                <span className="errormessage">{errors.type.message}</span>
-              )}{" "}
-              <br />
-            </p>
           </div>
-          <div className="flex gap-5 ">
-            <div className="w-1/2">
-              <label className="labelstyle" htmlFor="price">
-                Price
-              </label>
+          <div className="flex gap-5 h-24">
+            <div className="w-1/2 ">
+              <div className="flex justify-between">
+                <label className="labelstyle" htmlFor="price">
+                  Price
+                </label>
+                <p>
+                  {errors.price && (
+                    <span className="errormessage">{errors.price.message}</span>
+                  )}
+                </p>
+              </div>
               <input
                 className="inputstyle"
                 id="price"
@@ -100,34 +110,28 @@ export default function RegistrationForm() {
                 type="number"
                 placeholder="$139.99"
               />
-              <p className="mb-2">
-                {" "}
-                {errors.price && (
-                  <span className="errormessage">{errors.price.message}</span>
-                )}{" "}
-                <br />
-              </p>
             </div>
             <div className="w-1/2">
-              <label className="labelstyle" htmlFor="discountPercentage">
-                Discount percentage
-              </label>
+              <div className="flex justify-between h-7">
+                <label className="labelstyle" htmlFor="discountPercentage">
+                  Discount percentage
+                </label>
+                {errors.discountPercentage && (
+                  <span className="errormessage mt-0">
+                    {errors.discountPercentage.message}
+                  </span>
+                )}
+              </div>
               <input
-                className=" inputstyle "
+                className=" inputstyle my-1 "
                 id="discountPercentage"
                 {...register("discountPercentage")}
                 type="number"
                 placeholder="20%"
+                min="0"
+                max="100"
+                
               />
-              <p className="mb-2">
-                {" "}
-                {errors.discountPercentage && (
-                  <span className="errormessage">
-                    {errors.discountPercentage.message}
-                  </span>
-                )}{" "}
-                <br />
-              </p>
             </div>
           </div>
           <div className=" flex flex-col mb-4">
@@ -135,43 +139,42 @@ export default function RegistrationForm() {
               Label:
             </label>
             <div className=" flex flex-row gap-3">
-              <div>
-                <input
-                  className=" h-4 w-4 mr-1"
-                  id="indoor"
-                  {...register("label")}
-                  type="radio"
-                  value="indoor"
-                />
-                <label className="labelstyle" htmlFor="indoor">
-                  Indoor
-                </label>
-              </div>
-              <div>
-                <input
-                  className=" h-4 w-4 mr-1"
-                  id="outdoor"
-                  {...register("label")}
-                  type="radio"
-                  value="outdoor"
-                />
-                <label className="labelstyle" htmlFor="outdoor">
-                  Outdoor
-                </label>
-              </div>
+              <input
+                className=" h-4 w-4 mr-1"
+                id="indoor"
+                {...register("label")}
+                type="radio"
+                value="indoor"
+              />
+              <label className="labelstyle" htmlFor="indoor">
+                Indoor
+              </label>
+
+              <input
+                className=" h-4 w-4 mr-1"
+                id="outdoor"
+                {...register("label")}
+                type="radio"
+                value="outdoor"
+              />
+              <label className="labelstyle" htmlFor="outdoor">
+                Outdoor
+              </label>
             </div>
-            <p className="mb-2">
-              {" "}
-              {errors.label && (
-                <span className="errormessage">{errors.label.message}</span>
-              )}{" "}
-              <br />
-            </p>
           </div>
           <div>
-            <label className="labelstyle" htmlFor="features">
-              Features
-            </label>
+            <div className="flex justify-between">
+              <label className="labelstyle" htmlFor="features">
+                Features
+              </label>
+              <p className="">
+                {errors.features && (
+                  <span className="errormessage">
+                    {errors.features.message}
+                  </span>
+                )}
+              </p>
+            </div>
             <textarea
               className=" inputstyle h-[125px]"
               {...register("features")}
@@ -180,18 +183,20 @@ export default function RegistrationForm() {
               rows="10"
               placeholder="Species: Echinocereus..."
             ></textarea>
-            <p className="mb-2">
-              {" "}
-              {errors.features && (
-                <span className="errormessage">{errors.features.message}</span>
-              )}{" "}
-              <br />
-            </p>
           </div>
           <div>
-            <label className="labelstyle" htmlFor="description">
-              Description
-            </label>
+            <div className="flex justify-between">
+              <label className="labelstyle" htmlFor="description">
+                Description
+              </label>
+              <p className="">
+                {errors.description && (
+                  <span className="errormessage">
+                    {errors.description.message}
+                  </span>
+                )}
+              </p>
+            </div>
             <textarea
               className=" inputstyle h-[125px]"
               {...register("description")}
@@ -200,14 +205,6 @@ export default function RegistrationForm() {
               rows="10"
               placeholder="Ladyfinger cactus..."
             ></textarea>
-            <p className="mb-2">
-              {errors.description && (
-                <span className="errormessage">
-                  {errors.description.message}
-                </span>
-              )}{" "}
-              <br />
-            </p>
           </div>
         </fieldset>
 

@@ -7,7 +7,7 @@ export const createRegistrationFormSchema = zod.object({
   price: zod
     .string()
     .transform((val, ctx) =>
-      stringToFloat(val, ctx, "The value must be greater than 0", val < 1)
+      stringToFloat(val, ctx, "Invalid Price", val < 1)
     ),
   discountPercentage: zod
     .string()
@@ -15,7 +15,7 @@ export const createRegistrationFormSchema = zod.object({
       stringToFloat(
         val,
         ctx,
-        "The value must be 0 or greater than",
+        "Invalid",
         val < 0
       )
     ),
