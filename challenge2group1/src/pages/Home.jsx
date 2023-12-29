@@ -90,38 +90,44 @@ export default function Home() {
         <div className="flex gap-20 ml-20 ">
           <div className="flex gap-20 ">
             <img className="" src="../../public/section-2-image-1.svg" alt="" />
-            <img className="" src="../../public/section-2-image-2.svg" alt="" />{" "}
+            <img
+              className=""
+              src="../../public/section-2-image-2.svg"
+              alt=""
+            />{" "}
           </div>
-          <div className="w-1/3 "> 
-          <HomeItemContainer>
-            <img src="../../public/section-2-image-3.svg" alt="" />
-            <p className="pstyle">
-              Our website offers a wide array of stunning plants, ranging from
-              vibrant flowers to lush indoor foliage, allowing you to create
-              your very own green oasis. In addition to our extensive plant
-              selection, we also provide gardening kits and fertilizers to equip
-              you with everything you need to nurture your plants and achieve
-              gardening success. But we don't stop there! We believe that
-              knowledge is the key to a thriving garden, so we offer a wealth of
-              information and resources on gardening techniques, plant care
-              tips, and landscaping ideas. Whether you're a seasoned gardener or
-              just starting your green journey, our goal is to inspire and
-              support you every step of the way. Get ready to explore our
-              virtual garden and discover the joys of gardening with us!
-            </p>
-            <HomeButton text="See more photos" />
-          </HomeItemContainer>
+          <div className="w-1/3 ">
+            <HomeItemContainer>
+              <img src="../../public/section-2-image-3.svg" alt="" />
+              <p className="pstyle">
+                Our website offers a wide array of stunning plants, ranging from
+                vibrant flowers to lush indoor foliage, allowing you to create
+                your very own green oasis. In addition to our extensive plant
+                selection, we also provide gardening kits and fertilizers to
+                equip you with everything you need to nurture your plants and
+                achieve gardening success. But we don't stop there! We believe
+                that knowledge is the key to a thriving garden, so we offer a
+                wealth of information and resources on gardening techniques,
+                plant care tips, and landscaping ideas. Whether you're a
+                seasoned gardener or just starting your green journey, our goal
+                is to inspire and support you every step of the way. Get ready
+                to explore our virtual garden and discover the joys of gardening
+                with us!
+              </p>
+              <HomeButton text="See more photos" />
+            </HomeItemContainer>
           </div>
         </div>
       </HomeContainer>
 
       <HomeContainer>
         <h2>this weeks Most Popular and best selling</h2>
-        <SliderCards/>
+        <SliderCards onSale={false} />
       </HomeContainer>
 
       <HomeContainer>
         <h2>Plants in Sale</h2>
+        <SliderCards onSale={true} />
       </HomeContainer>
     </main>
   );
