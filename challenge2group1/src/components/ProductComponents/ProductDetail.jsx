@@ -5,15 +5,14 @@ export const ProductDetail = () => {
     const {id} = useParams();
     const [ itemId, setItemId ] = useState([]);
 
-    const getItemId = async () => {
-        const res = await fetch(`http://localhost:3000/plants/${id}`);
-        const response = await res.json();
-        setItemId(response);
-    }
-
     useEffect(() => {
+        const getItemId = async () => {
+            const res = await fetch(`http://localhost:3000/plants/${id}`);
+            const response = await res.json();
+            setItemId(response);
+        }
         getItemId();
-    })
+    },[])
 
     return (
         <li>
