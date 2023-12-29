@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 export const SquareButton = ({title}) => {
   return (
-    <button className='button'>{title}</button>
+    <button className="flex justify-start bg-lunar text-white py-3 mb-20 mt-10 px-14">{title}</button>
   )
 }
 
