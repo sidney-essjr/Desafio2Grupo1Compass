@@ -212,14 +212,14 @@ export default function RegistrationForm() {
         </fieldset>
 
         <button
-          className="flex mx-auto justify-center bg-lunar text-white  py-3 mb-20 mt-10 md:px-28 px-14 lg:px-56"
+          className="flex mx-auto justify-center bg-lunar text-white  py-3 mb-20 mt-5 md:px-28 px-14 lg:px-56"
           type="submit"
         >
           Register
         </button>
       </form>
       <img
-        className="hidden  md:flex grayscale h-full align-middle  "
+        className="hidden md:flex grayscale h-full mt-24"
         src="homePlant.svg"
       />
     </div>
