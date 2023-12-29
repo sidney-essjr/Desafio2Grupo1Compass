@@ -2,6 +2,7 @@ import HomeCard from "../components/HomeComponents/HomeCard";
 import HomeContainer from "../components/HomeComponents/HomeContainer";
 import HomeButton from "../components/HomeComponents/HomeButton";
 import HomeItemContainer from "../components/HomeComponents/HomeItemContainer";
+import SliderCards from "../components/SliderCards";
 
 export default function Home() {
   return (
@@ -116,6 +117,7 @@ export default function Home() {
 
       <HomeContainer>
         <h2>this weeks Most Popular and best selling</h2>
+        <SliderCards/>
       </HomeContainer>
 
       <HomeContainer>

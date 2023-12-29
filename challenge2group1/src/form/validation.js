@@ -15,7 +15,7 @@ export const createRegistrationFormSchema = zod.object({
       stringToFloat(
         val,
         ctx,
-        "The value must be greater than or equal to 0",
+        "The value must be 0 or greater than",
         val < 0
       )
     ),

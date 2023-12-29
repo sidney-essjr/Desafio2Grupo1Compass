@@ -21,10 +21,7 @@ export default function RegistrationForm() {
 
   return (
     <div className="flex 2xl:justify-center gap-5 bg-gelo overflow-hidden	w-screen">
-      <form
-        className=" mx-20 mt-10  "
-        onSubmit={handleSubmit(checkOnSale)}
-      >
+      <form className=" mx-20 mt-10  " onSubmit={handleSubmit(checkOnSale)}>
         <fieldset>
           <h1 className="text-lunar font-inter font-semibold ">
             Plant registration
@@ -47,9 +44,12 @@ export default function RegistrationForm() {
               type="text"
               placeholder="Echinocereus Cactus"
             />
-            {errors.name && (
-              <span className="errormessage">{errors.name.message}</span>
-            )}
+            <p className="mb-2">
+              {errors.name && (
+                <span className="errormessage">{errors.name.message}</span>
+              )}
+              <br />
+            </p>
           </div>
           <div>
             <label className="labelstyle" htmlFor="subtitle">
@@ -62,9 +62,12 @@ export default function RegistrationForm() {
               type="text"
               placeholder="A majestic addition to your plant collection"
             />
-            {errors.subtitle && (
-              <span className="errormessage">{errors.subtitle.message}</span>
-            )}
+            <p className="mb-2">
+              {errors.subtitle && (
+                <span className="errormessage">{errors.subtitle.message}</span>
+              )}{" "}
+              <br />
+            </p>
           </div>
           <div>
             <label className="labelstyle" htmlFor="type">
@@ -77,9 +80,13 @@ export default function RegistrationForm() {
               type="text"
               placeholder="Cactus"
             />
-            {errors.type && (
-              <span className="errormessage">{errors.type.message}</span>
-            )}
+            <p className="mb-2">
+              {" "}
+              {errors.type && (
+                <span className="errormessage">{errors.type.message}</span>
+              )}{" "}
+              <br />
+            </p>
           </div>
           <div className="flex gap-5 ">
             <div className="w-1/2">
@@ -93,9 +100,13 @@ export default function RegistrationForm() {
                 type="number"
                 placeholder="$139.99"
               />
-              {errors.price && (
-                <span className="errormessage">{errors.price.message}</span>
-              )}
+              <p className="mb-2">
+                {" "}
+                {errors.price && (
+                  <span className="errormessage">{errors.price.message}</span>
+                )}{" "}
+                <br />
+              </p>
             </div>
             <div className="w-1/2">
               <label className="labelstyle" htmlFor="discountPercentage">
@@ -108,11 +119,15 @@ export default function RegistrationForm() {
                 type="number"
                 placeholder="20%"
               />
-              {errors.discountPercentage && (
-                <span className="errormessage">
-                  {errors.discountPercentage.message}
-                </span>
-              )}
+              <p className="mb-2">
+                {" "}
+                {errors.discountPercentage && (
+                  <span className="errormessage">
+                    {errors.discountPercentage.message}
+                  </span>
+                )}{" "}
+                <br />
+              </p>
             </div>
           </div>
           <div className=" flex flex-col mb-4">
@@ -145,9 +160,13 @@ export default function RegistrationForm() {
                 </label>
               </div>
             </div>
-            {errors.label && (
-              <span className="errormessage">{errors.label.message}</span>
-            )}
+            <p className="mb-2">
+              {" "}
+              {errors.label && (
+                <span className="errormessage">{errors.label.message}</span>
+              )}{" "}
+              <br />
+            </p>
           </div>
           <div>
             <label className="labelstyle" htmlFor="features">
@@ -161,9 +180,13 @@ export default function RegistrationForm() {
               rows="10"
               placeholder="Species: Echinocereus..."
             ></textarea>
-            {errors.features && (
-              <span className="errormessage">{errors.features.message}</span>
-            )}
+            <p className="mb-2">
+              {" "}
+              {errors.features && (
+                <span className="errormessage">{errors.features.message}</span>
+              )}{" "}
+              <br />
+            </p>
           </div>
           <div>
             <label className="labelstyle" htmlFor="description">
@@ -177,9 +200,14 @@ export default function RegistrationForm() {
               rows="10"
               placeholder="Ladyfinger cactus..."
             ></textarea>
-            {errors.description && (
-              <span className="errormessage">{errors.description.message}</span>
-            )}
+            <p className="mb-2">
+              {errors.description && (
+                <span className="errormessage">
+                  {errors.description.message}
+                </span>
+              )}{" "}
+              <br />
+            </p>
           </div>
         </fieldset>
 
