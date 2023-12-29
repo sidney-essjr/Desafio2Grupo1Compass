@@ -16,14 +16,14 @@ export const ProductDetail = () => {
 
     return (
         <li>
-            <img src={`../src/${itemId.imgUrl}`} />
-            <h1>{itemId.name}</h1>
-            <h2>{itemId.subtitle}</h2>
-            <p>{itemId.label}</p>
-            <p>{itemId.price}</p>
-            <p><a target='blank' href={`https://www.google.com/search?q=comprar+${itemId.name}`}>Check Out</a></p>
-            <p>{itemId.features}</p>
-            <p>{itemId.description}</p>
+        <img src={`../src/${itemId.imgUrl}`} />
+        <h1>{itemId.name}</h1>
+        <h2>{itemId.subtitle}</h2>
+        <p>{itemId.label}</p>
+        <p>{itemId.price}</p>
+        <p><a target='blank' href={`https://www.google.com/search?q=comprar+${itemId.name}`}>Check Out</a></p>
+        <p>{itemId.features}</p>
+        <p>{itemId.description}</p>
         </li>
     );
 }
