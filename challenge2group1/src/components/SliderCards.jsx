@@ -37,7 +37,7 @@ export default function SliderCards({ title, onSale }) {
   }, []);
 
   if (error) {
-    return "An error occurred!";
+    return { error };
   }
 
   return (

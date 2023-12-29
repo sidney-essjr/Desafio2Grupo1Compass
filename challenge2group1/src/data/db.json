@@ -29,7 +29,7 @@
       "name": "Mini Monstera",
       "subtitle": "It is believed to bring good luck, good news and hope",
       "label": ["indoor", "perennial"],
-      "price": "$107",
+      "price": "$107.99",
       "isInSale": false,
       "discountPercentage": 20,
       "features": "Species: Rhaphidophora Tetrasperma. Mature Size: 6-8 ft. tall (indoors), 15-20 ft. tall (outdoors). Blooming Season: Spring, Summer. Pot Size: Available in various pot sizes to suit your preference and needs. Shipping: Our Echinocereus Cacti are carefully packaged and shipped with the utmost care to ensure they arrive in excellent condition.",
@@ -65,7 +65,7 @@
       "name": "Monstera",
       "subtitle": "It is an easy and rewarding plant, it only needs a little water once a week",
       "label": ["indoor", "perennial"],
-      "price": "$145",
+      "price": "$145.99",
       "isInSale": true,
       "discountPercentage": 20,
       "features": "Species: Monstera Pinnatipartita. Mature Size: 6 in. tall, 3 in. wide. Blooming Season: Spring. Pot Size: Available in various pot sizes to suit your preference and needs. Shipping: Our Echinocereus Cacti are carefully packaged and shipped with the utmost care to ensure they arrive in excellent condition.",
@@ -73,7 +73,6 @@
       "imgUrl": "assets/MonsteraPinnatipartita.svg"
     }
   ],
-
   "devs": [
     {
       "id": 1,

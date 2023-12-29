@@ -21,7 +21,7 @@ const Header = () => {
           </li>
           <li>
             <NavLink 
-              to="registrationForm"
+              to="plantRegistration"
               style={({isActive}) => ({color: isActive ? "#8A9B6E" : undefined})}
             >Register</NavLink>
           </li>

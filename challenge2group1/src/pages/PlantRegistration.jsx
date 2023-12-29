@@ -1,27 +1,54 @@
-import { useForm } from "react-hook-form";
-import { createRegistrationFormSchema } from "../form/validation";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { updatePlants } from "../data/https";
+import {
+  containsDiscount,
+  createRegistrationFormSchema,
+} from "../form/validation";
 
-export default function RegistrationForm() {
+const MAX = 5000000;
+const MIN = 1000000;
+
+export default function PlantRegistration() {
+  const [error, setError] = useState();
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm({
     resolver: zodResolver(createRegistrationFormSchema),
   });
 
-  function checkOnSale(data) {
-    data.discountPercentage > 0
-      ? (data.isInSale = true)
-      : (data.isInSale = false);
+  function hadleChanges(data) {
+    containsDiscount(data);
+    data.price = data.price.toLocaleString("en-US", {
+      style: "currency",
+      currency: "USD",
+    });
+    data.label = [data.label, data.type];
+    delete data.type;
 
     console.log(data);
+    reset();
+    fetchPlants(data);
+  }
+
+  function fetchPlants(plant) {
+    try {
+      updatePlants(plant);
+    } catch (error) {
+      setError({
+        message:
+          error.message || "Could not fetch plants, please try again later.",
+      });
+    }
   }
 
   return (
     <div className="flex 2xl:justify-center gap-5 bg-gelo overflow-hidden	w-screen">
-      <form className=" mx-20 mt-10  " onSubmit={handleSubmit(checkOnSale)}>
+      <form className=" mx-20 mt-10  " onSubmit={handleSubmit(hadleChanges)}>
         <fieldset>
           <h1 className="text-lunar font-inter font-semibold ">
             Plant registration
@@ -99,6 +126,7 @@ export default function RegistrationForm() {
                 {...register("price")}
                 type="number"
                 placeholder="$139.99"
+                step={0.01}
               />
               <p className="mb-2">
                 {" "}
