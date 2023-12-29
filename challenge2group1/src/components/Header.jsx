@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
-    <div className="sticky flex top-0 justify-between bg-gelo items-center w-screen "  >
+    <div className="sticky flex top-0 justify-between bg-gelo items-center w-screen z-10 "  >
       <img className="ml-20"
         
         src="/plantPeaceIcon.svg"
@@ -21,7 +21,7 @@ const Header = () => {
           </li>
           <li>
             <NavLink 
-              to="registrationForm"
+              to="plantRegistration"
               style={({isActive}) => ({color: isActive ? "#8A9B6E" : undefined})}
             >Register</NavLink>
           </li>

@@ -1,29 +1,28 @@
-import { useState, useEffect } from 'react';
-import Product from '../ProductComponents/Product';
+import { useState, useEffect } from "react";
+import Product from "../ProductComponents/Product";
 
 export default function ListPlants() {
-    const[ loadedListPlants, setLoadedListPlants] = useState ([]);
+  const [loadedListPlants, setLoadedListPlants] = useState([]);
 
-    useEffect(() => {
-
+  useEffect(() => {
     async function fetchListPlants() {
-        const response = await fetch('http://localhost:3000/plants');
+      const response = await fetch("http://localhost:3000/plants");
 
-        if (!response.ok) {
-            //...
-        }
-        const listPlants = await response.json();
-        setLoadedListPlants(listPlants);
+      if (!response.ok) {
+        //...
+      }
+      const listPlants = await response.json();
+      setLoadedListPlants(listPlants);
     }
 
     fetchListPlants();
-}, []);
-return (
+  }, []);
+  
+  return (
     <ul>
-        {loadedListPlants.map((plant) => (
-            <Product key={plant.id} plant={plant} />
-        ))}
+      {loadedListPlants.map((plant) => (
+        <Product key={plant.id} plant={plant} />
+      ))}
     </ul>
-)
-
+  );
 }

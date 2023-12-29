@@ -20,3 +20,16 @@ export async function fetchDevData(){
   }
   return devData;
 }
+
+export function updatePlants(plant) {
+  fetch("http://localhost:3000/plants", {
+    method: "POST",
+    body: JSON.stringify(plant),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => console.log(data))
+    .catch((error) => console.error(error));
+}
