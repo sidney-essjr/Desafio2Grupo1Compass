@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"; 
+
 export default function Product({ plant }) {
     return (
     <li>
@@ -5,7 +7,7 @@ export default function Product({ plant }) {
         <h1>{plant.name}</h1>
         <h2>{plant.subtitle}</h2>
         <p>{plant.price}</p>
-        <p><button>Saiba Mais</button></p>
+        <p><Link to={`${plant.id}`}>Saiba Mais</Link></p>
     </li>
     );
 }
