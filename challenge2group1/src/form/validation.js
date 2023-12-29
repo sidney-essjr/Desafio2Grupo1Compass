@@ -1,9 +1,27 @@
 import zod from "zod";
 
 export const createRegistrationFormSchema = zod.object({
-  name: zod.string().trim().min(1, "The Plant name field is mandatory!"),
-  subtitle: zod.string().trim().min(1, "The Subtitle field is mandatory!"),
-  type: zod.string().trim().min(1, "The Type field is mandatory!"),
+  name: zod
+    .string()
+    .trim()
+    .min(1, "The Plant name field is mandatory!")
+    .refine((val) => !regex.test(val), {
+      message: "This field does not accept numbers",
+    }),
+  subtitle: zod
+    .string()
+    .trim()
+    .min(1, "The Subtitle field is mandatory!")
+    .refine((val) => !regex.test(val), {
+      message: "This field does not accept numbers",
+    }),
+  type: zod
+    .string()
+    .trim()
+    .min(1, "The Type field is mandatory!")
+    .refine((val) => !regex.test(val), {
+      message: "This field does not accept numbers",
+    }),
   price: zod
     .string()
     .transform((val, ctx) =>
@@ -42,3 +60,11 @@ const stringToFloat = (val, ctx, message, validation) => {
   }
   return parsed;
 };
+
+export const containsDiscount = (data) => {
+  data.discountPercentage > 0
+    ? (data.isInSale = true)
+    : (data.isInSale = false);
+};
+
+const regex = /[0-9]/;
