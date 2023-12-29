@@ -71,7 +71,7 @@
       "price": "$79.99",
       "isInSale": false,
       "discountPercentage": 20,
-      "features": "Species: Ixora Spp. Mature Size: 10-15 ft. tall, 4-10 ft. wide. wide. Blooming Season: Spring, Summer, Fall, Winter. Pot Size: Available in various pot sizes to suit your preference and needs. Shipping: Our Echinocereus Cacti are carefully packaged and shipped with the utmost care to ensure they arrive in excellent condition.",
+      "features": "Species: Ixora Spp. Mature Size: 10-15 ft. tall, 4-10 ft wide. Blooming Season: Spring, Summer, Fall, Winter. Pot Size: Available in various pot sizes to suit your preference and needs. Shipping: Our Echinocereus Cacti are carefully packaged and shipped with the utmost care to ensure they arrive in excellent condition.",
       "description": "Ixora spp. is a genus of small tropical flowering shrubs with large clusters of four-petaled flowers. Ixora grows best in tropical conditions outdoors and in somewhat humid spaces indoors. Ixora requires full sun, and moist, acidic soil, and thrives in temperatures above 60 degrees Fahrenheit.",
       "imgUrl": "assets/IxoraSpp.svg"
     },
@@ -91,49 +91,98 @@
       "imgUrl": "assets/MonsteraPinnatipartita.svg"
     },
     {
-      "name": "sdf",
+      "id": 7,
+      "name": "Zebra plant",
       "subtitle": "sdf",
-      "price": "$444.00",
-      "discountPercentage": null,
+      "price": "$74.00",
+      "discountPercentage": 10,
+      "label": [
+        "Outdoor",
+        "Annual"
+      ],
+      "features": "Species: Aphelandra squarrosa. Mature Size: 1–6 ft. tall, 1–5 ft. wide. Blooming Season: Summer, fall. Pot Size: Available in various pot sizes to suit your preference and needs. Shipping: Our Echinocereus Cacti are carefully packaged and shipped with the utmost care to ensure they arrive in excellent condition.",
+      "description": "The zebra plant, which typically grows indoors, is loved for its unique dark green leaves striped with white veins. The jewel of this plant is its colorful flowers. The indoor zebra plant is a slow-growing plant, reaching maturity of a couple of feet tall in three years",
+      "isInSale": true,
+      "imgUrl": "assets/AphelandraSquarrosa.svg"
+    },
+    {
+      "id": 8,
+      "name": "Orchid",
+      "subtitle": "Flower with healing properties",
+      "label": [
+        "Outdoor",
+        "Perennial"
+      ],
+      "price": "$79.99",
+      "isInSale": false,
+      "discountPercentage": 20,
+      "features": "Species: Orchidaceae. Mature Size: 1–3 ft. tall, 6–12 in. wide. Blooming Season: Spring, Summer, Fall, Winter. Pot Size: Available in various pot sizes to suit your preference and needs. Shipping: Our Echinocereus Cacti are carefully packaged and shipped with the utmost care to ensure they arrive in excellent condition.",
+      "description": "Grown as popular houseplant, orchids (Orchidaceae) are easy to grow and care for once you understand the plant's ideal growing conditions and maintenance requirements. While there are hundreds of orchid species to choose from, the most commonly sold orchid groups are Phalaenopis, Cattleya, Denrobium, and Cymbidium.",
+      "imgUrl": "assets/Orchidaceae.svg"
+    },
+    {
+      "id": 9,
+      "name": "Christmas star",
+      "subtitle": "Flower with healing properties",
       "label": [
         "indoor",
-        "sdf"
+        "shrub"
       ],
-      "features": "hjk",
-      "description": "hjk",
+      "price": "$109.99",
       "isInSale": false,
-      "imgUrl": "assets/EchinocereusCactus.svg",
-      "id": 7
+      "discountPercentage": 20,
+      "features": "Species: Euphorbia pulcherrima. Mature Size: 3–10 ft. tall, 3–7 ft. wide. Blooming Season: Winter. Pot Size: Available in various pot sizes to suit your preference and needs. Shipping: Our Echinocereus Cacti are carefully packaged and shipped with the utmost care to ensure they arrive in excellent condition.",
+      "description": "Poinsettia is a perennial shrub native to Mexico. It is most often grown as an annual for winter holiday display, but it can also be grown as a perennial garden shrub in regions where winter temperatures remain above 50°F. Also known as Mexican flameleaf, these plants are forced into bloom in time for the holiday season, and they require specific care to look their best into the new year and beyond.",
+      "imgUrl": "assets/EuphorbiaPulcherrima.svg"
+    },
+    {
+      "id": 10,
+      "name": "Santa Leopoldina",
+      "subtitle": "Flower with healing properties",
+      "label": [
+        "Outdoor",
+        "Loamy"
+      ],
+      "price": "$49.99",
+      "isInSale": false,
+      "discountPercentage": 20,
+      "features": "Species: Philodendron spiritus-sancti. Mature Size: 65 ft. long, 6 ft. wide. Blooming Season: Spring, summer. Pot Size: Available in various pot sizes to suit your preference and needs. Shipping: Our Echinocereus Cacti are carefully packaged and shipped with the utmost care to ensure they arrive in excellent condition.",
+      "description": "Philodendron spiritus-sancti., also commonly known as Santa Leopoldina, is a rare philodendron native to a small region in Brazil, called Espirito Santo. This unique plant is also called the holy grail of philodendrons, coveted for its elongated, sword-like leaves that can reach up to 2 feet long.",
+      "imgUrl": "assets/PhilodendronSpiritus.svg"
     }
   ],
   "devs": [
     {
       "id": 1,
       "name": "Mateus Maciulevicius",
-      "idade": "24",
-      "cidade": "Itararé-SP",
-      "aboutMe": "Lithuanian descendent, junior developer and systems analysis and development student, I love games, rock and electronic music! :D"
+      "idade": "24 years old",
+      "cidade": "Live in Itararé-SP",
+      "aboutMe": "Lithuanian descendent, junior developer and systems analysis and development student, I love games, rock and electronic music! :D",
+      "imgUrl": "assets/EucalyptusCinerea.svg"
     },
     {
       "id": 2,
       "name": "Sidney Souza",
-      "idade": "31",
-      "cidade": "São José-SC",
-      "aboutMe": "Escrevo mais daqui a pouco"
+      "idade": "31 years old",
+      "cidade": "Live in São José-SC",
+      "aboutMe": "Escrevo mais daqui a pouco",
+      "imgUrl": "assets/EucalyptusCinerea.svg"
     },
     {
       "id": 3,
       "name": "Vívian Oliveira",
-      "idade": "39",
-      "cidade": "Recife-PE",
-      "aboutMe": "Escrevo mais daqui a pouco"
+      "idade": "39 years old",
+      "cidade": "Live in Recife-PE",
+      "aboutMe": "Escrevo mais daqui a pouco",
+      "imgUrl": "assets/vivian.svg"
     },
     {
       "id": 4,
       "name": "William Pereira Terra",
-      "idade": "31",
-      "cidade": "Santa Vitória do Palmar-RS",
-      "aboutMe": "I like music, mostly rap, like psychology subjects too, and love cars, or everything that burns gas to be truthy."
+      "idade": "31 years old",
+      "cidade": "Live in Santa Vitória do Palmar-RS",
+      "aboutMe": "I like music, mostly rap, like psychology subjects too, and love cars, or everything that burns gas to be truthy.",
+      "imgUrl": "assets/william.svg"
     }
   ]
 }
