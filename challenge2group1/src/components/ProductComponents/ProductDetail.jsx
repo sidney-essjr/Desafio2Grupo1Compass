@@ -16,7 +16,7 @@ export const ProductDetail = () => {
 
     return (
         <li>
-        <img src={`src/${itemId.imgUrl}`} />
+        <img src={`../src/${itemId.imgUrl}`} />
         <h1>{itemId.name}</h1>
         <h2>{itemId.subtitle}</h2>
         <p>{itemId.label}</p>
