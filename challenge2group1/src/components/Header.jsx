@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 
 const Header = () => {
@@ -39,7 +39,7 @@ const Header = () => {
           </li>
         </ul>
       </nav>
-      <img className="mr-20" src="/userIcon.svg" alt="user icon" />
+      <Link to="userRegister"><img className="mr-20" src="/userIcon.svg" alt="user icon" /></Link>
     </div>
   );
 };
