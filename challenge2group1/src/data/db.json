@@ -4,7 +4,10 @@
       "id": 1,
       "name": "Echinocereus Cactus",
       "subtitle": "A Majestic Addition to Your Plant Collection",
-      "label": ["indoor", "cactus"],
+      "label": [
+        "indoor",
+        "cactus"
+      ],
       "price": "$139.99",
       "isInSale": true,
       "discountPercentage": 20,
@@ -16,7 +19,10 @@
       "id": 2,
       "name": "Eucalyptus",
       "subtitle": "The aroma of eucalyptus is very good for calming and relaxing",
-      "label": ["indoor", "tree"],
+      "label": [
+        "indoor",
+        "tree"
+      ],
       "price": "$99.99",
       "isInSale": false,
       "discountPercentage": 10,
@@ -28,7 +34,10 @@
       "id": 3,
       "name": "Mini Monstera",
       "subtitle": "It is believed to bring good luck, good news and hope",
-      "label": ["indoor", "perennial"],
+      "label": [
+        "indoor",
+        "perennial"
+      ],
       "price": "$107.99",
       "isInSale": false,
       "discountPercentage": 20,
@@ -40,7 +49,10 @@
       "id": 4,
       "name": "Crinkle Leaf Plant",
       "subtitle": "Easy maintenance, as it requires little water and a lot of light",
-      "label": ["indoor", "succulent"],
+      "label": [
+        "indoor",
+        "succulent"
+      ],
       "price": "$139.99",
       "isInSale": true,
       "discountPercentage": 20,
@@ -52,7 +64,10 @@
       "id": 5,
       "name": "Ixora",
       "subtitle": "Flower with healing properties",
-      "label": ["indoor", "shrub"],
+      "label": [
+        "indoor",
+        "shrub"
+      ],
       "price": "$79.99",
       "isInSale": false,
       "discountPercentage": 20,
@@ -64,13 +79,31 @@
       "id": 6,
       "name": "Monstera",
       "subtitle": "It is an easy and rewarding plant, it only needs a little water once a week",
-      "label": ["indoor", "perennial"],
+      "label": [
+        "indoor",
+        "perennial"
+      ],
       "price": "$145.99",
       "isInSale": true,
       "discountPercentage": 20,
       "features": "Species: Monstera Pinnatipartita. Mature Size: 6 in. tall, 3 in. wide. Blooming Season: Spring. Pot Size: Available in various pot sizes to suit your preference and needs. Shipping: Our Echinocereus Cacti are carefully packaged and shipped with the utmost care to ensure they arrive in excellent condition.",
       "description": "Monsteras are favorite houseplants in interior design. The Monstera pinnatipartita is one such out-of-the-ordinary example. This evergreen climbs with epiphytic aerial roots and can grow up to 2 feet a year if indoor growing conditions are optimal. What sets this rare species apart is that the fenestration extends further up the dark green, heart-shaped leaves than you see in some of the more familiar monsteras. Despite their show-stopping appearance, these plants are surprisingly easy-to-care-for.",
       "imgUrl": "assets/MonsteraPinnatipartita.svg"
+    },
+    {
+      "name": "sdf",
+      "subtitle": "sdf",
+      "price": "$444.00",
+      "discountPercentage": null,
+      "label": [
+        "indoor",
+        "sdf"
+      ],
+      "features": "hjk",
+      "description": "hjk",
+      "isInSale": false,
+      "imgUrl": "assets/EchinocereusCactus.svg",
+      "id": 7
     }
   ],
   "devs": [

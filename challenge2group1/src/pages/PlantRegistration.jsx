@@ -28,6 +28,7 @@ export default function PlantRegistration() {
       currency: "USD",
     });
     data.label = [data.label, data.type];
+    data.imgUrl = 'assets/EchinocereusCactus.svg'
     delete data.type;
 
     console.log(data);
