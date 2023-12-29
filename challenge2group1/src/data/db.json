@@ -91,17 +91,18 @@
       "imgUrl": "assets/MonsteraPinnatipartita.svg"
     },
     {
-      "name": "TESTE",
-      "subtitle": "TESTE",
-      "price": "$33.00",
+      "name": "sdf",
+      "subtitle": "sdf",
+      "price": "$444.00",
       "discountPercentage": null,
       "label": [
         "indoor",
-        "TESTE"
+        "sdf"
       ],
-      "features": "asd",
-      "description": "asd",
+      "features": "hjk",
+      "description": "hjk",
       "isInSale": false,
+      "imgUrl": "assets/EchinocereusCactus.svg",
       "id": 7
     }
   ],
