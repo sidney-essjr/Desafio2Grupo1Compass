@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
-    <div className="flex  justify-between bg-gelo items-center w-screen"  >
+    <div className="sticky flex top-0 justify-between bg-gelo items-center w-screen "  >
       <img className="ml-20"
         
         src="/plantPeaceIcon.svg"

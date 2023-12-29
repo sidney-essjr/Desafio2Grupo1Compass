@@ -18,4 +18,7 @@
   .errormessage {
     @apply text-errorred my-2;
   }
+  .pstyle {
+    @apply font-raleway text-textgray text-base;
+  }
 }
