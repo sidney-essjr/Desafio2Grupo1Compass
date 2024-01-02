@@ -41,12 +41,12 @@ export default function SliderCards({ title, onSale }) {
   }
 
   return (
-    <div>
+    <div className="flex bg-white h-[560px] ">
       <div>
-        <h1>{title}</h1>
+        <h1 >{title}</h1>
       </div>
       <div>
-        <Splide
+        <Splide 
           aria-label="Testimonials"
           options={{ fixedWidth: "300px", isNavigation: true }}
         >

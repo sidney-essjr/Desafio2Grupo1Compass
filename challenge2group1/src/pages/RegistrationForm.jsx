@@ -44,7 +44,7 @@ export default function RegistrationForm() {
               </p>
             </div>
             <input
-              className="inputstyle "
+              className="border-errorred"
               id="name"
               {...register("name")}
               type="text"

@@ -21,7 +21,7 @@ export default function Home() {
                 <p className=" font-pacifico ml-2">love for nature</p>{" "}
               </div>
               <div className="w-full">
-                <h1 className="text-lunar text-[64px] font-bold font-garamond ">
+                <h1 className="headerstyle">
                   Discover Your <span className="text-abacate">Green</span> Side
                 </h1>
                 <p className="pstyle">
@@ -51,7 +51,7 @@ export default function Home() {
       <HomeContainer>
         <HomeItemContainer className="w-[400px]">
           <div className="w-[998px] flex-col mx-auto">
-            <h2 className="text-lunar text-[64px] font-bold font-garamond text-center mt-20 mb-3">
+            <h2 className="headerstyle text-center mt-20 mb-3">
               Steps To Take Care Of Your{" "}
               <span className="text-abacate">Plants</span>
             </h2>
@@ -119,16 +119,22 @@ export default function Home() {
           </div>
         </div>
       </HomeContainer>
+      <div className=" w-screen justify-center pl-20 pt-20  bg-gelo">
+        <HomeContainer>
+          <h2 className="headerstyle text-center mt-20 mb-3">
+            This Weeks Most Popular{" "}
+            <span className="text-abacate">And Best Selling</span>
+          </h2>
+          <SliderCards onSale={false} />
+        </HomeContainer>
 
-      <HomeContainer>
-        <h2>this weeks Most Popular and best selling</h2>
-        <SliderCards onSale={false} />
-      </HomeContainer>
-
-      <HomeContainer>
-        <h2>Plants in Sale</h2>
-        <SliderCards onSale={true} />
-      </HomeContainer>
+        <HomeContainer>
+          <h2 className="headerstyle text-center mt-20 mb-3">
+            <span className="text-abacate">Plants in </span>Sale
+          </h2>
+          <SliderCards onSale={true} />
+        </HomeContainer>
+      </div>
     </main>
   );
 }

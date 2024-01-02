@@ -10,15 +10,24 @@
 
 @layer components {
   .inputstyle {
-    @apply border rounded w-full mt-2 mb-3  py-2 px-3 text-linegray bg-gelo invalid:border-errorred;
+    @apply border rounded w-full mt-2 mb-3  py-2 px-3 text-linegray bg-gelo;
   }
   .labelstyle {
     @apply font-inter font-medium text-base;
   }
+  .label-div {
+    @apply flex justify-between h-6;
+  }
+  .input-error-style {
+    @apply border-errorred;
+  }
   .errormessage {
-    @apply text-errorred font-light text-base my-2;
+    @apply text-errorred font-light text-base -mb-4;
   }
   .pstyle {
     @apply font-raleway text-textgray text-base;
+  }
+  .headerstyle {
+    @apply text-lunar text-[64px] font-bold font-garamond;
   }
 }
