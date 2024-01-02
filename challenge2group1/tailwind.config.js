@@ -25,8 +25,9 @@ export default {
     },
 
     borderRadius: {
-      'borderFull': '50%',
+      'full': '50%',
     },
+    
     extend: {},
   },
   plugins: [require("@tailwindcss/forms")],
