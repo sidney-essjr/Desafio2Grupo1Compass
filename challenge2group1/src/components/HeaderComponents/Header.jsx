@@ -1,7 +1,7 @@
 import React from "react";
-import PlantIcon from "./HeaderComponents/PlantIcon";
-import UserIcon from "./HeaderComponents/UserIcon";
-import NavBar from "./HeaderComponents/NavBar";
+import PlantIcon from "./PlantIcon";
+import UserIcon from "./UserIcon";
+import NavBar from "./NavBar";
 import { Link } from "react-router-dom";
 
 const Header = () => {

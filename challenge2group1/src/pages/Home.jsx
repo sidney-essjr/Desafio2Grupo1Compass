@@ -88,18 +88,22 @@ export default function Home() {
 
       <HomeContainer>
         <div className="flex gap-20 ml-20 ">
-          <div className="flex gap-20 ">
-            <img className="" src="../../public/section-2-image-1.svg" alt="" />
+          <div className="flex gap-20 w-2/3">
             <img
-              className=""
+              className="w-1/2"
+              src="../../public/section-2-image-1.svg"
+              alt=""
+            />
+            <img
+              className="w-1/2"
               src="../../public/section-2-image-2.svg"
               alt=""
             />{" "}
           </div>
-          <div className="w-1/3 ">
+          <div className="w-1/3 flex-col mx-20">
             <HomeItemContainer>
-              <img src="../../public/section-2-image-3.svg" alt="" />
-              <p className="pstyle">
+              <img src="../../public/section-2-image-3.svg" className="w-full" alt="" />
+              <p className="pstyle flex-wrap">
                 Our website offers a wide array of stunning plants, ranging from
                 vibrant flowers to lush indoor foliage, allowing you to create
                 your very own green oasis. In addition to our extensive plant
