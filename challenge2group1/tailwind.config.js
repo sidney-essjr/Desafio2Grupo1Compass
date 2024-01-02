@@ -12,6 +12,7 @@ export default {
       linegray: "#AFB2AA",
       textgray: "#808276",
       errorred: "#e20000",
+      verdinho: "#83E281",
 
     },
     fontFamily: {
