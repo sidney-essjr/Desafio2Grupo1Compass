@@ -56,7 +56,7 @@ export default function SliderCards({ title, onSale }) {
             availablePlants.map((plant) => {
               return (
                 <SplideSlide id={plant.id}>
-                  <Card plant={plant} />
+                  <Card key={plant.id} plant={plant} />
                 </SplideSlide>
               );
             })

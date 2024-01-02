@@ -5,6 +5,9 @@ import PlantRegistration from "../pages/PlantRegistration";
 import Products from "../pages/Products";
 import About from "../pages/About";
 import {ProductDetail}  from "../components/ProductComponents/ProductDetail";
+import UserRegister from "../pages/UserRegister";
+import Login from "../pages/Login";
+import Signin from "../pages/Signin";
 
 
 const router = createBrowserRouter([
@@ -15,9 +18,17 @@ const router = createBrowserRouter([
       { index: true, element: <Home /> },
       { path: "plantRegistration", element: <PlantRegistration /> },
       { path: "products", element: <Products /> },
-      { path: "about", element: <About /> },
-      { path: "products/:productId", element: <ProductDetail />}
+      { path: "about", element: <About /> },      
+      { path: "products/:id", element: <ProductDetail />},
     ],
+  },
+  { 
+    path: "/userRegister", 
+    element:<UserRegister />, 
+    children:[
+      {index: true, element: <Login />},
+      {path: "signin", element: <Signin />}
+   ]
   },
 ]);
 export default router;
