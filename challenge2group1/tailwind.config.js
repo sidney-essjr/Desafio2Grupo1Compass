@@ -2,7 +2,6 @@
 export default {
   content: ["./src/**/*.{html,js,jsx}"],
   theme: {
-  
     colors: {
       gelo: "#F0F1EE",
       abacate: "#8A9B6E",
@@ -13,14 +12,16 @@ export default {
       textgray: "#808276",
       errorred: "#e20000",
       verdinho: "#83E281",
-
     },
     fontFamily: {
       raleway: ['"Raleway"'],
       garamond: ['"EB Garamond"'],
       lato: ['"Lato"'],
       inter: ['"Inter"'],
-      pacifico: ['"Pacifico"']
+      pacifico: ['"Pacifico"'],
+    },
+    screens: {
+      md: "767px",
     },
 
     borderRadius: {
@@ -28,8 +29,5 @@ export default {
     },
     extend: {},
   },
-  plugins: [
-    require('@tailwindcss/forms')
-  ],
-  
+  plugins: [require("@tailwindcss/forms")],
 };

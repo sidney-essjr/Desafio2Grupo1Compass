@@ -28,7 +28,7 @@ export default function PlantRegistration() {
       currency: "USD",
     });
     data.label = [data.label, data.type];
-    data.imgUrl = 'assets/EchinocereusCactus.svg'
+    data.imgUrl = "assets/EchinocereusCactus.svg";
     delete data.type;
 
     console.log(data);
@@ -49,7 +49,7 @@ export default function PlantRegistration() {
 
   return (
     <div className="flex 2xl:justify-center gap-5 bg-gelo overflow-hidden	w-screen">
-      <form className=" mx-20 mt-10  " onSubmit={handleSubmit(hadleChanges)}>
+      <form className=" mx-10 mt-5 md:mx-20 md:mt-10  " onSubmit={handleSubmit(hadleChanges)}>
         <fieldset>
           <h1 className="text-lunar font-inter font-semibold ">
             Plant registration
@@ -61,10 +61,11 @@ export default function PlantRegistration() {
             aling="center"
           />
           <div>
-            <div className="flex justify-between">
+            <div className="label-div">
               <label className="labelstyle" htmlFor="name">
                 Plant name
               </label>
+              {console.log(errors.name)}
               <p className="mb-2">
                 {errors.name && (
                   <span className="errormessage">{errors.name.message}</span>
@@ -72,7 +73,9 @@ export default function PlantRegistration() {
               </p>
             </div>
             <input
-              className="inputstyle "
+              className={`inputstyle ${
+                !!errors.name?.message ? "input-error-style" : null
+              }`}
               id="name"
               {...register("name")}
               type="text"
@@ -80,7 +83,7 @@ export default function PlantRegistration() {
             />
           </div>
           <div>
-            <div className="flex justify-between">
+            <div className="label-div">
               <label className="labelstyle" htmlFor="subtitle">
                 Plant subtitle
               </label>
@@ -93,7 +96,9 @@ export default function PlantRegistration() {
               </p>
             </div>
             <input
-              className="inputstyle"
+              className={`inputstyle ${
+                !!errors.subtitle?.message ? "input-error-style" : null
+              }`}
               id="subtitle"
               {...register("subtitle")}
               type="text"
@@ -101,7 +106,7 @@ export default function PlantRegistration() {
             />
           </div>
           <div>
-            <div className="flex justify-between">
+            <div className="label-div">
               <label className="labelstyle" htmlFor="type">
                 Plant type
               </label>
@@ -112,7 +117,9 @@ export default function PlantRegistration() {
               </p>
             </div>
             <input
-              className="inputstyle"
+              className={`inputstyle ${
+                !!errors.type?.message ? "input-error-style" : null
+              }`}
               id="type"
               {...register("type")}
               type="text"
@@ -121,7 +128,7 @@ export default function PlantRegistration() {
           </div>
           <div className="flex gap-5 h-24">
             <div className="w-1/2 ">
-              <div className="flex justify-between">
+              <div className="label-div">
                 <label className="labelstyle" htmlFor="price">
                   Price
                 </label>
@@ -132,7 +139,9 @@ export default function PlantRegistration() {
                 </p>
               </div>
               <input
-                className="inputstyle"
+                className={`inputstyle ${
+                  !!errors.price?.message ? "input-error-style" : null
+                }`}
                 id="price"
                 {...register("price")}
                 type="number"
@@ -141,25 +150,21 @@ export default function PlantRegistration() {
               />
             </div>
             <div className="w-1/2">
-              <div className="flex justify-between h-7">
+              <div className="label-div">
                 <label className="labelstyle" htmlFor="discountPercentage">
                   Discount percentage
                 </label>
-                {errors.discountPercentage && (
-                  <span className="errormessage mt-0">
-                    {errors.discountPercentage.message}
-                  </span>
-                )}
               </div>
               <input
-                className=" inputstyle my-1 "
+                className={`inputstyle ${
+                  !!errors.discountPercentage?.message
+                    ? "input-error-style"
+                    : null
+                }`}
                 id="discountPercentage"
                 {...register("discountPercentage")}
                 type="number"
                 placeholder="20%"
-                min="0"
-                max="100"
-                
               />
             </div>
           </div>
@@ -174,6 +179,7 @@ export default function PlantRegistration() {
                 {...register("label")}
                 type="radio"
                 value="indoor"
+                checked
               />
               <label className="labelstyle" htmlFor="indoor">
                 Indoor
@@ -192,7 +198,7 @@ export default function PlantRegistration() {
             </div>
           </div>
           <div>
-            <div className="flex justify-between">
+            <div className="label-div">
               <label className="labelstyle" htmlFor="features">
                 Features
               </label>
@@ -205,7 +211,9 @@ export default function PlantRegistration() {
               </p>
             </div>
             <textarea
-              className=" inputstyle h-[125px]"
+              className={`inputstyle h-[125px] ${
+                !!errors.features?.message ? "input-error-style" : null
+              }`}
               {...register("features")}
               id="features"
               cols="30"
@@ -214,7 +222,7 @@ export default function PlantRegistration() {
             ></textarea>
           </div>
           <div>
-            <div className="flex justify-between">
+            <div className="label-div">
               <label className="labelstyle" htmlFor="description">
                 Description
               </label>
@@ -227,7 +235,9 @@ export default function PlantRegistration() {
               </p>
             </div>
             <textarea
-              className=" inputstyle h-[125px]"
+              className={`inputstyle h-[125px] ${
+                !!errors.description?.message ? "input-error-style" : null
+              }`}
               {...register("description")}
               id="description"
               cols="30"
