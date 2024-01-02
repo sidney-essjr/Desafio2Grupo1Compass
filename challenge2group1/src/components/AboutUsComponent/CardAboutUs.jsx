@@ -2,7 +2,7 @@ export default function CardAboutUs({dev}){
   return (
     <section 
       key={dev.id}
-      className="w-1/2  mt-10 mb-10 h-96 flex flex-col items-center mx-auto bg-lunar rounded-tl-2xl"
+      className="w-1/2  mt-10 h-96 flex flex-col items-center mx-auto bg-lunar rounded-tl-2xl"
     >
       <img 
         src={`src/${dev.imgUrl}`} 
