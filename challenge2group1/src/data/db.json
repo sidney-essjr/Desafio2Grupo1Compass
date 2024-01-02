@@ -9,7 +9,7 @@
         "cactus"
       ],
       "price": "$139.99",
-      "isInSale": true,
+      "isInSale": false,
       "discountPercentage": 20,
       "features": "Species: Echinocereus spp. Mature Size: Up to 18 in. tall, 3 in. wide. Blooming Season: Spring. Pot Size: Available in various pot sizes to suit your preference and needs. Shipping: Our Echinocereus Cacti are carefully packaged and shipped with the utmost care to ensure they arrive in excellent condition.",
       "description": "Ladyfinger cactus (*Echinocereus pentalophus*) is also known as Alice, Devil's Fingers, and Dog Tail. It needs bright sunlight, light fertilizer, and is prone to root rot. The root system is shallow and weak. Aphids and mealybugs are also a danger. Avoiding wet soil can help with success with a ladyfinger cactus.",
@@ -33,7 +33,7 @@
     {
       "id": 3,
       "name": "Zebra plant",
-      "subtitle": "Flower with healing properties",
+      "subtitle": "A Majestic Addition to Your Plant Collection",
       "price": "$74.00",
       "discountPercentage": 10,
       "label": [
@@ -48,7 +48,7 @@
     {
       "id": 4,
       "name": "Orchid",
-      "subtitle": "Flower with healing properties",
+      "subtitle": "A Majestic Addition to Your Plant Collection",
       "label": [
         "Outdoor",
         "Perennial"
@@ -63,7 +63,7 @@
     {
       "id": 5,
       "name": "Christmas star",
-      "subtitle": "Flower with healing properties",
+      "subtitle": "A Majestic Addition to Your Plant Collection",
       "label": [
         "indoor",
         "shrub"
@@ -78,7 +78,7 @@
     {
       "id": 6,
       "name": "Santa Leopoldina",
-      "subtitle": "Flower with healing properties",
+      "subtitle": "A Majestic Addition to Your Plant Collection",
       "label": [
         "Outdoor",
         "Loamy"
@@ -137,6 +137,36 @@
     },
     {
       "id": 10,
+      "name": "Crinkle Leaf Plant",
+      "subtitle": "Easy maintenance, as it requires little water and a lot of light",
+      "label": [
+        "indoor",
+        "succulent"
+      ],
+      "price": "$139.99",
+      "isInSale": true,
+      "discountPercentage": 20,
+      "features": "Species: Adromischus Cristatus. Mature Size: 6 in. tall, 3 in. wide. Blooming Season: Spring. Pot Size: Available in various pot sizes to suit your preference and needs. Shipping: Our Echinocereus Cacti are carefully packaged and shipped with the utmost care to ensure they arrive in excellent condition.",
+      "description": "Crinkle leaf plants (Adromischus cristatus) are easygoing, unique-looking succulents that make excellent additions to your home or garden. The crinkle lead plant is a small and slow grower characterized by its fleshy, triangular, gray-green leaves that grow upward out of a central base and are crinkled at the top. The leaves of the crinkle leaf plant are covered in tiny hairs, giving them a fuzzy appearance. The succulent is best planted in the spring, but if grown indoors, it can be planted in any season.",
+      "imgUrl": "assets/AdromischusCristatus.svg"
+    },
+    {
+      "id": 11,
+      "name": "Crinkle Leaf Plant",
+      "subtitle": "Easy maintenance, as it requires little water and a lot of light",
+      "label": [
+        "indoor",
+        "succulent"
+      ],
+      "price": "$139.99",
+      "isInSale": true,
+      "discountPercentage": 20,
+      "features": "Species: Adromischus Cristatus. Mature Size: 6 in. tall, 3 in. wide. Blooming Season: Spring. Pot Size: Available in various pot sizes to suit your preference and needs. Shipping: Our Echinocereus Cacti are carefully packaged and shipped with the utmost care to ensure they arrive in excellent condition.",
+      "description": "Crinkle leaf plants (Adromischus cristatus) are easygoing, unique-looking succulents that make excellent additions to your home or garden. The crinkle lead plant is a small and slow grower characterized by its fleshy, triangular, gray-green leaves that grow upward out of a central base and are crinkled at the top. The leaves of the crinkle leaf plant are covered in tiny hairs, giving them a fuzzy appearance. The succulent is best planted in the spring, but if grown indoors, it can be planted in any season.",
+      "imgUrl": "assets/AdromischusCristatus.svg"
+    },
+    {
+      "id": 12,
       "name": "Crinkle Leaf Plant",
       "subtitle": "Easy maintenance, as it requires little water and a lot of light",
       "label": [
