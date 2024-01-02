@@ -1,39 +1,28 @@
-import { fetchAvailablePlants } from "../data/https";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
-import Card from "./Card.jsx";
-import { useState, useEffect } from "react";
 import "@splidejs/react-splide/css";
+import { useEffect, useState } from "react";
 import "../css/splide.css";
+import Card from "./Card.jsx";
 
-export default function SliderCards({ title, onSale }) {
-  const [isFetching, setIsFetching] = useState(false);
+export default function SliderCards({ onSale, plants }) {
+  const [isFetching, setIsFetching] = useState(true);
   const [availablePlants, setAvailablePlants] = useState([]);
   const [error, setError] = useState();
 
   useEffect(() => {
-    async function fetchPlants() {
-      setIsFetching(true);
-
-      try {
-        let plants = await fetchAvailablePlants();
-
-        if (onSale) {
-          plants = plants.filter((plant) => plant.isInSale === true);
-        } else {
-          plants = plants.filter((plant) => plant.isInSale !== true);
-        }
-
-        setAvailablePlants(plants);
-      } catch (error) {
-        setError({
-          message:
-            error.message || "Could not fetch plants, please try again later.",
-        });
-        setIsFetching(false);
+    try {
+      if (onSale) {
+        setAvailablePlants(plants.filter((plant) => plant.isInSale === true));
+      } else {
+        setAvailablePlants(plants.filter((plant) => plant.isInSale !== true));
       }
+    } catch (error) {
+      setError({
+        message:
+          error.message || "Could not fetch plants, please try again later.",
+      });
+      setIsFetching(false);
     }
-
-    fetchPlants();
   }, []);
 
   if (error) {
@@ -43,10 +32,7 @@ export default function SliderCards({ title, onSale }) {
   return (
     <div className="flex bg-white h-[560px] ">
       <div>
-        <h1 >{title}</h1>
-      </div>
-      <div>
-        <Splide 
+        <Splide
           aria-label="Testimonials"
           options={{ fixedWidth: "300px", isNavigation: true }}
         >
