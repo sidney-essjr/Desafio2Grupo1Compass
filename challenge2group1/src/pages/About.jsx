@@ -25,12 +25,12 @@ export default function About(){
 
 
   return (
-    <>
+    <section>
       {dataNotFetched ? (<p>Fetching data...</p>) : (
         devs.map((dev) => {
           return <CardAboutUs dev={dev}/>
         })
       )}
-    </>
+    </section>
   )
 }
