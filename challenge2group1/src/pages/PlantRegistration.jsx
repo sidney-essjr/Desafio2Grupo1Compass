@@ -272,7 +272,6 @@ export default function PlantRegistration() {
                 {...register("label")}
                 type="radio"
                 value="indoor"
-                checked
               />
               <label className="labelstyle" htmlFor="indoor">
                 Indoor

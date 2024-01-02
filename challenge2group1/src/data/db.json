@@ -179,8 +179,22 @@
       "features": "Species: Adromischus Cristatus. Mature Size: 6 in. tall, 3 in. wide. Blooming Season: Spring. Pot Size: Available in various pot sizes to suit your preference and needs. Shipping: Our Echinocereus Cacti are carefully packaged and shipped with the utmost care to ensure they arrive in excellent condition.",
       "description": "Crinkle leaf plants (Adromischus cristatus) are easygoing, unique-looking succulents that make excellent additions to your home or garden. The crinkle lead plant is a small and slow grower characterized by its fleshy, triangular, gray-green leaves that grow upward out of a central base and are crinkled at the top. The leaves of the crinkle leaf plant are covered in tiny hairs, giving them a fuzzy appearance. The succulent is best planted in the spring, but if grown indoors, it can be planted in any season.",
       "imgUrl": "assets/AdromischusCristatus.svg"
+    },
+    {
+      "name": "qweqw",
+      "subtitle": "qwe",
+      "price": "$222.00",
+      "discountPercentage": 2,
+      "label": [
+        "outdoor",
+        "qwe"
+      ],
+      "features": "qwe",
+      "description": "qwe",
+      "isInSale": true,
+      "imgUrl": "assets/EchinocereusCactus.svg",
+      "id": 13
     }
-  
   ],
   "devs": [
     {
