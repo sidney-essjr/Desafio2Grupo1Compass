@@ -3,7 +3,7 @@ import React from "react";
 const PlantIcon = () => {
   return (
     <img
-      className="ml-20"
+      className=" responsive-style"
       src="/plantPeaceIcon.svg"
       alt="the plantPeace logo"
     />

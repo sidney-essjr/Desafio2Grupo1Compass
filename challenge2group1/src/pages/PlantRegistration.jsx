@@ -49,7 +49,7 @@ export default function PlantRegistration() {
 
   return (
     <div className="flex 2xl:justify-center gap-5 bg-gelo overflow-hidden	w-screen">
-      <form className=" mx-20 mt-10  " onSubmit={handleSubmit(hadleChanges)}>
+      <form className=" mx-10 mt-5 md:mx-20 md:mt-10  " onSubmit={handleSubmit(hadleChanges)}>
         <fieldset>
           <h1 className="text-lunar font-inter font-semibold ">
             Plant registration

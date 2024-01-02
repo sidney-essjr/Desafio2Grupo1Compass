@@ -30,4 +30,8 @@
   .headerstyle {
     @apply text-lunar text-[64px] font-bold font-garamond;
   }
+
+  .responsive-style {
+    @apply ml-5 md:ml-20;
+  }
 }

@@ -13,19 +13,19 @@ const NavBar = () => {
 
   return (
     <>
-      <nav>
+      <nav className="flex-wrap">
         <div className="hidden md:flex">
           <NavLinks />{" "}
         </div>
         <div className="md:hidden">
-          <button className="justify-end" onClick={toggleNavbar}>
+          <button className="justify-between" onClick={toggleNavbar}>
             {" "}
             {isShown ? <X /> : <Menu />}
           </button>
         </div>{" "}
       </nav>
       {isShown && (
-        <div className="flex basis-full flex-col items-center">
+        <div className="flex flex-col items-center">
           <NavLinks />
         </div>
       )}
