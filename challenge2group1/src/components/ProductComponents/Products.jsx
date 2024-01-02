@@ -19,7 +19,7 @@ export default function ListPlants() {
   }, []);
   
   return (
-    <ul>
+    <ul className="flex flex-wrap justify-center">
       {loadedListPlants.map((plant) => (
         <Product key={plant.id} plant={plant} />
       ))}
