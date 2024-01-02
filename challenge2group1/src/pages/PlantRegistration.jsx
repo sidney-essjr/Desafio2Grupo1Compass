@@ -1,21 +1,27 @@
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useState } from "react";
-import { useForm } from "react-hook-form";
+import { useEffect, useRef, useState } from "react";
+import { Controller, useForm } from "react-hook-form";
 import { updatePlants } from "../data/https";
 import {
   containsDiscount,
   createRegistrationFormSchema,
 } from "../form/validation";
 
-const MAX = 5000000;
-const MIN = 1000000;
+const regex = /[0-9!@#$%^&*()_+{}\[\]:;<>,.?~\\/`|\=]/;
 
 export default function PlantRegistration() {
-  const [error, setError] = useState();
+  const initialAssembly = useRef(true);
+  const [name, setName] = useState("");
+  const [subtitle, setSubtitle] = useState("");
+  const [type, setType] = useState("");
   const {
     register,
     handleSubmit,
     reset,
+    watch,
+    getValues,
+    setValue,
+    control,
     formState: { errors },
   } = useForm({
     resolver: zodResolver(createRegistrationFormSchema),
@@ -27,13 +33,14 @@ export default function PlantRegistration() {
       style: "currency",
       currency: "USD",
     });
+
     data.label = [data.label, data.type];
-    data.imgUrl = 'assets/EchinocereusCactus.svg'
+    data.imgUrl = "assets/EchinocereusCactus.svg";
     delete data.type;
 
-    console.log(data);
-    reset();
     fetchPlants(data);
+    reset();
+    cleanHistory();
   }
 
   function fetchPlants(plant) {
@@ -44,6 +51,59 @@ export default function PlantRegistration() {
         message:
           error.message || "Could not fetch plants, please try again later.",
       });
+    }
+  }
+
+  useEffect(() => {
+    if (!initialAssembly.current) {
+      const formValues = getValues();
+      storageData("form", JSON.stringify(formValues));
+    }
+    initialAssembly.current = false;
+  }, [watch()]);
+
+  useEffect(() => {
+    setLocalData();
+  }, []);
+
+  function storageData(key, value) {
+    localStorage.setItem(key, value);
+  }
+
+  function setLocalData() {
+    const data = JSON.parse(localStorage.getItem("form"));
+    setName(data.name);
+    setSubtitle(data.subtitle);
+    setType(data.type);
+    setValue("price", data.price);
+    setValue("discountPercentage", data.discountPercentage);
+    setValue("label", data.label);
+    setValue("features", data.features);
+    setValue("description", data.description);
+  }
+
+  function cleanHistory() {
+    localStorage.removeItem("form");
+  }
+
+  function handleIptName(event) {
+    const value = event.target.value;
+    if (!regex.test(value)) {
+      setName(value);
+    }
+  }
+
+  function handleIptSubtitle(event) {
+    const value = event.target.value;
+    if (!regex.test(value)) {
+      setSubtitle(value);
+    }
+  }
+
+  function handleIptType(event) {
+    const value = event.target.value;
+    if (!regex.test(value)) {
+      setType(value);
     }
   }
 
@@ -71,12 +131,21 @@ export default function PlantRegistration() {
                 )}
               </p>
             </div>
-            <input
-              className="inputstyle "
-              id="name"
-              {...register("name")}
-              type="text"
-              placeholder="Echinocereus Cactus"
+            <Controller
+              name="name"
+              control={control}
+              render={({ field }) => (
+                <input
+                  {...field}
+                  className="inputstyle "
+                  id="name"
+                  {...register("name")}
+                  type="text"
+                  placeholder="Echinocereus Cactus"
+                  onChange={(e) => field.onChange(handleIptName(e))}
+                  value={name}
+                />
+              )}
             />
           </div>
           <div>
@@ -92,12 +161,20 @@ export default function PlantRegistration() {
                 )}
               </p>
             </div>
-            <input
-              className="inputstyle"
-              id="subtitle"
-              {...register("subtitle")}
-              type="text"
-              placeholder="A majestic addition to your plant collection"
+            <Controller
+              name="subtitle"
+              control={control}
+              render={({ field }) => (
+                <input
+                  className="inputstyle"
+                  id="subtitle"
+                  {...register("subtitle")}
+                  type="text"
+                  placeholder="A majestic addition to your plant collection"
+                  onChange={(e) => field.onChange(handleIptSubtitle(e))}
+                  value={subtitle}
+                />
+              )}
             />
           </div>
           <div>
@@ -111,12 +188,20 @@ export default function PlantRegistration() {
                 )}
               </p>
             </div>
-            <input
-              className="inputstyle"
-              id="type"
-              {...register("type")}
-              type="text"
-              placeholder="Cactus"
+            <Controller
+              name="type"
+              control={control}
+              render={({ field }) => (
+                <input
+                  className="inputstyle"
+                  id="type"
+                  {...register("type")}
+                  type="text"
+                  placeholder="Cactus"
+                  onChange={(e) => field.onChange(handleIptType(e))}
+                  value={type}
+                />
+              )}
             />
           </div>
           <div className="flex gap-5 h-24">
@@ -159,7 +244,6 @@ export default function PlantRegistration() {
                 placeholder="20%"
                 min="0"
                 max="100"
-                
               />
             </div>
           </div>
