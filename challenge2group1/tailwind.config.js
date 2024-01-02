@@ -23,6 +23,10 @@ export default {
     screens: {
       md: "767px",
     },
+
+    borderRadius: {
+      'borderFull': '50%',
+    },
     extend: {},
   },
   plugins: [require("@tailwindcss/forms")],
