@@ -71,15 +71,19 @@ export default function PlantRegistration() {
   }
 
   function setLocalData() {
-    const data = JSON.parse(localStorage.getItem("form"));
-    setName(data.name);
-    setSubtitle(data.subtitle);
-    setType(data.type);
-    setValue("price", data.price);
-    setValue("discountPercentage", data.discountPercentage);
-    setValue("label", data.label);
-    setValue("features", data.features);
-    setValue("description", data.description);
+    try {
+      const data = JSON.parse(localStorage.getItem("form"));
+      setName(data.name);
+      setSubtitle(data.subtitle);
+      setType(data.type);
+      setValue("price", data.price);
+      setValue("discountPercentage", data.discountPercentage);
+      setValue("label", data.label);
+      setValue("features", data.features);
+      setValue("description", data.description);
+    } catch (error) {
+      return "No data stored";
+    }
   }
 
   function cleanHistory() {
@@ -128,7 +132,6 @@ export default function PlantRegistration() {
               <label className="labelstyle" htmlFor="name">
                 Plant name
               </label>
-              {console.log(errors.name)}
               <p className="mb-2">
                 {errors.name && (
                   <span className="errormessage">{errors.name.message}</span>
