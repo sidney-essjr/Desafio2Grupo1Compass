@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./src/**/*.{html,js,jsx}"],
+  content: ["./**/*.{html,js,jsx}", "./index.html"],
   theme: {
     colors: {
       gelo: "#F0F1EE",

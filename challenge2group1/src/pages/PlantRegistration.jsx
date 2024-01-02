@@ -112,12 +112,12 @@ export default function PlantRegistration() {
   }
 
   return (
-    <div className="flex 2xl:justify-center gap-5 bg-gelo overflow-hidden	w-screen">
+    <div className="flex justify-between gap-5 bg-gelo overflow-hidden	">
       <form
-        className=" mx-10 mt-5 md:mx-20 md:mt-10  "
+        className="flex-col mx-10 mt-5 md:mx-20 md:mt-10 "
         onSubmit={handleSubmit(hadleChanges)}
       >
-        <fieldset>
+        <fieldset >
           <h1 className="text-lunar font-inter font-semibold ">
             Plant registration
           </h1>
@@ -348,10 +348,7 @@ export default function PlantRegistration() {
           Register
         </button>
       </form>
-      <img
-        className="hidden md:flex grayscale h-full mt-24"
-        src="homePlant.svg"
-      />
+      <img className="hidden md:flex grayscale h-full " src="homePlant.svg" />
     </div>
   );
 }

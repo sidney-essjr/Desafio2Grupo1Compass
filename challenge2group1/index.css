@@ -34,4 +34,7 @@
   .responsive-style {
     @apply ml-5 md:ml-20;
   }
+  .hamburguer-div {
+    @apply flex flex-col basis-full items-center;
+  }
 }
