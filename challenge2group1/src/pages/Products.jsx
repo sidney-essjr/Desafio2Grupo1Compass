@@ -12,3 +12,8 @@ export default function Product() {
     </>
   );
 }
+
+export function loader({ params }) {
+  const id = params.id;
+  return fetch("http://localhost:3000/plants/" + id);
+}

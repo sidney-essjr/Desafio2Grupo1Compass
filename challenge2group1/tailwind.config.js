@@ -25,7 +25,7 @@ export default {
     },
 
     borderRadius: {
-      'borderFull': '50%',
+      borderFull: "50%",
     },
     extend: {},
   },

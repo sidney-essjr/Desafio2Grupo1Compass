@@ -31,8 +31,26 @@ const router = createBrowserRouter([
         loader: () => import("../pages/Home").then((module) => module.loader()),
       },
       { path: "about", element: <About /> },
-      { path: "products/:id", element: <ProductDetail /> },
-      { path: ":id", element: <ProductDetail /> },
+      {
+        path: "products/:id",
+        element: (
+          <Suspense fallback={<p>Loading...</p>}>
+            <ProductDetail />
+          </Suspense>
+        ),
+        loader: (meta) =>
+          import("../pages/Products").then((module) => module.loader(meta)),
+      },
+      {
+        path: ":id",
+        element: (
+          <Suspense fallback={<p>Loading...</p>}>
+            <ProductDetail />
+          </Suspense>
+        ),
+        loader: (meta) =>
+          import("../pages/Products").then((module) => module.loader(meta)),
+      },
     ],
   },
   {

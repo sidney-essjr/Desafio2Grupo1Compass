@@ -1,31 +1,25 @@
-import { useParams } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useLoaderData } from "react-router-dom";
 
 export const ProductDetail = () => {
-    const {id} = useParams();
-    const [ itemId, setItemId ] = useState([]);
+  const plant = useLoaderData();
 
-    useEffect(() => {
-        const getItemId = async () => {
-            const res = await fetch(`http://localhost:3000/plants/${id}`);
-            const response = await res.json();
-            setItemId(response);
-        }
-        getItemId();
-    },[])
-
-    return (
-        <li>
-        <img src={`../src/${itemId.imgUrl}`} />
-        <h1>{itemId.name}</h1>
-        <h2>{itemId.subtitle}</h2>
-        <p>{itemId.label}</p>
-        <p>{itemId.price}</p>
-        <p><a target='blank' href={`https://www.google.com/search?q=comprar+${itemId.name}`}>Check Out</a></p>
-        <p>{itemId.features}</p>
-        <p>{itemId.description}</p>
-        </li>
-    );
-}
-
-
+  return (
+    <li>
+      <img src={`../src/${plant.imgUrl}`} />
+      <h1>{plant.name}</h1>
+      <h2>{plant.subtitle}</h2>
+      <p>{plant.label}</p>
+      <p>{plant.price}</p>
+      <p>
+        <a
+          target="blank"
+          href={`https://www.google.com/search?q=comprar+${plant.name}`}
+        >
+          Check Out
+        </a>
+      </p>
+      <p>{plant.features}</p>
+      <p>{plant.description}</p>
+    </li>
+  );
+};
