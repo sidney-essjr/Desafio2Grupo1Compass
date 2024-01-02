@@ -17,7 +17,11 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Home />,
+        element: (
+          <Suspense fallback={<p>Loading...</p>}>
+            <Home />
+          </Suspense>
+        ),
         loader: () => import("../pages/Home").then((module) => module.loader()),
       },
       { path: "plantRegistration", element: <PlantRegistration /> },
