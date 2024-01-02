@@ -22,6 +22,10 @@ export default {
       inter: ['"Inter"'],
       pacifico: ['"Pacifico"']
     },
+
+    borderRadius: {
+      'borderFull': '50%',
+    },
     extend: {},
   },
   plugins: [
