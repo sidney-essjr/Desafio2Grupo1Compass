@@ -1,21 +1,27 @@
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useState } from "react";
-import { useForm } from "react-hook-form";
+import { useEffect, useRef, useState } from "react";
+import { Controller, useForm } from "react-hook-form";
 import { updatePlants } from "../data/https";
 import {
   containsDiscount,
   createRegistrationFormSchema,
 } from "../form/validation";
 
-const MAX = 5000000;
-const MIN = 1000000;
+const regex = /[0-9!@#$%^&*()_+{}\[\]:;<>,.?~\\/`|\=]/;
 
 export default function PlantRegistration() {
-  const [error, setError] = useState();
+  const initialAssembly = useRef(true);
+  const [name, setName] = useState("");
+  const [subtitle, setSubtitle] = useState("");
+  const [type, setType] = useState("");
   const {
     register,
     handleSubmit,
     reset,
+    watch,
+    getValues,
+    setValue,
+    control,
     formState: { errors },
   } = useForm({
     resolver: zodResolver(createRegistrationFormSchema),
@@ -27,13 +33,14 @@ export default function PlantRegistration() {
       style: "currency",
       currency: "USD",
     });
+
     data.label = [data.label, data.type];
     data.imgUrl = "assets/EchinocereusCactus.svg";
     delete data.type;
 
-    console.log(data);
-    reset();
     fetchPlants(data);
+    reset();
+    cleanHistory();
   }
 
   function fetchPlants(plant) {
@@ -47,9 +54,69 @@ export default function PlantRegistration() {
     }
   }
 
+  useEffect(() => {
+    if (!initialAssembly.current) {
+      const formValues = getValues();
+      storageData("form", JSON.stringify(formValues));
+    }
+    initialAssembly.current = false;
+  }, [watch()]);
+
+  useEffect(() => {
+    setLocalData();
+  }, []);
+
+  function storageData(key, value) {
+    localStorage.setItem(key, value);
+  }
+
+  function setLocalData() {
+    try {
+      const data = JSON.parse(localStorage.getItem("form"));
+      setName(data.name);
+      setSubtitle(data.subtitle);
+      setType(data.type);
+      setValue("price", data.price);
+      setValue("discountPercentage", data.discountPercentage);
+      setValue("label", data.label);
+      setValue("features", data.features);
+      setValue("description", data.description);
+    } catch (error) {
+      return "No data stored";
+    }
+  }
+
+  function cleanHistory() {
+    localStorage.removeItem("form");
+  }
+
+  function handleIptName(event) {
+    const value = event.target.value;
+    if (!regex.test(value)) {
+      setName(value);
+    }
+  }
+
+  function handleIptSubtitle(event) {
+    const value = event.target.value;
+    if (!regex.test(value)) {
+      setSubtitle(value);
+    }
+  }
+
+  function handleIptType(event) {
+    const value = event.target.value;
+    if (!regex.test(value)) {
+      setType(value);
+    }
+  }
+
   return (
     <div className="flex 2xl:justify-center gap-5 bg-gelo overflow-hidden	w-screen">
-      <form className=" mx-10 mt-5 md:mx-20 md:mt-10  " onSubmit={handleSubmit(hadleChanges)}>
+      <form
+        className=" mx-10 mt-5 md:mx-20 md:mt-10  "
+        onSubmit={handleSubmit(hadleChanges)}
+      >
         <fieldset>
           <h1 className="text-lunar font-inter font-semibold ">
             Plant registration
@@ -65,21 +132,29 @@ export default function PlantRegistration() {
               <label className="labelstyle" htmlFor="name">
                 Plant name
               </label>
-              {console.log(errors.name)}
               <p className="mb-2">
                 {errors.name && (
                   <span className="errormessage">{errors.name.message}</span>
                 )}
               </p>
             </div>
-            <input
-              className={`inputstyle ${
-                !!errors.name?.message ? "input-error-style" : null
-              }`}
-              id="name"
-              {...register("name")}
-              type="text"
-              placeholder="Echinocereus Cactus"
+            <Controller
+              name="name"
+              control={control}
+              render={({ field }) => (
+                <input
+                  {...field}
+                  className={`inputstyle ${
+                    !!errors.name?.message ? "input-error-style" : null
+                  }`}
+                  id="name"
+                  {...register("name")}
+                  type="text"
+                  placeholder="Echinocereus Cactus"
+                  onChange={(e) => field.onChange(handleIptName(e))}
+                  value={name}
+                />
+              )}
             />
           </div>
           <div>
@@ -95,14 +170,22 @@ export default function PlantRegistration() {
                 )}
               </p>
             </div>
-            <input
-              className={`inputstyle ${
-                !!errors.subtitle?.message ? "input-error-style" : null
-              }`}
-              id="subtitle"
-              {...register("subtitle")}
-              type="text"
-              placeholder="A majestic addition to your plant collection"
+            <Controller
+              name="subtitle"
+              control={control}
+              render={({ field }) => (
+                <input
+                  className={`inputstyle ${
+                    !!errors.subtitle?.message ? "input-error-style" : null
+                  }`}
+                  id="subtitle"
+                  {...register("subtitle")}
+                  type="text"
+                  placeholder="A majestic addition to your plant collection"
+                  onChange={(e) => field.onChange(handleIptSubtitle(e))}
+                  value={subtitle}
+                />
+              )}
             />
           </div>
           <div>
@@ -116,14 +199,22 @@ export default function PlantRegistration() {
                 )}
               </p>
             </div>
-            <input
-              className={`inputstyle ${
-                !!errors.type?.message ? "input-error-style" : null
-              }`}
-              id="type"
-              {...register("type")}
-              type="text"
-              placeholder="Cactus"
+            <Controller
+              name="type"
+              control={control}
+              render={({ field }) => (
+                <input
+                  className={`inputstyle ${
+                    !!errors.type?.message ? "input-error-style" : null
+                  }`}
+                  id="type"
+                  {...register("type")}
+                  type="text"
+                  placeholder="Cactus"
+                  onChange={(e) => field.onChange(handleIptType(e))}
+                  value={type}
+                />
+              )}
             />
           </div>
           <div className="flex gap-5 h-24">
@@ -165,6 +256,8 @@ export default function PlantRegistration() {
                 {...register("discountPercentage")}
                 type="number"
                 placeholder="20%"
+                min="0"
+                max="100"
               />
             </div>
           </div>
@@ -219,6 +312,7 @@ export default function PlantRegistration() {
               cols="30"
               rows="10"
               placeholder="Species: Echinocereus..."
+              maxLength={200}
             ></textarea>
           </div>
           <div>
@@ -243,6 +337,7 @@ export default function PlantRegistration() {
               cols="30"
               rows="10"
               placeholder="Ladyfinger cactus..."
+              maxLength={200}
             ></textarea>
           </div>
         </fieldset>
