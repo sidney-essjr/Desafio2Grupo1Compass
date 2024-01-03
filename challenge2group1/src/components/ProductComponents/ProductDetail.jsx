@@ -4,12 +4,12 @@ export const ProductDetail = () => {
   const plant = useLoaderData();
 
   return (
-    <li>
-      <div className="flex flex-col md:flex-row items-center justify-center h-screen bg-gray-100">
-      <div className="md:w-1/2">
-      <img className="w-752 h-690 flex-shrink-0 opacity-90 bg-cover bg-center bg-lightgray" 
+    
+    <li className="flex flex-col md:flex-row items-center h-screen">
+      <div className="md:w-1/2 w-96 h-96">
+      <img className="flex-shrink-0 opacity-90 bg-cover-repeat bg-center" 
       src={`../src/${plant.imgUrl}`} /></div>
-      </div>
+
       <div className="md:w-1/2 p-8">
       <h1 className="text-lunar text-[64px] font-bold font-garamond">{plant.name}</h1>
       <h2 className="pstyle text-[24px]">{plant.subtitle}</h2>
