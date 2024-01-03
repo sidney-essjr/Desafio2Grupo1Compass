@@ -16,7 +16,8 @@ export const ProductDetail = () => {
       <h1 className="text-lunar text-[64px] font-bold font-garamond">{plant.name}</h1>
       <h2 className="font-raleway text-textgray text-[24px]">{plant.subtitle}</h2>
       {plant.label.map((label) => {
-              return <p className=" text-verdinho border border-verdinho rounded-[100px] bg-[#F6FFF6] inline-flex mt-1 py-2 px-3">{label}</p>;
+              return <p className=" text-verdinho border border-verdinho rounded-[100px] bg-[#F6FFF6] inline-flex mr-6 mt-6 py-2 px-3">
+                {label}</p>;
             })}
       <p className="text-lunar text-[24px] font-lato px-3 py-6 font-semibold">{plant.price}</p>
       <div >
