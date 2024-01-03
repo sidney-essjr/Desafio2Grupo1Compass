@@ -10,7 +10,7 @@
 
 @layer components {
   .inputstyle {
-    @apply border rounded w-full mt-2 mb-3  py-2 px-3 text-linegray bg-gelo;
+    @apply w-full mt-2 mb-3  py-2 px-3 text-linegray bg-gelo;
   }
   .labelstyle {
     @apply font-inter font-medium text-base;
@@ -31,10 +31,7 @@
     @apply text-lunar text-[64px] font-bold font-garamond;
   }
 
-  .responsive-style {
-    @apply ml-5 md:ml-20;
-  }
-  .hamburguer-div {
-    @apply flex flex-col basis-full items-center;
+  .div-style {
+    @apply flex flex-col basis-full items-center mb-4;
   }
 }

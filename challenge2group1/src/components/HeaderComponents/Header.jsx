@@ -31,7 +31,7 @@ const Header = () => {
         <UserIcon />{" "}
       </Link>
       {isShown && (
-        <div className="flex basis-full bg-abacate">
+        <div className="div-style">
           <NavLinks />
         </div>
       )}

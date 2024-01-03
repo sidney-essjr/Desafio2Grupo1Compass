@@ -4,21 +4,21 @@ export const createRegistrationFormSchema = zod.object({
   name: zod
     .string()
     .trim()
-    .min(1, "The Plant name field is mandatory!")
+    .min(1, "Requested field")
     .refine((val) => !regex.test(val), {
       message: "This field does not accept numbers",
     }),
   subtitle: zod
     .string()
     .trim()
-    .min(1, "The Subtitle field is mandatory!")
+    .min(1, "Requested field")
     .refine((val) => !regex.test(val), {
       message: "This field does not accept numbers",
     }),
   type: zod
     .string()
     .trim()
-    .min(1, "The Type field is mandatory!")
+    .min(1, "Requested field")
     .refine((val) => !regex.test(val), {
       message: "This field does not accept numbers",
     }),
@@ -42,11 +42,11 @@ export const createRegistrationFormSchema = zod.object({
     required_error: "You need to select an option",
   }),
 
-  features: zod.string().trim().min(1, "The Features field is mandatory!"),
+  features: zod.string().trim().min(1, "Requested Field"),
   description: zod
     .string()
     .trim()
-    .min(1, "The Description field is mandatory!"),
+    .min(1, "Requested field"),
 });
 
 const stringToFloat = (val, ctx, message, validation) => {

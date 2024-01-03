@@ -117,7 +117,7 @@ export default function PlantRegistration() {
         className="flex-col mx-10 mt-5 md:mx-20 md:mt-10 "
         onSubmit={handleSubmit(hadleChanges)}
       >
-        <fieldset >
+        <fieldset>
           <h1 className="text-lunar font-inter font-semibold ">
             Plant registration
           </h1>
@@ -342,7 +342,7 @@ export default function PlantRegistration() {
         </fieldset>
 
         <button
-          className="flex mx-auto justify-center bg-lunar text-white  py-3 mb-20 mt-5 md:px-28 px-14 lg:px-56"
+          className="flex mx-auto justify-center bg-lunar text-white  py-3 mb-10 md:mb-20 mt-5 md:px-28 px-14 lg:px-56"
           type="submit"
         >
           Register
