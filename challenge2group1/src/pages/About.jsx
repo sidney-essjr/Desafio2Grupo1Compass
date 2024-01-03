@@ -22,7 +22,7 @@ export default function About() {
   }, []);
 
   return (
-    <section>
+    <section className="bg-gelo">
       {dataNotFetched ? (<p>Fetching data...</p>) : (
         devs.map((dev) => {
           return <CardAboutUs dev={dev} />;
