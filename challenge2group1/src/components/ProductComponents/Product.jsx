@@ -12,12 +12,10 @@ export default function Product({ plant }) {
             <p className="pstyle">{plant.subtitle}</p>
           </div>
           <div className="px-6 py-4">
-            <span className=" text-verdinho border border-verdinho rounded-full px-3 py-1 text-sm font-semibold mr-2">
-              {plant.label}{" "}
-            </span>
+            <span className=" text-verdinho border border-verdinho rounded-[100px] px-3 py-1 text-sm font-semibold mr-2">
+              {plant.label} </span>
             <span className=" text-lunar text-[20px] rounded-full px-3 py-1 font-semibold">
-              {plant.price}{" "}
-            </span>
+              {plant.price} </span>
           </div>
           <div className="flex justify-center bg-lunar text-white px-6 py-4">
             <Link to={`${plant.id}`}>Saiba Mais</Link>
