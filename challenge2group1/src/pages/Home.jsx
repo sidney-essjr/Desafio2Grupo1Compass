@@ -49,7 +49,7 @@ export default function Home() {
 
       <HomeContainer>
         <HomeItemContainer >
-          <div className="w-[100%] flex-col mx-auto">
+          <div className="w-[100%] flex-col ml-5 md:ml-20">
             <h2 className="header-style text-center mt-20 mb-3">
               Steps To Take Care Of Your{" "}
               <span className="text-abacate">Plants</span>
@@ -62,7 +62,7 @@ export default function Home() {
           </div>
         </HomeItemContainer>
         <HomeItemContainer>
-          <div className="flex-col md:flex md:m-20 mx-5 mt-10 gap-20">
+          <div className="flex flex-col md:flex-row md:m-20 mx-5 mt-10 md:gap-20">
             <HomeCard
               image="/section-2-water-image.svg"
               imageDescription="water-image"
@@ -86,8 +86,8 @@ export default function Home() {
       </HomeContainer>
 
       <HomeContainer>
-        <div className="flex gap-20 ml-20 ">
-          <div className="flex gap-20 w-2/3">
+        <div className="flex flex-col md:flex-row gap-20  md:ml-20 ">
+          <div className="flex flex-col md:flex-row gap-5 md:gap-20 md:w-2/3 items-center">
             <img
               className="w-1/2"
               src="../../public/section-2-image-1.svg"
@@ -99,11 +99,11 @@ export default function Home() {
               alt=""
             />{" "}
           </div>
-          <div className="w-1/3 flex-col mx-20">
+          <div className="md:w-1/3 flex-col md:mx-20">
             <HomeItemContainer>
               <img
                 src="../../public/section-2-image-3.svg"
-                className="w-full"
+                className="w-11/12 mx-1"
                 alt=""
               />
               <p className="p-style flex-wrap">
@@ -126,7 +126,7 @@ export default function Home() {
           </div>
         </div>
       </HomeContainer>
-      <div className=" w-screen justify-center pl-20  bg-gelo">
+      <div className=" w-screen justify-center md:pl-10 bg-gelo  ">
         <HomeContainer>
           <h2 className="header-style text-center pt-12 mb-3">
             This Weeks Most Popular{" "}
