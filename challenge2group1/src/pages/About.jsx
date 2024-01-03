@@ -25,7 +25,7 @@ export default function About(){
 
 
   return (
-    <section>
+    <section className="mb-2">
       {dataNotFetched ? (<p>Fetching data...</p>) : (
         devs.map((dev) => {
           return <CardAboutUs dev={dev}/>
