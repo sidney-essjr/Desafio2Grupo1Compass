@@ -16,7 +16,6 @@ export default function Home() {
             <div className="">
               <div className="inline-flex justify-start align-bottom">
                 <img src="rectangle.svg" alt="a" />
-
                 <p className=" font-pacifico ml-2">love for nature</p>{" "}
               </div>
               <div className="w-full">
@@ -48,7 +47,7 @@ export default function Home() {
       </HomeContainer>
 
       <HomeContainer>
-        <HomeItemContainer >
+        <HomeItemContainer>
           <div className="w-[100%] flex-col ml-5 md:ml-20">
             <h2 className="header-style text-center mt-20 mb-3">
               Steps To Take Care Of Your{" "}
@@ -146,8 +145,9 @@ export default function Home() {
   );
 }
 
-export function loader() {
-  const resp = fetch("http://localhost:3000/plants");
+export async function loader() {
+  const resp = await fetch("http://localhost:3000/plants");
+
   if (resp.status === 404) {
     throw new Response("Not Found", { status: 404 });
   }

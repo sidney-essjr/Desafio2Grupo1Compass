@@ -13,9 +13,9 @@ export default function Product() {
   );
 }
 
-export function loader({ params }) {
+export async function loader({ params }) {
   const id = params.id;
-  const resp = fetch("http://localhost:3000/plants/" + id);
+  const resp = await fetch("http://localhost:3000/plants/" + id);
   if (resp.status === 404) {
     throw new Response("Not Found", { status: 404 });
   }
