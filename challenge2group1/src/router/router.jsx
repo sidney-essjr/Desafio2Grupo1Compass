@@ -41,7 +41,7 @@ const router = createBrowserRouter([
       { path: "about", element: <About /> },
       {
         path: "products/:id",
-        // errorElement: <Error />,
+        errorElement: <Error />,
         element: (
           <Suspense fallback={<p>Loading...</p>}>
             <ProductDetail />
@@ -52,7 +52,7 @@ const router = createBrowserRouter([
       },
       {
         path: ":id",
-        // errorElement: <Error />,
+        errorElement: <Error />,
         element: (
           <Suspense fallback={<p>Loading...</p>}>
             <ProductDetail />
