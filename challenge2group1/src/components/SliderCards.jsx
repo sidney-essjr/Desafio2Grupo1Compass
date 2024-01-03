@@ -30,7 +30,7 @@ export default function SliderCards({ onSale, plants }) {
   }
 
   return (
-    <div className="flex pb-10">
+    <div className="flex pt-10 pb-20">
       <div className="">
         <Splide
           aria-label="Testimonials"
