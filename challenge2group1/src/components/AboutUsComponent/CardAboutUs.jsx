@@ -1,6 +1,6 @@
 export default function CardAboutUs({dev}){
   return (
-    <section className="w-2/6 flex flex-col items-center bg-lunar rounded-2xl m-5" key={dev.id} >
+    <section className="w-96 flex flex-col items-center bg-lunar rounded-2xl m-5" key={dev.id} >
       <img className="w-44 rounded-borderFull mt-10" src={`src/${dev.imgUrl}`} alt=" " />
       <div className="m-6 text-white h-24">
         <p className=" ">{dev.name}, {dev.idade}, {dev.cidade}</p>

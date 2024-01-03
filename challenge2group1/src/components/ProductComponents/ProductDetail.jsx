@@ -4,7 +4,7 @@ export const ProductDetail = () => {
   const plant = useLoaderData();
 
   return (
-    <li className="flex flex-col md:flex-row bg-gelo items-center h-screen">
+    <li className="flex flex-col md:flex-row h-4/6 bg-gelo items-center">
       <div className="md:w-1/2">
         <img
           className="w-[752px] h-[690px] first-line:flex-shrink-0 opacity-90 bg-cover-repeat bg-center"
