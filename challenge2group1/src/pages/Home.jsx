@@ -147,5 +147,9 @@ export default function Home() {
 }
 
 export function loader() {
-  return fetch("http://localhost:3000/plants");
+  const resp = fetch("http://localhost:3000/plants");
+  if (resp.status === 404) {
+    throw new Response("Not Found", { status: 404 });
+  }
+  return resp;
 }
