@@ -9,6 +9,7 @@ import Signin from "../pages/Signin";
 import UserRegister from "../pages/UserRegister";
 import Error from "../components/Error";
 import Loading from "../components/Loading";
+import { loader as plantsLoader } from "../pages/Home";
 
 const Home = lazy(() => import("../pages/Home"));
 const Products = lazy(() => import("../pages/Products"));
@@ -26,7 +27,7 @@ const router = createBrowserRouter([
             <Home />
           </Suspense>
         ),
-        loader: () => import("../pages/Home").then((module) => module.loader()),
+        loader: plantsLoader,
       },
       { path: "plantRegistration", element: <PlantRegistration /> },
       {

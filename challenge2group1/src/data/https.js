@@ -1,21 +1,29 @@
-// export async function fetchAvailablePlants() {
-//   const response = await fetch("http://localhost:3000/plants");
-//   const plants = await response.json();
+import { QueryClient } from "@tanstack/react-query";
 
-//   if (!response.ok) {
-//     throw new Error("Failed to fetch places");
-//   }
+export const queryClient = new QueryClient();
 
-//   return plants;
-// }
+export async function fetchPlants({ signal }) {
+  const url = "http://localhost:3000/plants";
 
+  const response = await fetch(url, { signal: signal });
 
-export async function fetchDevData(){
+  if (!response.ok) {
+    const error = new Error("An error occurred while fetching the plants");
+    error.code = response.status;
+    error.info = await response.json();
+    throw error;
+  }
+
+  const plants = await response.json();
+
+  return plants;
+}
+
+export async function fetchDevData() {
   const response = await fetch("http://localhost:3000/devs");
   const devData = response.json();
-  
 
-  if(!response.ok){
+  if (!response.ok) {
     throw new Error("Failed to fetch dev data, try again later!");
   }
   return devData;

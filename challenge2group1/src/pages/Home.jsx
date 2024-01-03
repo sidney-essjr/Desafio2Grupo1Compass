@@ -1,12 +1,18 @@
-import { useLoaderData } from "react-router-dom";
 import HomeButton from "../components/HomeComponents/HomeButton";
 import HomeCard from "../components/HomeComponents/HomeCard";
 import HomeContainer from "../components/HomeComponents/HomeContainer";
 import HomeItemContainer from "../components/HomeComponents/HomeItemContainer";
 import SliderCards from "../components/SliderCards";
+import { fetchPlants, queryClient } from "../data/https";
+import { useQuery } from "@tanstack/react-query";
 
 export default function Home() {
-  const plants = useLoaderData();
+  // const plants = useLoaderData();
+
+  const { data, isError, error } = useQuery({
+    queryKey: ["plants"],
+    queryFn: ({ signal }) => fetchPlants({ signal }),
+  });
 
   return (
     <main>
@@ -131,14 +137,14 @@ export default function Home() {
             This Weeks Most Popular{" "}
             <span className="text-abacate">And Best Selling</span>
           </h2>
-          <SliderCards onSale={false} plants={plants} />
+          <SliderCards onSale={false} plants={data} />
         </HomeContainer>
 
         <HomeContainer>
           <h2 className="header-style text-center mt-20 mb-3">
             <span className="text-abacate">Plants in </span>Sale
           </h2>
-          <SliderCards onSale={true} plants={plants} />
+          <SliderCards onSale={true} plants={data} />
         </HomeContainer>
       </div>
     </main>
@@ -146,10 +152,8 @@ export default function Home() {
 }
 
 export async function loader() {
-  const resp = await fetch("http://localhost:3000/plants");
-
-  if (resp.status === 404) {
-    throw new Response("Not Found", { status: 404 });
-  }
-  return resp;
+  return queryClient.fetchQuery({
+    queryKey: ["plants"],
+    queryFn: ({ signal }) => fetchPlants({ signal }),
+  });
 }
