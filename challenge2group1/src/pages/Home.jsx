@@ -130,9 +130,9 @@ export default function Home() {
           </div>
         </div>
       </HomeContainer>
-      <div className=" w-screen justify-center pl-20 pt-20  bg-gelo">
+      <div className=" w-screen justify-center pl-20  bg-gelo">
         <HomeContainer>
-          <h2 className="headerstyle text-center mt-20 mb-3">
+          <h2 className="headerstyle text-center pt-12 mb-3">
             This Weeks Most Popular{" "}
             <span className="text-abacate">And Best Selling</span>
           </h2>

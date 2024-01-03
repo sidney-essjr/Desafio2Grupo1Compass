@@ -1,3 +1,8 @@
 .splide__pagination {
   display: none;
+  
+}
+.splide__list {
+  display: flex;
+  gap: 40px;
 }
