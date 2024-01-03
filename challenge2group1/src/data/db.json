@@ -13,7 +13,7 @@
       "discountPercentage": 20,
       "features": ["Species: Echinocereus spp.", "Mature Size: Up to 18 in. tall, 3 in. wide.", "Blooming Season: Spring.", "Pot Size: Available in various pot sizes to suit your preference and needs.", "Shipping: Our Echinocereus Cacti are carefully packaged and shipped with the utmost care to ensure they arrive in excellent condition."],
       "description": "Ladyfinger cactus (*Echinocereus pentalophus*) is also known as Alice, Devil's Fingers, and Dog Tail. It needs bright sunlight, light fertilizer, and is prone to root rot. The root system is shallow and weak. Aphids and mealybugs are also a danger. Avoiding wet soil can help with success with a ladyfinger cactus.",
-      "imgUrl": "assets/EchinocereusCactus.svg"
+      "imgUrl": "assets/echinocereusCactus.svg"
     },
     {
       "id": 2,
@@ -26,9 +26,9 @@
       "price": "$145.99",
       "isInSale": true,
       "discountPercentage": 20,
-      "features": "Species: Monstera Pinnatipartita. Mature Size: 6 in. tall, 3 in. wide. Blooming Season: Spring. Pot Size: Available in various pot sizes to suit your preference and needs. Shipping: Our Echinocereus Cacti are carefully packaged and shipped with the utmost care to ensure they arrive in excellent condition.",
+      "features": ["Species: Monstera Pinnatipartita.", "Mature Size: 6 in. tall, 3 in. wide.", "Blooming Season: Spring.", "Pot Size: Available in various pot sizes to suit your preference and needs.", "Shipping: Our Echinocereus Cacti are carefully packaged and shipped with the utmost care to ensure they arrive in excellent condition."],
       "description": "Monsteras are favorite houseplants in interior design. The Monstera pinnatipartita is one such out-of-the-ordinary example. This evergreen climbs with epiphytic aerial roots and can grow up to 2 feet a year if indoor growing conditions are optimal. What sets this rare species apart is that the fenestration extends further up the dark green, heart-shaped leaves than you see in some of the more familiar monsteras. Despite their show-stopping appearance, these plants are surprisingly easy-to-care-for.",
-      "imgUrl": "assets/MonsteraPinnatipartita.svg"
+      "imgUrl": "assets/monsteraPinnatipartita.svg"
     },
     {
       "id": 3,
@@ -40,10 +40,10 @@
         "Outdoor",
         "Annual"
       ],
-      "features": "Species: Aphelandra squarrosa. Mature Size: 1–6 ft. tall, 1–5 ft. wide. Blooming Season: Summer, fall. Pot Size: Available in various pot sizes to suit your preference and needs. Shipping: Our Echinocereus Cacti are carefully packaged and shipped with the utmost care to ensure they arrive in excellent condition.",
+      "features": ["Species: Aphelandra squarrosa.", "Mature Size: 1–6 ft. tall, 1–5 ft. wide.", "Blooming Season: Summer, fall. Pot Size: Available in various pot sizes to suit your preference and needs.", "Shipping: Our Echinocereus Cacti are carefully packaged and shipped with the utmost care to ensure they arrive in excellent condition."],
       "description": "The zebra plant, which typically grows indoors, is loved for its unique dark green leaves striped with white veins. The jewel of this plant is its colorful flowers. The indoor zebra plant is a slow-growing plant, reaching maturity of a couple of feet tall in three years",
       "isInSale": true,
-      "imgUrl": "assets/AphelandraSquarrosa.svg"
+      "imgUrl": "assets/aphelandraSquarrosa.svg"
     },
     {
       "id": 4,
@@ -56,9 +56,9 @@
       "price": "$79.99",
       "isInSale": false,
       "discountPercentage": 20,
-      "features": "Species: Orchidaceae. Mature Size: 1–3 ft. tall, 6–12 in. wide. Blooming Season: Spring, Summer, Fall, Winter. Pot Size: Available in various pot sizes to suit your preference and needs. Shipping: Our Echinocereus Cacti are carefully packaged and shipped with the utmost care to ensure they arrive in excellent condition.",
+      "features": ["Species: Orchidaceae.", "Mature Size: 1–3 ft. tall, 6–12 in. wide.", "Blooming Season: Spring, Summer, Fall, Winter.", "Post Size: Available in various pot sizes to suit your preference and needs.", "Shipping: Our Echinocereus Cacti are carefully packaged and shipped with the utmost care to ensure they arrive in excellent condition."],
       "description": "Grown as popular houseplant, orchids (Orchidaceae) are easy to grow and care for once you understand the plant's ideal growing conditions and maintenance requirements. While there are hundreds of orchid species to choose from, the most commonly sold orchid groups are Phalaenopis, Cattleya, Denrobium, and Cymbidium.",
-      "imgUrl": "assets/Orchidaceae.svg"
+      "imgUrl": "assets/orchidaceae.svg"
     },
     {
       "id": 5,
@@ -71,9 +71,9 @@
       "price": "$109.99",
       "isInSale": false,
       "discountPercentage": 20,
-      "features": "Species: Euphorbia pulcherrima. Mature Size: 3–10 ft. tall, 3–7 ft. wide. Blooming Season: Winter. Pot Size: Available in various pot sizes to suit your preference and needs. Shipping: Our Echinocereus Cacti are carefully packaged and shipped with the utmost care to ensure they arrive in excellent condition.",
+      "features": ["Species: Euphorbia pulcherrima.", "Mature Size: 3–10 ft. tall, 3–7 ft. wide.", "Blooming Season: Winter. Pot Size: Available in various pot sizes to suit your preference and needs.", "Shipping: Our Echinocereus Cacti are carefully packaged and shipped with the utmost care to ensure they arrive in excellent condition."],
       "description": "Poinsettia is a perennial shrub native to Mexico. It is most often grown as an annual for winter holiday display, but it can also be grown as a perennial garden shrub in regions where winter temperatures remain above 50°F. Also known as Mexican flameleaf, these plants are forced into bloom in time for the holiday season, and they require specific care to look their best into the new year and beyond.",
-      "imgUrl": "assets/EuphorbiaPulcherrima.svg"
+      "imgUrl": "assets/euphorbiaPulcherrima.svg"
     },
     {
       "id": 6,
@@ -86,9 +86,9 @@
       "price": "$49.99",
       "isInSale": false,
       "discountPercentage": 20,
-      "features": "Species: Philodendron spiritus-sancti. Mature Size: 65 ft. long, 6 ft. wide. Blooming Season: Spring, summer. Pot Size: Available in various pot sizes to suit your preference and needs. Shipping: Our Echinocereus Cacti are carefully packaged and shipped with the utmost care to ensure they arrive in excellent condition.",
+      "features": ["Species: Philodendron spiritus-sancti.", "Mature Size: 65 ft. long, 6 ft. wide.", "Blooming Season: Spring, summer.", "Pot Size: Available in various pot sizes to suit your preference and needs.", "Shipping: Our Echinocereus Cacti are carefully packaged and shipped with the utmost care to ensure they arrive in excellent condition."],
       "description": "Philodendron spiritus-sancti., also commonly known as Santa Leopoldina, is a rare philodendron native to a small region in Brazil, called Espirito Santo. This unique plant is also called the holy grail of philodendrons, coveted for its elongated, sword-like leaves that can reach up to 2 feet long.",
-      "imgUrl": "assets/PhilodendronSpiritus.svg"
+      "imgUrl": "assets/philodendronSpiritus.svg"
     },
     {
       "id": 7,
@@ -101,9 +101,9 @@
       "price": "$79.99",
       "isInSale": false,
       "discountPercentage": 20,
-      "features": "Species: Ixora Spp. Mature Size: 10-15 ft. tall, 4-10 ft wide. Blooming Season: Spring, Summer, Fall, Winter. Pot Size: Available in various pot sizes to suit your preference and needs. Shipping: Our Echinocereus Cacti are carefully packaged and shipped with the utmost care to ensure they arrive in excellent condition.",
+      "features": ["Species: Ixora Spp.", "Mature Size: 10-15 ft. tall, 4-10 ft wide.", "Blooming Season: Spring, Summer, Fall, Winter.", "Post Size: Available in various pot sizes to suit your preference and needs.", "Shipping: Our Echinocereus Cacti are carefully packaged and shipped with the utmost care to ensure they arrive in excellent condition."],
       "description": "Ixora spp. is a genus of small tropical flowering shrubs with large clusters of four-petaled flowers. Ixora grows best in tropical conditions outdoors and in somewhat humid spaces indoors. Ixora requires full sun, and moist, acidic soil, and thrives in temperatures above 60 degrees Fahrenheit.",
-      "imgUrl": "assets/IxoraSpp.svg"
+      "imgUrl": "assets/ixoraSpp.svg"
     },
     {
       "id": 8,
@@ -116,9 +116,9 @@
       "price": "$99.99",
       "isInSale": false,
       "discountPercentage": 10,
-      "features": "Species: Eucalyptus Cinerea. Mature Size: 6–53 ft. tall, 2–15 ft. wide. Blooming Season: Summer. Pot Size: Available in various pot sizes to suit your preference and needs. Shipping: Our Echinocereus Cacti are carefully packaged and shipped with the utmost care to ensure they arrive in excellent condition.",
+      "features": ["Species: Eucalyptus Cinerea.", "Mature Size: 6–53 ft. tall, 2–15 ft. wide.", "Blooming Season: Summer.", "Pot Size: Available in various pot sizes to suit your preference and needs.", "Shipping: Our Echinocereus Cacti are carefully packaged and shipped with the utmost care to ensure they arrive in excellent condition."],
       "description": "Argyle apple (Eucalyptus cinerea) is an evergreen tree that will grow from 6 to 15 m tall and 6 to 12 m wide. Its aromatic foliage is silver-gray and resembles large coins. It blooms profusely in spring with clusters of white flowers. It will be the focal point of any garden with its beautiful bark and leaves. Thrives in full sun with dry to medium moist, well-drained soil. It is drought tolerant. Toxic to Pets",
-      "imgUrl": "assets/EucalyptusCinerea.svg"
+      "imgUrl": "assets/eucalyptusCinerea.svg"
     },
     {
       "id": 9,
@@ -131,9 +131,9 @@
       "price": "$107.99",
       "isInSale": false,
       "discountPercentage": 20,
-      "features": "Species: Rhaphidophora Tetrasperma. Mature Size: 6-8 ft. tall (indoors), 15-20 ft. tall (outdoors). Blooming Season: Spring, Summer. Pot Size: Available in various pot sizes to suit your preference and needs. Shipping: Our Echinocereus Cacti are carefully packaged and shipped with the utmost care to ensure they arrive in excellent condition.",
+      "features": ["Species: Rhaphidophora Tetrasperma.", "Mature Size: 6-8 ft. tall (indoors), 15-20 ft. tall (outdoors).", "Blooming Season: Spring, Summer.", "Pot Size: Available in various pot sizes to suit your preference and needs.", "Shipping: Our Echinocereus Cacti are carefully packaged and shipped with the utmost care to ensure they arrive in excellent condition."],
       "description": "Rhaphidophora Tetrasperma, also commonly known as Mini Monstera, is a tropical plant known for its climbing nature. Mini Monstera grows best in indoor conditions and requires partial sunlight, acidic or neutral soil, and temperatures between 65 and 80 degrees. Mini monstera can be propagated easily from clippings and is known for its ability to climb, making it a gorgeous cascading addition to bookcases and more.",
-      "imgUrl": "assets/RhaphidophoraTetrasperma.svg"
+      "imgUrl": "assets/rhaphidophoraTetrasperma.svg"
     },
     {
       "id": 10,
@@ -146,9 +146,9 @@
       "price": "$139.99",
       "isInSale": true,
       "discountPercentage": 20,
-      "features": "Species: Adromischus Cristatus. Mature Size: 6 in. tall, 3 in. wide. Blooming Season: Spring. Pot Size: Available in various pot sizes to suit your preference and needs. Shipping: Our Echinocereus Cacti are carefully packaged and shipped with the utmost care to ensure they arrive in excellent condition.",
+      "features": ["Species: Adromischus Cristatus.", "Mature Size: 6 in. tall, 3 in. wide.", "Blooming Season: Spring.", "Pot Size: Available in various pot sizes to suit your preference and needs.", "Shipping: Our Echinocereus Cacti are carefully packaged and shipped with the utmost care to ensure they arrive in excellent condition."],
       "description": "Crinkle leaf plants (Adromischus cristatus) are easygoing, unique-looking succulents that make excellent additions to your home or garden. The crinkle lead plant is a small and slow grower characterized by its fleshy, triangular, gray-green leaves that grow upward out of a central base and are crinkled at the top. The leaves of the crinkle leaf plant are covered in tiny hairs, giving them a fuzzy appearance. The succulent is best planted in the spring, but if grown indoors, it can be planted in any season.",
-      "imgUrl": "assets/AdromischusCristatus.svg"
+      "imgUrl": "assets/adromischusCristatus.svg"
     },
     {
       "id": 11,
@@ -161,9 +161,9 @@
       "price": "$139.99",
       "isInSale": true,
       "discountPercentage": 20,
-      "features": "Species: Adromischus Cristatus. Mature Size: 6 in. tall, 3 in. wide. Blooming Season: Spring. Pot Size: Available in various pot sizes to suit your preference and needs. Shipping: Our Echinocereus Cacti are carefully packaged and shipped with the utmost care to ensure they arrive in excellent condition.",
+      "features": ["Species: Adromischus Cristatus.", "Mature Size: 6 in. tall, 3 in. wide.", "Blooming Season: Spring.", "Pot Size: Available in various pot sizes to suit your preference and needs.", "Shipping: Our Echinocereus Cacti are carefully packaged and shipped with the utmost care to ensure they arrive in excellent condition."],
       "description": "Crinkle leaf plants (Adromischus cristatus) are easygoing, unique-looking succulents that make excellent additions to your home or garden. The crinkle lead plant is a small and slow grower characterized by its fleshy, triangular, gray-green leaves that grow upward out of a central base and are crinkled at the top. The leaves of the crinkle leaf plant are covered in tiny hairs, giving them a fuzzy appearance. The succulent is best planted in the spring, but if grown indoors, it can be planted in any season.",
-      "imgUrl": "assets/AdromischusCristatus.svg"
+      "imgUrl": "assets/adromischusCristatus.svg"
     },
     {
       "id": 12,
@@ -176,9 +176,9 @@
       "price": "$139.99",
       "isInSale": true,
       "discountPercentage": 20,
-      "features": "Species: Adromischus Cristatus. Mature Size: 6 in. tall, 3 in. wide. Blooming Season: Spring. Pot Size: Available in various pot sizes to suit your preference and needs. Shipping: Our Echinocereus Cacti are carefully packaged and shipped with the utmost care to ensure they arrive in excellent condition.",
+      "features": ["Species: Adromischus Cristatus.", "Mature Size: 6 in. tall, 3 in. wide.", "Blooming Season: Spring. Pot Size: Available in various pot sizes to suit your preference and needs.", "Shipping: Our Echinocereus Cacti are carefully packaged and shipped with the utmost care to ensure they arrive in excellent condition."],
       "description": "Crinkle leaf plants (Adromischus cristatus) are easygoing, unique-looking succulents that make excellent additions to your home or garden. The crinkle lead plant is a small and slow grower characterized by its fleshy, triangular, gray-green leaves that grow upward out of a central base and are crinkled at the top. The leaves of the crinkle leaf plant are covered in tiny hairs, giving them a fuzzy appearance. The succulent is best planted in the spring, but if grown indoors, it can be planted in any season.",
-      "imgUrl": "assets/AdromischusCristatus.svg"
+      "imgUrl": "assets/adromischusCristatus.svg"
     },
     {
       "name": "qweqw",
@@ -189,10 +189,10 @@
         "outdoor",
         "qwe"
       ],
-      "features": "qwe",
+      "features": ["qwe"],
       "description": "qwe",
       "isInSale": true,
-      "imgUrl": "assets/EchinocereusCactus.svg",
+      "imgUrl": "assets/echinocereusCactus.svg",
       "id": 13
     }
   ],
@@ -211,7 +211,7 @@
       "idade": "31 years old",
       "cidade": "Live in São José-SC",
       "aboutMe": "Escrevo mais daqui a pouco",
-      "imgUrl": "assets/EucalyptusCinerea.svg"
+      "imgUrl": "assets/eucalyptusCinerea.svg"
     },
     {
       "id": 3,
@@ -219,7 +219,7 @@
       "idade": "39 years old",
       "cidade": "Live in Recife-PE",
       "aboutMe": "Escrevo mais daqui a pouco",
-      "imgUrl": "assets/vivian.svg"
+      "imgUrl": "assets/Vivian.svg"
     },
     {
       "id": 4,
@@ -227,7 +227,7 @@
       "idade": "31 years old",
       "cidade": "Live in Santa Vitória do Palmar-RS",
       "aboutMe": "I like music, mostly rap, like psychology subjects too, and love cars, or everything that burns gas to be truthy.",
-      "imgUrl": "assets/william.svg"
+      "imgUrl": "assets/William.svg"
     }
   ]
 }
