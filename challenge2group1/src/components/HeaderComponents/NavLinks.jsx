@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 const NavLinks = () => {
   return (
-    <ul className="flex flex-col md:flex-row font-raleway gap-2 md:gap-6 text-lunar text-xs -mb-3">
+    <ul className="flex flex-col md:flex-row font-raleway gap-2 md:gap-6 text-lunar text-base -mb-3">
       <li >
         <NavLink
           to="/"

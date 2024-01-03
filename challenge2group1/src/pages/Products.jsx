@@ -15,5 +15,9 @@ export default function Product() {
 
 export function loader({ params }) {
   const id = params.id;
-  return fetch("http://localhost:3000/plants/" + id);
+  const resp = fetch("http://localhost:3000/plants/" + id);
+  if (resp.status === 404) {
+    throw new Response("Not Found", { status: 404 });
+  }
+  return resp;
 }

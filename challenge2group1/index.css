@@ -24,11 +24,11 @@
   .errormessage {
     @apply text-errorred font-light text-base -mb-4;
   }
-  .pstyle {
-    @apply font-raleway text-textgray text-base;
+  .p-style {
+    @apply font-raleway text-textgray text-[16px] mx-5;
   }
-  .headerstyle {
-    @apply text-lunar text-[64px] font-bold font-garamond;
+  .header-style {
+    @apply text-lunar text-[32px] md:text-[64px] font-bold font-garamond text-center;
   }
   .header-card {
     @apply font-lato font-bold text-[24px] text-lunar text-left ml-6 mt-2;
@@ -40,10 +40,12 @@
     @apply font-raleway text-[16px] text-left text-linegray line-through	 ml-6 mt-1;
   }
   .label-card {
-    @apply font-raleway text-[16px] text-left text-abacate border-solid	border-abacate bg-gelo rounded-[20px] ml-6 mt-1 py-2 px-3 w-fit;
+    @apply font-raleway text-[16px] text-left text-abacate border-[1px] border-solid	border-abacate bg-gelo rounded-[20px] ml-6 mt-1 py-2 px-3 w-fit;
   }
 
   .div-style {
     @apply flex flex-col basis-full items-center;
   }
+
+
 }

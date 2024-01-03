@@ -1,36 +1,33 @@
-import {useState, useEffect} from "react"
-import {fetchDevData } from "../data/https"
-import CardAboutUs from "../components/AboutUsComponent/CardAboutUs"
+import { useEffect, useState } from "react";
+import CardAboutUs from "../components/AboutUsComponent/CardAboutUs";
+import { fetchDevData } from "../data/https";
 
-export default function About(){
-  const [devs, setDevs] = useState([])
-  const [dataNotFetched, setdataNotFetched] = useState(false)
-  const [error, setError] = useState([])
-  
+export default function About() {
+  const [devs, setDevs] = useState([]);
+  const [dataNotFetched, setdataNotFetched] = useState(false);
+
   useEffect(() => {
-    async function fetchDevs(){
-      setdataNotFetched(true)
+    async function fetchDevs() {
+      setdataNotFetched(true);
       try {
-        const dev = await fetchDevData()
-        setDevs(dev)
-        console.log(dev)
+        const dev = await fetchDevData();
+        setDevs(dev);
+        console.log(dev);
       } catch (error) {
-        setError({errorMessage: error.message
-        })
+        setError({ errorMessage: error.message });
       }
-      setdataNotFetched(false)
+      setdataNotFetched(false);
     }
-    fetchDevs()
-  }, [])
-
+    fetchDevs();
+  }, []);
 
   return (
     <section>
       {dataNotFetched ? (<p>Fetching data...</p>) : (
         devs.map((dev) => {
-          return <CardAboutUs dev={dev}/>
+          return <CardAboutUs dev={dev} />;
         })
       )}
     </section>
-  )
+  );
 }
