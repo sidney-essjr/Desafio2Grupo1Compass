@@ -13,7 +13,7 @@ const Header = () => {
     setIsShown(!isShown);
   };
   return (
-    <div className="sticky flex top-0 pt-2 justify-between bg-gelo items-center w-screen z-10 flex-wrap">
+    <div className="sticky flex top-0 pt-2 justify-between bg-gelo items-center w-screen z-10 flex-wrap pb-4">
       <PlantIcon />
       <div >
         <div className="hidden md:flex">

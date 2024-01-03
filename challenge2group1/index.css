@@ -32,6 +32,6 @@
   }
 
   .div-style {
-    @apply flex flex-col basis-full items-center mb-4;
+    @apply flex flex-col basis-full items-center;
   }
 }
