@@ -9,16 +9,21 @@ export default function Card({ plant }) {
   ).toLocaleString("en-US", { style: "currency", currency: "USD" });
 
   return (
-    <div id={plant.id}>
+    <div className=" shadow bg-white" id={plant.id}>
       <Link to={`${plant.id}`}>
         <button type="button">
           <img src={`src/${plant.imgUrl}`} alt={plant.name} />
           <div>
-            <h1>{plant.name}</h1>
-            <p>{discountPrice}</p>
-            {plant.isInSale && <p>{plant.price}</p>}
+            <h1 className=" header-card">{plant.name}</h1>
+            <div className="flex mb-2">
+              {" "}
+              <p className="price-card">{discountPrice}</p>
+              {plant.isInSale && (
+                <p className="discount-card">{plant.price}</p>
+              )}{" "}
+            </div>
             {plant.label.map((label) => {
-              return <p>{label}</p>;
+              return <p className="label-card">{label}</p>;
             })}
           </div>
         </button>
