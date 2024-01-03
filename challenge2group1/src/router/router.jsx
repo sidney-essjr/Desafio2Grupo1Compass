@@ -8,6 +8,7 @@ import RootLayout from "../pages/RootLayout";
 import Signin from "../pages/Signin";
 import UserRegister from "../pages/UserRegister";
 import Error from "../components/Error";
+import Loading from "../components/Loading";
 
 const Home = lazy(() => import("../pages/Home"));
 const Products = lazy(() => import("../pages/Products"));
@@ -21,7 +22,7 @@ const router = createBrowserRouter([
         index: true,
         errorElement: <Error />,
         element: (
-          <Suspense fallback={<p>Loading...</p>}>
+          <Suspense fallback={<Loading />}>
             <Home />
           </Suspense>
         ),
@@ -32,7 +33,7 @@ const router = createBrowserRouter([
         path: "products",
         errorElement: <Error />,
         element: (
-          <Suspense fallback={<p>Loading...</p>}>
+          <Suspense fallback={<Loading />}>
             <Products />
           </Suspense>
         ),
@@ -43,7 +44,7 @@ const router = createBrowserRouter([
         path: "products/:id",
         errorElement: <Error />,
         element: (
-          <Suspense fallback={<p>Loading...</p>}>
+          <Suspense fallback={<Loading />}>
             <ProductDetail />
           </Suspense>
         ),
@@ -54,7 +55,7 @@ const router = createBrowserRouter([
         path: ":id",
         errorElement: <Error />,
         element: (
-          <Suspense fallback={<p>Loading...</p>}>
+          <Suspense fallback={<Loading />}>
             <ProductDetail />
           </Suspense>
         ),
