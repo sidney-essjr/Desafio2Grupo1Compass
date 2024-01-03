@@ -30,8 +30,8 @@ export default function SliderCards({ onSale, plants }) {
   }
 
   return (
-    <div className="flex bg-white h-[560px] ">
-      <div>
+    <div className="flex pb-10">
+      <div className="">
         <Splide
           aria-label="Testimonials"
           options={{ fixedWidth: "300px", isNavigation: true }}
@@ -41,7 +41,7 @@ export default function SliderCards({ onSale, plants }) {
           ) : (
             availablePlants.map((plant) => {
               return (
-                <SplideSlide id={plant.id}>
+                <SplideSlide  id={plant.id}>
                   <Card key={plant.id} plant={plant} />
                 </SplideSlide>
               );

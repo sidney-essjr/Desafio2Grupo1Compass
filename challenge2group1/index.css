@@ -30,6 +30,18 @@
   .headerstyle {
     @apply text-lunar text-[64px] font-bold font-garamond;
   }
+  .header-card {
+    @apply font-lato font-bold text-[24px] text-lunar text-left ml-6 mt-2;
+  }
+  .price-card {
+    @apply font-raleway text-[16px] text-left text-lunar ml-6 mt-1;
+  }
+  .discount-card {
+    @apply font-raleway text-[16px] text-left text-linegray line-through	 ml-6 mt-1;
+  }
+  .label-card {
+    @apply font-raleway text-[16px] text-left text-abacate border-solid	border-abacate bg-gelo rounded-[20px] ml-6 mt-1 py-2 px-3 w-fit;
+  }
 
   .div-style {
     @apply flex flex-col basis-full items-center;
