@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function Product({ plant }) {
     return (
       <li className="px-2 py-2">
-        <div className="max-w-sm rounded overflow-hidden shadow-lg">
+        <div className="max-w-sm rounded-[7px] overflow-hidden shadow-lg">
           <img className="w-full" src={`src/${plant.imgUrl}`} alt=" " />
           <div className="px-6 py-4">
             <div className="text-lunar text-[27px] font-bold font-garamond">
