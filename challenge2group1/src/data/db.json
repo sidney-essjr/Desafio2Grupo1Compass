@@ -11,7 +11,7 @@
       "price": "$139.99",
       "isInSale": false,
       "discountPercentage": 20,
-      "features": "Species: Echinocereus spp. Mature Size: Up to 18 in. tall, 3 in. wide. Blooming Season: Spring. Pot Size: Available in various pot sizes to suit your preference and needs. Shipping: Our Echinocereus Cacti are carefully packaged and shipped with the utmost care to ensure they arrive in excellent condition.",
+      "features": ["Species: Echinocereus spp.", "Mature Size: Up to 18 in. tall, 3 in. wide.", "Blooming Season: Spring.", "Pot Size: Available in various pot sizes to suit your preference and needs.", "Shipping: Our Echinocereus Cacti are carefully packaged and shipped with the utmost care to ensure they arrive in excellent condition."],
       "description": "Ladyfinger cactus (*Echinocereus pentalophus*) is also known as Alice, Devil's Fingers, and Dog Tail. It needs bright sunlight, light fertilizer, and is prone to root rot. The root system is shallow and weak. Aphids and mealybugs are also a danger. Avoiding wet soil can help with success with a ladyfinger cactus.",
       "imgUrl": "assets/EchinocereusCactus.svg"
     },
