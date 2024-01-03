@@ -1,10 +1,13 @@
+import { useLoaderData } from "react-router-dom";
+import HomeButton from "../components/HomeComponents/HomeButton";
 import HomeCard from "../components/HomeComponents/HomeCard";
 import HomeContainer from "../components/HomeComponents/HomeContainer";
-import HomeButton from "../components/HomeComponents/HomeButton";
 import HomeItemContainer from "../components/HomeComponents/HomeItemContainer";
 import SliderCards from "../components/SliderCards";
 
 export default function Home() {
+  const plants = useLoaderData();
+
   return (
     <main>
       <HomeContainer>
@@ -102,7 +105,11 @@ export default function Home() {
           </div>
           <div className="w-1/3 flex-col mx-20">
             <HomeItemContainer>
-              <img src="../../public/section-2-image-3.svg" className="w-full" alt="" />
+              <img
+                src="../../public/section-2-image-3.svg"
+                className="w-full"
+                alt=""
+              />
               <p className="pstyle flex-wrap">
                 Our website offers a wide array of stunning plants, ranging from
                 vibrant flowers to lush indoor foliage, allowing you to create
@@ -129,16 +136,20 @@ export default function Home() {
             This Weeks Most Popular{" "}
             <span className="text-abacate">And Best Selling</span>
           </h2>
-          <SliderCards onSale={false} />
+          <SliderCards onSale={false} plants={plants} />
         </HomeContainer>
 
         <HomeContainer>
           <h2 className="headerstyle text-center mt-20 mb-3">
             <span className="text-abacate">Plants in </span>Sale
           </h2>
-          <SliderCards onSale={true} />
+          <SliderCards onSale={true} plants={plants} />
         </HomeContainer>
       </div>
     </main>
   );
+}
+
+export function loader() {
+  return fetch("http://localhost:3000/plants");
 }

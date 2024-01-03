@@ -10,7 +10,7 @@
 
 @layer components {
   .inputstyle {
-    @apply border rounded w-full mt-2 mb-3  py-2 px-3 text-linegray bg-gelo;
+    @apply w-full mt-2 mb-3  py-2 px-3 text-linegray bg-gelo  rounded-[4px];
   }
   .labelstyle {
     @apply font-inter font-medium text-base;
@@ -30,8 +30,20 @@
   .headerstyle {
     @apply text-lunar text-[64px] font-bold font-garamond;
   }
+  .header-card {
+    @apply font-lato font-bold text-[24px] text-lunar text-left ml-6 mt-2;
+  }
+  .price-card {
+    @apply font-raleway text-[16px] text-left text-lunar ml-6 mt-1;
+  }
+  .discount-card {
+    @apply font-raleway text-[16px] text-left text-linegray line-through	 ml-6 mt-1;
+  }
+  .label-card {
+    @apply font-raleway text-[16px] text-left text-abacate border-solid	border-abacate bg-gelo rounded-[20px] ml-6 mt-1 py-2 px-3 w-fit;
+  }
 
-  .responsive-style {
-    @apply ml-5 md:ml-20;
+  .div-style {
+    @apply flex flex-col basis-full items-center;
   }
 }

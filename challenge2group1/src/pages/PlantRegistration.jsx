@@ -71,15 +71,19 @@ export default function PlantRegistration() {
   }
 
   function setLocalData() {
-    const data = JSON.parse(localStorage.getItem("form"));
-    setName(data.name);
-    setSubtitle(data.subtitle);
-    setType(data.type);
-    setValue("price", data.price);
-    setValue("discountPercentage", data.discountPercentage);
-    setValue("label", data.label);
-    setValue("features", data.features);
-    setValue("description", data.description);
+    try {
+      const data = JSON.parse(localStorage.getItem("form"));
+      setName(data.name);
+      setSubtitle(data.subtitle);
+      setType(data.type);
+      setValue("price", data.price);
+      setValue("discountPercentage", data.discountPercentage);
+      setValue("label", data.label);
+      setValue("features", data.features);
+      setValue("description", data.description);
+    } catch (error) {
+      return "No data stored";
+    }
   }
 
   function cleanHistory() {
@@ -108,9 +112,9 @@ export default function PlantRegistration() {
   }
 
   return (
-    <div className="flex 2xl:justify-center gap-5 bg-gelo overflow-hidden	w-screen">
+    <div className="flex justify-between gap-5 bg-gelo overflow-hidden	">
       <form
-        className=" mx-10 mt-5 md:mx-20 md:mt-10  "
+        className="flex-col mx-10 mt-5 md:mx-20 md:mt-5  grow "
         onSubmit={handleSubmit(hadleChanges)}
       >
         <fieldset>
@@ -128,7 +132,6 @@ export default function PlantRegistration() {
               <label className="labelstyle" htmlFor="name">
                 Plant name
               </label>
-              {console.log(errors.name)}
               <p className="mb-2">
                 {errors.name && (
                   <span className="errormessage">{errors.name.message}</span>
@@ -141,9 +144,9 @@ export default function PlantRegistration() {
               render={({ field }) => (
                 <input
                   {...field}
-                  className={`inputstyle ${
-                    !!errors.name?.message ? "input-error-style" : null
-                  }`}
+                  className={`inputstyle
+
+                  ${!!errors.name?.message ? "input-error-style" : null}`}
                   id="name"
                   {...register("name")}
                   type="text"
@@ -269,7 +272,6 @@ export default function PlantRegistration() {
                 {...register("label")}
                 type="radio"
                 value="indoor"
-                checked
               />
               <label className="labelstyle" htmlFor="indoor">
                 Indoor
@@ -340,16 +342,13 @@ export default function PlantRegistration() {
         </fieldset>
 
         <button
-          className="flex mx-auto justify-center bg-lunar text-white  py-3 mb-20 mt-5 md:px-28 px-14 lg:px-56"
+          className="flex mx-auto justify-center bg-lunar text-white  py-3 mb-10 md:mb-20 mt-5 md:px-28 px-14 lg:px-56"
           type="submit"
         >
           Register
         </button>
       </form>
-      <img
-        className="hidden md:flex grayscale h-full mt-24"
-        src="homePlant.svg"
-      />
+      <img className="hidden md:flex grayscale  md:shrink" src="homePlant.svg" />
     </div>
   );
 }

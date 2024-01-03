@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "server": "json-server --watch src/data/db.json"
+    "server": "json-server --watch src/data/db.json",
+    "style": "npx tailwindcss -i ./index.css -o ./dist/output.css --watch"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.3",
