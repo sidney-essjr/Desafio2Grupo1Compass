@@ -12,22 +12,18 @@ export default function Home() {
     <main>
       <HomeContainer>
         <HomeItemContainer>
-          <div className="flex w-screen justify-center pl-20 pt-20  bg-gelo">
-            <div className="w-1/2 shrink ml-20">
+          <div className="flex w-screen justify-center md:px-20 px-5 pt-5  md:pt-20  bg-gelo">
+            <div className="">
               <div className="inline-flex justify-start align-bottom">
-                <hr
-                  className="text-errorred"
-                  height="3px"
-                  width="32px"
-                  aling="left"
-                />{" "}
+                <img src="rectangle.svg" alt="a" />
+
                 <p className=" font-pacifico ml-2">love for nature</p>{" "}
               </div>
               <div className="w-full">
-                <h1 className="headerstyle">
+                <h1 className="header-style">
                   Discover Your <span className="text-abacate">Green</span> Side
                 </h1>
-                <p className="pstyle">
+                <p className="p-style">
                   We are your one-stop destination for all things green and
                   growing. Our website offers a wide array of stunning plants,
                   ranging from vibrant flowers to lush indoor foliage, allowing
@@ -36,14 +32,14 @@ export default function Home() {
                 <HomeButton text="Shop now" />
               </div>
               <img
-                className="grayscale  -mt-44 -ml-20 -mb-48 overflow-hidden"
+                className="grayscale  -mt-44 -ml-20 -mb-48 overflow-hidden  "
                 src="/section-1-left-image-plant.svg"
                 alt=""
               />
             </div>
 
             <img
-              className="grayscale -mt-24 shrink h-full overflow-hidden"
+              className="grayscale -mt-24 shrink h-full overflow-hidden hidden md:flex"
               src="/section-1-right-image-plant.svg"
               alt=""
             />
@@ -52,13 +48,13 @@ export default function Home() {
       </HomeContainer>
 
       <HomeContainer>
-        <HomeItemContainer className="w-[400px]">
-          <div className="w-[998px] flex-col mx-auto">
-            <h2 className="headerstyle text-center mt-20 mb-3">
+        <HomeItemContainer >
+          <div className="w-[100%] flex-col mx-auto">
+            <h2 className="header-style text-center mt-20 mb-3">
               Steps To Take Care Of Your{" "}
               <span className="text-abacate">Plants</span>
             </h2>
-            <p className="pstyle">
+            <p className="p-style">
               By following these three steps - proper watering, appropriate
               sunlight, and providing essential nutrients - you'll be well on
               your way to maintaining healthy and thriving plants.
@@ -66,7 +62,7 @@ export default function Home() {
           </div>
         </HomeItemContainer>
         <HomeItemContainer>
-          <div className="flex m-20 gap-20">
+          <div className="flex-col md:flex md:m-20 mx-5 mt-10 gap-20">
             <HomeCard
               image="/section-2-water-image.svg"
               imageDescription="water-image"
@@ -110,7 +106,7 @@ export default function Home() {
                 className="w-full"
                 alt=""
               />
-              <p className="pstyle flex-wrap">
+              <p className="p-style flex-wrap">
                 Our website offers a wide array of stunning plants, ranging from
                 vibrant flowers to lush indoor foliage, allowing you to create
                 your very own green oasis. In addition to our extensive plant
@@ -132,7 +128,7 @@ export default function Home() {
       </HomeContainer>
       <div className=" w-screen justify-center pl-20  bg-gelo">
         <HomeContainer>
-          <h2 className="headerstyle text-center pt-12 mb-3">
+          <h2 className="header-style text-center pt-12 mb-3">
             This Weeks Most Popular{" "}
             <span className="text-abacate">And Best Selling</span>
           </h2>
@@ -140,7 +136,7 @@ export default function Home() {
         </HomeContainer>
 
         <HomeContainer>
-          <h2 className="headerstyle text-center mt-20 mb-3">
+          <h2 className="header-style text-center mt-20 mb-3">
             <span className="text-abacate">Plants in </span>Sale
           </h2>
           <SliderCards onSale={true} plants={plants} />
