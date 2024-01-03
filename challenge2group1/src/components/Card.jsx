@@ -22,9 +22,7 @@ export default function Card({ plant }) {
                 <p className="discount-card">{plant.price}</p>
               )}{" "}
             </div>
-            {plant.label.map((label) => {
-              return <p className="label-card">{label}</p>;
-            })}
+            <p className="label-card">{plant.label[0]}</p>;
           </div>
         </button>
       </Link>

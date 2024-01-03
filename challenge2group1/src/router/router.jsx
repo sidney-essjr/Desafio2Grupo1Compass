@@ -1,14 +1,16 @@
+import { Suspense, lazy } from "react";
 import { createBrowserRouter } from "react-router-dom";
 import { ProductDetail } from "../components/ProductComponents/ProductDetail";
 import About from "../pages/About";
-import Home from "../pages/Home";
 import Login from "../pages/Login";
 import PlantRegistration from "../pages/PlantRegistration";
-import Products from "../pages/Products";
 import RootLayout from "../pages/RootLayout";
 import Signin from "../pages/Signin";
 import UserRegister from "../pages/UserRegister";
-import { Suspense } from "react";
+import Error from "../components/Error";
+
+const Home = lazy(() => import("../pages/Home"));
+const Products = lazy(() => import("../pages/Products"));
 
 const router = createBrowserRouter([
   {
@@ -17,6 +19,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
+        errorElement: <Error />,
         element: (
           <Suspense fallback={<p>Loading...</p>}>
             <Home />
@@ -27,6 +30,7 @@ const router = createBrowserRouter([
       { path: "plantRegistration", element: <PlantRegistration /> },
       {
         path: "products",
+        errorElement: <Error />,
         element: (
           <Suspense fallback={<p>Loading...</p>}>
             <Products />
@@ -37,6 +41,7 @@ const router = createBrowserRouter([
       { path: "about", element: <About /> },
       {
         path: "products/:id",
+        // errorElement: <Error />,
         element: (
           <Suspense fallback={<p>Loading...</p>}>
             <ProductDetail />
@@ -47,6 +52,7 @@ const router = createBrowserRouter([
       },
       {
         path: ":id",
+        // errorElement: <Error />,
         element: (
           <Suspense fallback={<p>Loading...</p>}>
             <ProductDetail />
