@@ -114,7 +114,7 @@ export default function PlantRegistration() {
   return (
     <div className="flex justify-between gap-5 bg-gelo overflow-hidden	">
       <form
-        className="flex-col mx-10 mt-5 md:mx-20 md:mt-10 "
+        className="flex-col mx-10 mt-5 md:mx-20 md:mt-5  grow "
         onSubmit={handleSubmit(hadleChanges)}
       >
         <fieldset>
@@ -144,9 +144,9 @@ export default function PlantRegistration() {
               render={({ field }) => (
                 <input
                   {...field}
-                  className={`inputstyle ${
-                    !!errors.name?.message ? "input-error-style" : null
-                  }`}
+                  className={`inputstyle
+
+                  ${!!errors.name?.message ? "input-error-style" : null}`}
                   id="name"
                   {...register("name")}
                   type="text"
@@ -348,7 +348,7 @@ export default function PlantRegistration() {
           Register
         </button>
       </form>
-      <img className="hidden md:flex grayscale h-full " src="homePlant.svg" />
+      <img className="hidden md:flex grayscale  md:shrink" src="homePlant.svg" />
     </div>
   );
 }

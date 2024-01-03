@@ -10,7 +10,7 @@
 
 @layer components {
   .inputstyle {
-    @apply w-full mt-2 mb-3  py-2 px-3 text-linegray bg-gelo;
+    @apply w-full mt-2 mb-3  py-2 px-3 text-linegray bg-gelo  rounded-[4px];
   }
   .labelstyle {
     @apply font-inter font-medium text-base;
