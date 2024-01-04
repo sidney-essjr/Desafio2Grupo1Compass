@@ -1,7 +1,6 @@
-export function dynamicPageTitle() {
-  const pathName = window.location.pathname;
-  let title = "";
+export function dynamicPageTitle(pathName) {
   console.log(pathName);
+  let title = "";
 
   switch (pathName) {
     case "/":
@@ -18,6 +17,9 @@ export function dynamicPageTitle() {
       break;
     case "/userRegister":
       title = "User Register";
+      break;
+    case "/userRegister/signin":
+      title = "Sing In";
       break;
     default:
       title = "Plant Peace";

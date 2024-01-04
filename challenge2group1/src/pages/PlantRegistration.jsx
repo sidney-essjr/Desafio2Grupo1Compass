@@ -6,11 +6,13 @@ import {
   containsDiscount,
   createRegistrationFormSchema,
 } from "../form/validation";
+import { dynamicPageTitle } from "../util/util";
 
 const regex = /[0-9!@#$%^&*()_+{}\[\]:;<>,.?~\\/`|\=]/;
 
 export default function PlantRegistration() {
   const initialAssembly = useRef(true);
+  dynamicPageTitle(window.location.pathname);
   const {
     register,
     handleSubmit,

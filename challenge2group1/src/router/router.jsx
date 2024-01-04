@@ -5,7 +5,6 @@ import Loading from "../components/Loading";
 import { ProductDetail } from "../components/ProductComponents/ProductDetail";
 import Home from "../pages/Home";
 import RootLayout from "../pages/RootLayout";
-import { dynamicPageTitle } from "../util/util";
 
 const Products = lazy(() => import("../pages/Products"));
 const PlantRegistration = lazy(() => import("../pages/PlantRegistration"));
@@ -13,8 +12,6 @@ const About = lazy(() => import("../pages/About"));
 const Login = lazy(() => import("../pages/Login"));
 const Signin = lazy(() => import("../pages/Signin"));
 const UserRegister = lazy(() => import("../pages/UserRegister"));
-
-const title = dynamicPageTitle();
 
 const router = createBrowserRouter([
   {
@@ -94,4 +91,5 @@ const router = createBrowserRouter([
     ],
   },
 ]);
+
 export default router;
