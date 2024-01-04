@@ -1,5 +1,7 @@
 import Products from "../components/ProductComponents/Products";
 import { useLoaderData } from "react-router-dom";
+import { queryClient } from "../data/https";
+import { fetchPlant } from "../data/https";
 
 export default function Product() {
   const plants = useLoaderData();
@@ -15,9 +17,8 @@ export default function Product() {
 
 export async function loader({ params }) {
   const id = params.id;
-  const resp = await fetch("http://localhost:3000/plants/" + id);
-  if (resp.status === 404) {
-    throw new Response("Not Found", { status: 404 });
-  }
-  return resp;
+  return queryClient.fetchQuery({
+    queryKey: ["plant"],
+    queryFn: ({ signal }) => fetchPlant({ signal, id }),
+  });
 }
