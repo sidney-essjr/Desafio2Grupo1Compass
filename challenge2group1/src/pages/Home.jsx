@@ -4,8 +4,10 @@ import HomeContainer from "../components/HomeComponents/HomeContainer";
 import HomeItemContainer from "../components/HomeComponents/HomeItemContainer";
 import SliderCards from "../components/SliderCards";
 import { fetchPlants, queryClient } from "../data/https";
+import { dynamicPageTitle } from "../util/util";
 
 export default function Home() {
+  dynamicPageTitle(window.location.pathname);
   return (
     <main>
       <HomeContainer>
@@ -95,12 +97,17 @@ export default function Home() {
             src="section-2-image-2.svg"
             alt=""
           />{" "}
+<<<<<<< HEAD
           <div className="md:w-1/2 flex-col max-w-[440px] grow mx-5">
             <img
               src="section-2-image-3.svg"
               className=" w-full mb-1 mt-10 md:mt-0"
               alt=""
             />
+=======
+          <div className="md:w-1/2 flex-col max-w-[440px] grow">
+            <img src="section-2-image-3.svg" className=" w-full mb-1" alt="" />
+>>>>>>> feat/pageTitle
             <p className="p-style m-0 flex-wrap">
               Our website offers a wide array of stunning plants, ranging from
               vibrant flowers to lush indoor foliage, allowing you to create

@@ -1,7 +1,9 @@
-import { Outlet } from "react-router-dom"
-import HeaderLoginSignin from "../components/login-signin-components/HeaderLoginSignin"
+import { Outlet } from "react-router-dom";
+import HeaderLoginSignin from "../components/login-signin-components/HeaderLoginSignin";
+import { dynamicPageTitle } from "../util/util";
 
-export default function UserRegister(){
+export default function UserRegister() {
+  dynamicPageTitle(window.location.pathname);
   return (
     <main >
       <div className="bg-[url(src/assets/register-image.svg)] absolute  bg-cover h-[100%] w-[100%] opacity-25"></div>
