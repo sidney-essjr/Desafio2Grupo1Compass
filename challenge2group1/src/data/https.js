@@ -19,6 +19,23 @@ export async function fetchPlants({ signal }) {
   return plants;
 }
 
+export async function fetchPlant({ signal, id }) {
+  const url = "http://localhost:3000/plants/" + id;
+
+  const response = await fetch(url, { signal: signal });
+
+  if (!response.ok) {
+    const error = new Error("An error occurred while fetching the plants");
+    error.code = response.status;
+    error.info = await response.json();
+    throw error;
+  }
+
+  const plant = await response.json();
+
+  return plant;
+}
+
 export async function fetchDevData() {
   const response = await fetch("http://localhost:3000/devs");
   const devData = response.json();
