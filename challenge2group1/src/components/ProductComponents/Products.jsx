@@ -3,7 +3,7 @@ import Product from "../ProductComponents/Product";
 export default function ListPlants({plants}) {
 
   return (
-    <ul className="flex flex-wrap justify-center">
+    <ul className="flex flex-wrap justify-center bg-gelo">
       <div className="w-full">
         <h1 className="text-lunar text-center text-[64px] font-bold font-garamond ">
           Lista de <span className="text-abacate">Produtos</span></h1>
