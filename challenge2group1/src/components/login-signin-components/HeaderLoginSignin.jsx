@@ -5,9 +5,9 @@ export default function HeaderLoginSignin(){
     <header className="">
       <img className="w-[202px] h-[140px] ml-6 py-4" src="plantPeace.svg" alt="" />
       <nav className="text-lunar flex flex-row py-2 justify-around">
-        <Link to="login">Login</Link>
-        <Link to="signin">Sign in</Link>
-        <Link to="/">Home</Link>
+        <Link className="hover:text-abacate" to="login">Login</Link>
+        <Link className="hover:text-abacate" to="signin">Sign in</Link>
+        <Link className="hover:text-abacate" to="/">Home</Link>
       </nav>
     </header>
   );
