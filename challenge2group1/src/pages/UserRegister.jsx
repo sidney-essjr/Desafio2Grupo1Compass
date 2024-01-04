@@ -3,11 +3,11 @@ import HeaderLoginSignin from "../components/login-signin-components/HeaderLogin
 
 export default function UserRegister(){
   return (
-    <section className="grid place-items-center h-screen text-lunar border-solid border-2 border-sky-500">
-    <section>
-      <HeaderLoginSignin />
-      <Outlet />
+    <section className="grid place-items-center h-screen bg-gelo text-gelo border-solid border-2">
+      <section>
+        <HeaderLoginSignin />
+        <Outlet />
+      </section>
     </section>
-    </section>
-  )
+  );
 }
