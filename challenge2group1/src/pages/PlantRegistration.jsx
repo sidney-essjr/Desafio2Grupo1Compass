@@ -1,5 +1,5 @@
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { Controller, useForm } from "react-hook-form";
 import { updatePlants } from "../data/https";
 import {
@@ -11,9 +11,6 @@ const regex = /[0-9!@#$%^&*()_+{}\[\]:;<>,.?~\\/`|\=]/;
 
 export default function PlantRegistration() {
   const initialAssembly = useRef(true);
-  const [name, setName] = useState("");
-  const [subtitle, setSubtitle] = useState("");
-  const [type, setType] = useState("");
   const {
     register,
     handleSubmit,
@@ -88,27 +85,6 @@ export default function PlantRegistration() {
 
   function cleanHistory() {
     localStorage.removeItem("form");
-  }
-
-  function handleIptName(event) {
-    const value = event.target.value;
-    if (!regex.test(value)) {
-      setName(value);
-    }
-  }
-
-  function handleIptSubtitle(event) {
-    const value = event.target.value;
-    if (!regex.test(value)) {
-      setSubtitle(value);
-    }
-  }
-
-  function handleIptType(event) {
-    const value = event.target.value;
-    if (!regex.test(value)) {
-      setType(value);
-    }
   }
 
   return (
@@ -348,7 +324,10 @@ export default function PlantRegistration() {
           Register
         </button>
       </form>
-      <img className="hidden md:flex grayscale  md:shrink" src="homePlant.svg" />
+      <img
+        className="hidden md:flex grayscale  md:shrink"
+        src="homePlant.svg"
+      />
     </div>
   );
 }

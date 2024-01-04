@@ -4,11 +4,8 @@ import HomeContainer from "../components/HomeComponents/HomeContainer";
 import HomeItemContainer from "../components/HomeComponents/HomeItemContainer";
 import SliderCards from "../components/SliderCards";
 import { fetchPlants, queryClient } from "../data/https";
-import { useLoaderData } from "react-router-dom";
 
 export default function Home() {
-  const plants = useLoaderData();
-
   return (
     <main>
       <HomeContainer>
@@ -132,14 +129,14 @@ export default function Home() {
             This Weeks Most Popular{" "}
             <span className="text-abacate">And Best Selling</span>
           </h2>
-          <SliderCards onSale={false} plants={plants} />
+          <SliderCards onSale={false} />
         </HomeContainer>
 
         <HomeContainer>
           <h2 className="header-style text-center mt-20 mb-3">
             <span className="text-abacate">Plants in </span>Sale
           </h2>
-          <SliderCards onSale={true} plants={plants} />
+          <SliderCards onSale={true} />
         </HomeContainer>
       </div>
     </main>
@@ -149,6 +146,6 @@ export default function Home() {
 export async function loader() {
   return queryClient.fetchQuery({
     queryKey: ["plants"],
-    queryFn: ({ signal }) => fetchPlants({ signal }),
+    queryFn: () => fetchPlants(),
   });
 }
