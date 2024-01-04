@@ -2,10 +2,10 @@ import { QueryClient } from "@tanstack/react-query";
 
 export const queryClient = new QueryClient();
 
-export async function fetchPlants({ signal }) {
+export async function fetchPlants() {
   const url = "http://localhost:3000/plants";
 
-  const response = await fetch(url, { signal: signal });
+  const response = await fetch(url);
 
   if (!response.ok) {
     const error = new Error("An error occurred while fetching the plants");
@@ -19,10 +19,10 @@ export async function fetchPlants({ signal }) {
   return plants;
 }
 
-export async function fetchPlant({ signal, id }) {
+export async function fetchPlant(id) {
   const url = "http://localhost:3000/plants/" + id;
 
-  const response = await fetch(url, { signal: signal });
+  const response = await fetch(url);
 
   if (!response.ok) {
     const error = new Error("An error occurred while fetching the plants");

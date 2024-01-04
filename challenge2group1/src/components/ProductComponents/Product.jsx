@@ -24,7 +24,7 @@ export default function Product({ plant }) {
             </span>
           </div>
           <div className="flex justify-center bg-lunar text-white px-6 py-4">
-            <Link to={`${plant.id}`}>Saiba Mais</Link>
+            <Link to={`${plant.id}`}>Know More</Link>
           </div>
         </div>
       </li>

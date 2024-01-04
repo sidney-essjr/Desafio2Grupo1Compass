@@ -1,5 +1,5 @@
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { Controller, useForm } from "react-hook-form";
 import { updatePlants } from "../data/https";
 import {
@@ -11,9 +11,6 @@ const regex = /[0-9!@#$%^&*()_+{}\[\]:;<>,.?~\\/`|\=]/;
 
 export default function PlantRegistration() {
   const initialAssembly = useRef(true);
-  const [name, setName] = useState("");
-  const [subtitle, setSubtitle] = useState("");
-  const [type, setType] = useState("");
   const {
     register,
     handleSubmit,
@@ -90,27 +87,6 @@ export default function PlantRegistration() {
     localStorage.removeItem("form");
   }
 
-  function handleIptName(event) {
-    const value = event.target.value;
-    if (!regex.test(value)) {
-      setName(value);
-    }
-  }
-
-  function handleIptSubtitle(event) {
-    const value = event.target.value;
-    if (!regex.test(value)) {
-      setSubtitle(value);
-    }
-  }
-
-  function handleIptType(event) {
-    const value = event.target.value;
-    if (!regex.test(value)) {
-      setType(value);
-    }
-  }
-
   return (
     <div className="flex justify-between gap-5 bg-gelo overflow-hidden	">
       <form
@@ -144,15 +120,14 @@ export default function PlantRegistration() {
               render={({ field }) => (
                 <input
                   {...field}
-                  className={`inputstyle
-
-                  ${!!errors.name?.message ? "input-error-style" : null}`}
+                  className={`inputstyle ${
+                    !!errors.name?.message ? "input-error-style" : null
+                  }`}
                   id="name"
                   {...register("name")}
                   type="text"
                   placeholder="Echinocereus Cactus"
                   onChange={(e) => field.onChange(handleIptName(e))}
-                  value={name}
                 />
               )}
             />
@@ -183,7 +158,6 @@ export default function PlantRegistration() {
                   type="text"
                   placeholder="A majestic addition to your plant collection"
                   onChange={(e) => field.onChange(handleIptSubtitle(e))}
-                  value={subtitle}
                 />
               )}
             />
@@ -212,7 +186,6 @@ export default function PlantRegistration() {
                   type="text"
                   placeholder="Cactus"
                   onChange={(e) => field.onChange(handleIptType(e))}
-                  value={type}
                 />
               )}
             />
@@ -348,7 +321,10 @@ export default function PlantRegistration() {
           Register
         </button>
       </form>
-      <img className="hidden md:flex grayscale  md:shrink" src="homePlant.svg" />
+      <img
+        className="hidden md:flex grayscale  md:shrink"
+        src="homePlant.svg"
+      />
     </div>
   );
 }
