@@ -23,10 +23,15 @@ export default {
       },
       screens: {
         md: "767px",
+        sm: "530px"
       },
   
       borderRadius: {
         borderFull: "50%",
+      },
+
+      boxShadow: {
+        strongShadow: '0 25px 16px -13px rgb(0 0 0 / 0.30)',
       },
       
     },
