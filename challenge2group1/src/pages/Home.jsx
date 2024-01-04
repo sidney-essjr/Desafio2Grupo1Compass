@@ -13,14 +13,14 @@ export default function Home() {
     <main>
       <HomeContainer>
         <HomeItemContainer>
-          <div className="flex w-screen justify-center md:px-20 px-5 pt-5  md:pt-20  bg-gelo">
+          <div className="flex w-full  justify-center overflow-hidden pt-5  md:pt-20  bg-gelo">
             <div className="">
               <div className="inline-flex justify-start align-bottom">
                 <img className="ml-6" src="rectangle.svg" alt="a" />
                 <p className=" font-pacifico ml-2">love for nature</p>{" "}
               </div>
               <div className="w-full">
-                <h1 className="header-style">
+                <h1 className="header-style text-left">
                   Discover Your <span className="text-abacate">Green</span> Side
                 </h1>
                 <p className="p-style">
@@ -50,7 +50,7 @@ export default function Home() {
       <HomeContainer>
         <HomeItemContainer>
           <div className="w-[100%] flex-col">
-            <h2 className="header-style text-center w-[100%] mt-20 mb-3">
+            <h2 className="header-style text-center w-[100%] mb-3">
               Steps To Take Care Of Your{" "}
               <span className="text-abacate">Plants</span>
             </h2>
@@ -86,7 +86,7 @@ export default function Home() {
       </HomeContainer>
 
       <HomeContainer>
-        <div className="flex flex-col md:flex-row gap-20 w-fit items-start">
+        <div className="flex flex-col md:flex-row gap-20 w-fit mx-auto  items-start justify-between">
           {/* <div className="flex flex-col h-[857px] md:flex-row gap-5 md:gap-20 md:w-2/3 items-center"> */}
           <img
             className="w-1/4 hidden md:flex max-w-[440px] al"
@@ -122,7 +122,7 @@ export default function Home() {
           </div>
         </div>
       </HomeContainer>
-      <div className=" w-screen justify-center md:pl-10 bg-gelo  ">
+      <div className=" w-screen justify-center bg-gelo  ">
         <HomeContainer>
           <h2 className="header-style text-center md:pt-12 mb-3">
             This Weeks Most Popular{" "}
@@ -132,7 +132,7 @@ export default function Home() {
         </HomeContainer>
 
         <HomeContainer>
-          <h2 className="header-style text-center md:mt-20 mb-3">
+          <h2 className="header-style text-center mb-3">
             <span className="text-abacate">Plants in </span>Sale
           </h2>
           <SliderCards onSale={true} plants={plants} />
