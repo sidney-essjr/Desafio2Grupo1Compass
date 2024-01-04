@@ -54,7 +54,7 @@ export default function Home() {
               Steps To Take Care Of Your{" "}
               <span className="text-abacate">Plants</span>
             </h2>
-            <p className="p-style">
+            <p className="p-style text-center">
               By following these three steps - proper watering, appropriate
               sunlight, and providing essential nutrients - you'll be well on
               your way to maintaining healthy and thriving plants.
