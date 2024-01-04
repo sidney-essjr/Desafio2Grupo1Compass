@@ -1,5 +1,4 @@
 export function dynamicPageTitle(pathName) {
-  console.log(pathName);
   let title = "";
 
   switch (pathName) {

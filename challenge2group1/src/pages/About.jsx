@@ -14,7 +14,6 @@ export default function About() {
       try {
         const dev = await fetchDevData();
         setDevs(dev);
-        console.log(dev);
       } catch (error) {
         setError({ errorMessage: error.message });
       }
