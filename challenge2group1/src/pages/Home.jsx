@@ -1,9 +1,10 @@
-import { useLoaderData } from "react-router-dom";
 import HomeButton from "../components/HomeComponents/HomeButton";
 import HomeCard from "../components/HomeComponents/HomeCard";
 import HomeContainer from "../components/HomeComponents/HomeContainer";
 import HomeItemContainer from "../components/HomeComponents/HomeItemContainer";
 import SliderCards from "../components/SliderCards";
+import { fetchPlants, queryClient } from "../data/https";
+import { useLoaderData } from "react-router-dom";
 
 export default function Home() {
   const plants = useLoaderData();
@@ -146,10 +147,8 @@ export default function Home() {
 }
 
 export async function loader() {
-  const resp = await fetch("http://localhost:3000/plants");
-
-  if (resp.status === 404) {
-    throw new Response("Not Found", { status: 404 });
-  }
-  return resp;
+  return queryClient.fetchQuery({
+    queryKey: ["plants"],
+    queryFn: ({ signal }) => fetchPlants({ signal }),
+  });
 }

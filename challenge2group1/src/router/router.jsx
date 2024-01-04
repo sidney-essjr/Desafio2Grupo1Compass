@@ -1,5 +1,7 @@
 import { Suspense, lazy } from "react";
 import { createBrowserRouter } from "react-router-dom";
+import Error from "../components/Error";
+import Loading from "../components/Loading";
 import { ProductDetail } from "../components/ProductComponents/ProductDetail";
 import About from "../pages/About";
 import Login from "../pages/Login";
@@ -7,8 +9,6 @@ import PlantRegistration from "../pages/PlantRegistration";
 import RootLayout from "../pages/RootLayout";
 import Signin from "../pages/Signin";
 import UserRegister from "../pages/UserRegister";
-import Error from "../components/Error";
-import Loading from "../components/Loading";
 
 const Home = lazy(() => import("../pages/Home"));
 const Products = lazy(() => import("../pages/Products"));
