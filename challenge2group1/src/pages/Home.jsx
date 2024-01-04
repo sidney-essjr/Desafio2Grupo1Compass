@@ -16,7 +16,7 @@ export default function Home() {
           <div className="flex w-screen justify-center md:px-20 px-5 pt-5  md:pt-20  bg-gelo">
             <div className="">
               <div className="inline-flex justify-start align-bottom">
-                <img src="rectangle.svg" alt="a" />
+                <img className="ml-6" src="rectangle.svg" alt="a" />
                 <p className=" font-pacifico ml-2">love for nature</p>{" "}
               </div>
               <div className="w-full">
@@ -49,10 +49,9 @@ export default function Home() {
 
       <HomeContainer>
         <HomeItemContainer>
-          <div className="w-[100%] flex-col ml-5 md:ml-20">
-            <h2 className="header-style text-center mt-20 mb-3">
-              Steps To Take Care Of Your{" "}
-              <span className="text-abacate">Plants</span>
+          <div className="w-[100%] flex-col">
+            <h2 className="header-style text-center w-[100%] mt-20 mb-3">
+              Steps To Take Care Of Your <span className="text-abacate">Plants</span>
             </h2>
             <p className="p-style">
               By following these three steps - proper watering, appropriate
