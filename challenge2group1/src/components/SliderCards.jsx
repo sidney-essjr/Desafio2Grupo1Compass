@@ -20,12 +20,12 @@ export default function SliderCards({ onSale }) {
       } else {
         setAvailablePlants(plants.filter((plant) => plant.isInSale !== true));
       }
+      setIsFetching(false);
     } catch (error) {
       setError({
         message:
           error.message || "Could not fetch plants, please try again later.",
       });
-      setIsFetching(false);
     }
   }, []);
 
