@@ -221,7 +221,8 @@
       "idade": "24 years old",
       "cidade": "Live in Itararé-SP",
       "aboutMe": "Lithuanian descendent, junior developer and systems analysis and development student, I love games, rock and electronic music! :D",
-      "imgUrl": "assets/Mateus.svg"
+      "imgUrl": "assets/Mateus.svg",
+      "social": "https://github.com/DevMateusmac"
     },
     {
       "id": 2,
@@ -229,7 +230,8 @@
       "idade": "31 years old",
       "cidade": "Live in São José-SC",
       "aboutMe": "Calm and peaceful, I like cinema and music. I am currently creating pillars to be a programmer who honors the class and can grow by helping those who need it",
-      "imgUrl": "assets/sidney.svg"
+      "imgUrl": "assets/sidney.svg",
+      "social": "https://www.linkedin.com/in/sidney-souza-junior-5944a1247/"
     },
     {
       "id": 3,
@@ -237,7 +239,8 @@
       "idade": "39 years old",
       "cidade": "Live in Recife-PE",
       "aboutMe": "Communicative since I opened my eyes, I have a dog and a husband, they are both good people. hahaha. I'm curious and live on the move, I'm currently studying ADS and making the transition from fashion to technology.",
-      "imgUrl": "assets/Vivian.svg"
+      "imgUrl": "assets/Vivian.svg",
+      "social": "https://www.linkedin.com/in/vivianolliveira/"
     },
     {
       "id": 4,
@@ -245,7 +248,8 @@
       "idade": "31 years old",
       "cidade": "Live in Santa Vitória do Palmar-RS",
       "aboutMe": "I like music, mostly rap, like psychology subjects too, and love cars, or everything that burns gas to be truthy.",
-      "imgUrl": "assets/William.svg"
+      "imgUrl": "assets/William.svg",
+      "social": "https://www.linkedin.com/in/wpterra/"
     }
   ]
 }
