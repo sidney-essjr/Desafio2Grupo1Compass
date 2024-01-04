@@ -49,10 +49,9 @@ export default function Home() {
 
       <HomeContainer>
         <HomeItemContainer>
-          <div className="w-[100%] flex-col ml-5 md:ml-20">
-            <h2 className="header-style text-center mt-20 mb-3">
-              Steps To Take Care Of Your{" "}
-              <span className="text-abacate">Plants</span>
+          <div className="w-[100%] flex-col">
+            <h2 className="header-style text-center w-[100%] mt-20 mb-3">
+              Steps To Take Care Of Your <span className="text-abacate">Plants</span>
             </h2>
             <p className="p-style">
               By following these three steps - proper watering, appropriate
