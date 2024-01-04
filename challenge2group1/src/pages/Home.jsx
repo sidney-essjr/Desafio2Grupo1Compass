@@ -16,7 +16,7 @@ export default function Home() {
           <div className="flex w-full  justify-center overflow-hidden pt-5  md:pt-20  bg-gelo">
             <div className="">
               <div className="inline-flex justify-start align-bottom">
-                <img className="ml-6" src="rectangle.svg" alt="a" />
+                <img className="ml-1" src="rectangle.svg" alt="a" />
                 <p className=" font-pacifico ml-2">love for nature</p>{" "}
               </div>
               <div className="w-full">
