@@ -19,7 +19,7 @@ export async function fetchPlants() {
   return plants;
 }
 
-export async function fetchPlant(id) {
+export async function fetchPlant({ id }) {
   const url = "http://localhost:3000/plants/" + id;
 
   const response = await fetch(url);
