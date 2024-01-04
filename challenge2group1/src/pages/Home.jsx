@@ -4,17 +4,14 @@ import HomeContainer from "../components/HomeComponents/HomeContainer";
 import HomeItemContainer from "../components/HomeComponents/HomeItemContainer";
 import SliderCards from "../components/SliderCards";
 import { fetchPlants, queryClient } from "../data/https";
-import { useLoaderData } from "react-router-dom";
 
 export default function Home() {
-  const plants = useLoaderData();
-
   return (
     <main>
       <HomeContainer>
         <HomeItemContainer>
-          <div className="flex w-full  justify-center overflow-visible bg-gelo">
-            <div className="overflow-visible z-10 mt-40 ml-20 w-1/2">
+          <div className="flex w-full grow  justify-center bg-gelo ">
+            <div className="md:mt-40 md:ml-20 w-1/2">
               <div className="inline-flex justify-start align-bottom">
                 <img className="ml-1" src="rectangle.svg" alt="a" />
                 <p className=" font-pacifico ml-2">love for nature</p>{" "}
@@ -32,14 +29,14 @@ export default function Home() {
                 <HomeButton text="Shop now" />
               </div>
               <img
-                className="grayscale -ml-20 "
-                src="/section-1-left-image-plant.svg"
+                className="grayscale -ml-[70px] md:mt-12 "
+                src="/leftPlant.svg"
                 alt=""
               />
             </div>
 
             <img
-              className="grayscale hidden md:flex -mt-[400px] -mr-20 "
+              className="grayscale hidden md:flex -mt-20"
               src="/section-1-right-image-plant.svg"
               alt="various plants"
             />
@@ -49,8 +46,8 @@ export default function Home() {
 
       <HomeContainer>
         <HomeItemContainer>
-          <div className="w-[100%] flex-col">
-            <h2 className="header-style text-center w-[100%] mt-20 mb-3">
+          <div className=" flex-col mx-5">
+            <h2 className="header-style text-center w-[100%] mt-5 md:mt-20 mb-3 ">
               Steps To Take Care Of Your{" "}
               <span className="text-abacate">Plants</span>
             </h2>
@@ -86,7 +83,7 @@ export default function Home() {
       </HomeContainer>
 
       <HomeContainer>
-        <div className="flex flex-col md:flex-row gap-20 w-fit mx-auto  items-start justify-between">
+        <div className="flex flex-col md:flex-row gap-20 w-fit mx-auto  items-start mb-10 md:mb-40 justify-between">
           {/* <div className="flex flex-col h-[857px] md:flex-row gap-5 md:gap-20 md:w-2/3 items-center"> */}
           <img
             className="w-1/4 hidden md:flex max-w-[440px] al"
@@ -98,10 +95,10 @@ export default function Home() {
             src="section-2-image-2.svg"
             alt=""
           />{" "}
-          <div className="md:w-1/2 flex-col max-w-[440px] grow">
+          <div className="md:w-1/2 flex-col max-w-[440px] grow mx-5">
             <img
               src="section-2-image-3.svg"
-              className=" w-full mb-1"
+              className=" w-full mb-1 mt-10 md:mt-0"
               alt=""
             />
             <p className="p-style m-0 flex-wrap">
@@ -124,18 +121,20 @@ export default function Home() {
       </HomeContainer>
       <div className=" w-screen justify-center bg-gelo  ">
         <HomeContainer>
-          <h2 className="header-style text-center md:pt-12 mb-3">
+          <h2 className="header-style text-center pt-10 md:pt-12 mb-3 max-w-[912px] mx-auto md:mb-20">
             This Weeks Most Popular{" "}
             <span className="text-abacate">And Best Selling</span>
           </h2>
-          <SliderCards onSale={false} plants={plants} />
+          <SliderCards onSale={false} />
         </HomeContainer>
 
         <HomeContainer>
-          <h2 className="header-style text-center mb-3">
+          <div className="pb-10 ">
+          <h2 className="header-style text-center mt-10 md:mt-24 mb-3">
             <span className="text-abacate">Plants in </span>Sale
           </h2>
-          <SliderCards onSale={true} plants={plants} />
+          <SliderCards onSale={true} />
+          </div>
         </HomeContainer>
       </div>
     </main>
@@ -145,6 +144,6 @@ export default function Home() {
 export async function loader() {
   return queryClient.fetchQuery({
     queryKey: ["plants"],
-    queryFn: ({ signal }) => fetchPlants({ signal }),
+    queryFn: () => fetchPlants(),
   });
 }

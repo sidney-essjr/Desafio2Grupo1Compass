@@ -9,7 +9,7 @@ export default function Card({ plant }) {
   ).toLocaleString("en-US", { style: "currency", currency: "USD" });
 
   return (
-    <div className=" shadow bg-white pb-8" id={plant.id}>
+    <div className=" shadow-md  bg-white pb-8" id={plant.id}>
       <Link to={`${plant.id}`}>
         <button type="button">
           <img src={`src/${plant.imgUrl}`} alt={plant.name} />

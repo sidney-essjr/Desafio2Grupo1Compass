@@ -1,10 +1,9 @@
-import React from "react";
+import { Menu, X } from "lucide-react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import NavLinks from "./NavLinks";
 import PlantIcon from "./PlantIcon";
 import UserIcon from "./UserIcon";
-import { NavLink, Link } from "react-router-dom";
-import NavLinks from "./NavLinks";
-import { useState } from "react";
-import { Menu, X } from "lucide-react";
 
 const Header = () => {
   const [isShown, setIsShown] = useState(false);
@@ -15,20 +14,18 @@ const Header = () => {
   return (
     <div className="sticky flex top-0 pt-2 justify-between bg-gelo items-center w-screen z-20 flex-wrap pb-4">
       <PlantIcon />
-      <div >
+      <div>
         <div className="hidden md:flex">
-          <NavLinks />{" "}
+          <NavLinks />
         </div>
         <div className="md:hidden">
           <button className="justify-between" onClick={toggleNavbar}>
-            {" "}
             {isShown ? <X /> : <Menu />}
           </button>
-        </div>{" "}
+        </div>
       </div>
       <Link to="userRegister">
-        {" "}
-        <UserIcon />{" "}
+        <UserIcon />
       </Link>
       {isShown && (
         <div className="div-style">
