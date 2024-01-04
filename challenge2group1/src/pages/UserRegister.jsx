@@ -3,11 +3,14 @@ import HeaderLoginSignin from "../components/login-signin-components/HeaderLogin
 
 export default function UserRegister(){
   return (
-    <section className="grid place-items-center h-screen bg-gelo text-gelo border-solid border-2">
-      <section>
-        <HeaderLoginSignin />
-        <Outlet />
+    <main >
+      <div className="bg-[url(src/assets/register-image.svg)] absolute  bg-cover h-[100%] w-[100%] opacity-25"></div>
+      <section className="grid place-items-center h-screen text-gelo border-solid border-2 relative ">
+        <section className="shadow-strongShadow">
+          <HeaderLoginSignin />
+          <Outlet />
+        </section>
       </section>
-    </section>
+    </main> 
   );
 }
