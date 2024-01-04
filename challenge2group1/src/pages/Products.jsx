@@ -19,6 +19,6 @@ export async function loader({ params }) {
   const id = params.id;
   return queryClient.fetchQuery({
     queryKey: ["plant"],
-    queryFn: ({ signal }) => fetchPlant({ signal, id }),
+    queryFn: () => fetchPlant({ id }),
   });
 }
