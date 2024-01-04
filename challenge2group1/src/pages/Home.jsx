@@ -62,7 +62,7 @@ export default function Home() {
           </div>
         </HomeItemContainer>
         <HomeItemContainer>
-          <div className="flex flex-col md:flex-row md:m-20 mx-5 mt-10 md:gap-20">
+          <div className="flex flex-col text-center md:flex-row md:m-20 mx-5 mt-10 md:gap-20">
             <HomeCard
               image="/section-2-water-image.svg"
               imageDescription="water-image"
