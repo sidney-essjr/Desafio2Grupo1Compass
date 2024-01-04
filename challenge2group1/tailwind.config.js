@@ -34,6 +34,10 @@ export default {
         strongShadow: '0 25px 16px -13px rgb(0 0 0 / 0.30)',
       },
       
+      backgroundImage: {
+        'register-image': "url(src/assets/register-image.svg)"
+      }
+      
     },
   },
   plugins: [require("@tailwindcss/forms")],
