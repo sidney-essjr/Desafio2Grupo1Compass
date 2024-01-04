@@ -51,7 +51,8 @@ export default function Home() {
         <HomeItemContainer>
           <div className="w-[100%] flex-col">
             <h2 className="header-style text-center w-[100%] mt-20 mb-3">
-              Steps To Take Care Of Your <span className="text-abacate">Plants</span>
+              Steps To Take Care Of Your{" "}
+              <span className="text-abacate">Plants</span>
             </h2>
             <p className="p-style">
               By following these three steps - proper watering, appropriate
@@ -85,49 +86,45 @@ export default function Home() {
       </HomeContainer>
 
       <HomeContainer>
-        <div className="flex flex-col md:flex-row gap-20  md:ml-20 ">
-          <div className="flex flex-col md:flex-row gap-5 md:gap-20 md:w-2/3 items-center">
+        <div className="flex flex-col md:flex-row gap-20 w-fit items-start">
+          {/* <div className="flex flex-col h-[857px] md:flex-row gap-5 md:gap-20 md:w-2/3 items-center"> */}
+          <img
+            className="w-1/4 hidden md:flex max-w-[440px] al"
+            src="section-2-image-1.svg"
+            alt=""
+          />
+          <img
+            className="w-1/4 hidden md:flex max-w-[440px] shrink"
+            src="section-2-image-2.svg"
+            alt=""
+          />{" "}
+          <div className="md:w-1/2 flex-col max-w-[440px] grow">
             <img
-              className="w-1/2"
-              src="../../public/section-2-image-1.svg"
+              src="section-2-image-3.svg"
+              className=" w-full mb-1"
               alt=""
             />
-            <img
-              className="w-1/2"
-              src="../../public/section-2-image-2.svg"
-              alt=""
-            />{" "}
-          </div>
-          <div className="md:w-1/3 flex-col md:mx-20">
-            <HomeItemContainer>
-              <img
-                src="../../public/section-2-image-3.svg"
-                className="w-11/12 mx-1"
-                alt=""
-              />
-              <p className="p-style flex-wrap">
-                Our website offers a wide array of stunning plants, ranging from
-                vibrant flowers to lush indoor foliage, allowing you to create
-                your very own green oasis. In addition to our extensive plant
-                selection, we also provide gardening kits and fertilizers to
-                equip you with everything you need to nurture your plants and
-                achieve gardening success. But we don't stop there! We believe
-                that knowledge is the key to a thriving garden, so we offer a
-                wealth of information and resources on gardening techniques,
-                plant care tips, and landscaping ideas. Whether you're a
-                seasoned gardener or just starting your green journey, our goal
-                is to inspire and support you every step of the way. Get ready
-                to explore our virtual garden and discover the joys of gardening
-                with us!
-              </p>
-              <HomeButton text="See more photos" />
-            </HomeItemContainer>
+            <p className="p-style m-0 flex-wrap">
+              Our website offers a wide array of stunning plants, ranging from
+              vibrant flowers to lush indoor foliage, allowing you to create
+              your very own green oasis. In addition to our extensive plant
+              selection, we also provide gardening kits and fertilizers to equip
+              you with everything you need to nurture your plants and achieve
+              gardening success. But we don't stop there! We believe that
+              knowledge is the key to a thriving garden, so we offer a wealth of
+              information and resources on gardening techniques, plant care
+              tips, and landscaping ideas. Whether you're a seasoned gardener or
+              just starting your green journey, our goal is to inspire and
+              support you every step of the way. Get ready to explore our
+              virtual garden and discover the joys of gardening with us!
+            </p>
+            <HomeButton text="See more photos" />
           </div>
         </div>
       </HomeContainer>
       <div className=" w-screen justify-center md:pl-10 bg-gelo  ">
         <HomeContainer>
-          <h2 className="header-style text-center pt-12 mb-3">
+          <h2 className="header-style text-center md:pt-12 mb-3">
             This Weeks Most Popular{" "}
             <span className="text-abacate">And Best Selling</span>
           </h2>
@@ -135,7 +132,7 @@ export default function Home() {
         </HomeContainer>
 
         <HomeContainer>
-          <h2 className="header-style text-center mt-20 mb-3">
+          <h2 className="header-style text-center md:mt-20 mb-3">
             <span className="text-abacate">Plants in </span>Sale
           </h2>
           <SliderCards onSale={true} plants={plants} />
