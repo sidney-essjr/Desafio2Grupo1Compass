@@ -22,7 +22,7 @@ export default function About() {
   }, []);
 
   return (
-    <section className="bg-gelo flex flex-wrap justify-center ">
+    <section className="bg-gelo flex flex-wrap justify-center w-[]">
       {dataNotFetched ? (<p>Fetching data...</p>) : (
         devs.map((dev) => {
           return <CardAboutUs dev={dev} />;
