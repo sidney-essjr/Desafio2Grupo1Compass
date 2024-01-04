@@ -112,9 +112,9 @@ export default function PlantRegistration() {
   }
 
   return (
-    <div className="flex justify-between gap-5 bg-gelo overflow-hidden	">
+    <div className="flex justify-between gap-5 bg-gelo overflow-hidden px-10 md:px-20	w-full">
       <form
-        className="flex-col mx-10 mt-5 md:mx-20 md:mt-5  grow "
+        className="flex-col  mt-5  md:mt-5  grow "
         onSubmit={handleSubmit(hadleChanges)}
       >
         <fieldset>
