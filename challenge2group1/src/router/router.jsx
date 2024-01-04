@@ -4,14 +4,12 @@ import { createBrowserRouter } from "react-router-dom";
 import Error from "../components/Error";
 import Loading from "../components/Loading";
 import RootLayout from "../pages/RootLayout";
+import { ProductDetail } from "../components/ProductComponents/ProductDetail";
 
 // const Home = lazy(() => import("../pages/Home"));
 const Products = lazy(() => import("../pages/Products"));
 const PlantRegistration = lazy(() => import("../pages/PlantRegistration"));
 const About = lazy(() => import("../pages/About"));
-const ProductDetail = lazy(() =>
-  import("../components/ProductComponents/ProductDetail")
-);
 const Login = lazy(() => import("../pages/Login"));
 const Signin = lazy(() => import("../pages/Signin"));
 const UserRegister = lazy(() => import("../pages/UserRegister"));
@@ -54,22 +52,14 @@ const router = createBrowserRouter([
       {
         path: "products/:id",
         errorElement: <Error />,
-        element: (
-          <Suspense fallback={<Loading />}>
-            <ProductDetail />
-          </Suspense>
-        ),
+        element: <ProductDetail />,
         loader: (meta) =>
           import("../pages/Products").then((module) => module.loader(meta)),
       },
       {
         path: ":id",
         errorElement: <Error />,
-        element: (
-          <Suspense fallback={<Loading />}>
-            <ProductDetail />
-          </Suspense>
-        ),
+        element: <ProductDetail />,
         loader: (meta) =>
           import("../pages/Products").then((module) => module.loader(meta)),
       },

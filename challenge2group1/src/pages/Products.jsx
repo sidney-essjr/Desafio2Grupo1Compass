@@ -15,7 +15,7 @@ export default function Product() {
   );
 }
 
-export async function loader({ params }) {
+export function loader({ params }) {
   const id = params.id;
   return queryClient.fetchQuery({
     queryKey: ["plant"],
