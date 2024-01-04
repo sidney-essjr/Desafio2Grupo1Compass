@@ -13,8 +13,8 @@ export default function Home() {
     <main>
       <HomeContainer>
         <HomeItemContainer>
-          <div className="flex w-full  justify-center overflow-hidden pt-5  md:pt-20  bg-gelo">
-            <div className="">
+          <div className="flex w-full  justify-center overflow-visible bg-gelo">
+            <div className="overflow-visible z-10 mt-40 ml-20 w-1/2">
               <div className="inline-flex justify-start align-bottom">
                 <img className="ml-1" src="rectangle.svg" alt="a" />
                 <p className=" font-pacifico ml-2">love for nature</p>{" "}
@@ -32,16 +32,16 @@ export default function Home() {
                 <HomeButton text="Shop now" />
               </div>
               <img
-                className="grayscale  -mt-44 -ml-20 -mb-48 overflow-hidden  "
+                className="grayscale -ml-20 "
                 src="/section-1-left-image-plant.svg"
                 alt=""
               />
             </div>
 
             <img
-              className="grayscale -mt-24 shrink h-full overflow-hidden hidden md:flex"
+              className="grayscale hidden md:flex -mt-[400px] -mr-20 "
               src="/section-1-right-image-plant.svg"
-              alt=""
+              alt="various plants"
             />
           </div>
         </HomeItemContainer>
@@ -50,7 +50,7 @@ export default function Home() {
       <HomeContainer>
         <HomeItemContainer>
           <div className="w-[100%] flex-col">
-            <h2 className="header-style text-center w-[100%] mb-3">
+            <h2 className="header-style text-center w-[100%] mt-20 mb-3">
               Steps To Take Care Of Your{" "}
               <span className="text-abacate">Plants</span>
             </h2>
