@@ -121,7 +121,7 @@ export default function Home() {
       </HomeContainer>
       <div className=" w-screen justify-center bg-gelo  ">
         <HomeContainer>
-          <h2 className="header-style text-center pt-10 md:pt-12 mb-3 max-w-[912px] mx-auto md:mb-20">
+          <h2 className="header-style text-center pt-10 md:pt-12 mb-3 max-w-[912px] mx-auto md:mb-10">
             This Weeks Most Popular{" "}
             <span className="text-abacate">And Best Selling</span>
           </h2>
@@ -130,7 +130,7 @@ export default function Home() {
 
         <HomeContainer>
           <div className="pb-10 ">
-          <h2 className="header-style text-center mt-10 md:mt-24 mb-3">
+          <h2 className="header-style text-center mt-10 mb-3">
             <span className="text-abacate">Plants in </span>Sale
           </h2>
           <SliderCards onSale={true} />

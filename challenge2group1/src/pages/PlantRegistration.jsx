@@ -323,7 +323,7 @@ export default function PlantRegistration() {
       </form>
       <img
         className="hidden md:flex grayscale  md:shrink"
-        src="homePlant.svg"
+        src="section-1-right-image-plant.svg"
       />
     </div>
   );
