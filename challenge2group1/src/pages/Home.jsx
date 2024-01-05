@@ -30,18 +30,18 @@ export default function Home() {
                   you to create your very own green oasis.{" "}
                 </p>
                 <Link to="products">
-                <HomeButton text="Shop now" />
+                  <HomeButton text="Shop now" />
                 </Link>
               </div>
               <img
-                className="grayscale -ml-[70px] md:mt-12 "
+                className="grayscale hover:grayscale-0  -ml-[70px] md:mt-12 "
                 src="/leftPlant.svg"
                 alt=""
               />
             </div>
 
             <img
-              className="grayscale hidden md:flex -mt-20 overflow-hidden"
+              className="grayscale hover:grayscale-0 hidden md:flex -mt-20 overflow-hidden"
               src="/section-1-right-image-plant.svg"
               alt="various plants"
             />
@@ -101,7 +101,11 @@ export default function Home() {
             alt=""
           />{" "}
           <div className="md:w-1/2 flex-col max-w-[440px] grow">
-            <img src="section-2-image-3.svg" className=" w-11/12 md:w-full mx-auto mt-10 md:mt-0 mb-5" alt="" />
+            <img
+              src="section-2-image-3.svg"
+              className=" w-11/12 md:w-full mx-auto mt-10 md:mt-0 mb-5"
+              alt=""
+            />
             <p className="p-style mx-2 md:mx-0 flex-wrap">
               Our website offers a wide array of stunning plants, ranging from
               vibrant flowers to lush indoor foliage, allowing you to create
@@ -117,7 +121,7 @@ export default function Home() {
               virtual garden and discover the joys of gardening with us!
             </p>
             <Link to="products">
-            <HomeButton text="See more photos" />
+              <HomeButton text="See more photos" />
             </Link>
           </div>
         </div>
@@ -133,10 +137,10 @@ export default function Home() {
 
         <HomeContainer>
           <div className="pb-10 ">
-          <h2 className="header-style text-center mt-10 mb-3">
-            <span className="text-abacate">Plants in </span>Sale
-          </h2>
-          <SliderCards onSale={true} />
+            <h2 className="header-style text-center mt-10 mb-3">
+              <span className="text-abacate">Plants in </span>Sale
+            </h2>
+            <SliderCards onSale={true} />
           </div>
         </HomeContainer>
       </div>
