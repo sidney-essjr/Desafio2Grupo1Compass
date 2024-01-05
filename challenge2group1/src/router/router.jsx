@@ -1,12 +1,11 @@
-import Home from "../pages/Home";
 import { Suspense, lazy } from "react";
 import { createBrowserRouter } from "react-router-dom";
 import Error from "../components/Error";
 import Loading from "../components/Loading";
-import RootLayout from "../pages/RootLayout";
 import { ProductDetail } from "../components/ProductComponents/ProductDetail";
+import Home from "../pages/Home";
+import RootLayout from "../pages/RootLayout";
 
-// const Home = lazy(() => import("../pages/Home"));
 const Products = lazy(() => import("../pages/Products"));
 const PlantRegistration = lazy(() => import("../pages/PlantRegistration"));
 const About = lazy(() => import("../pages/About"));
@@ -92,4 +91,5 @@ const router = createBrowserRouter([
     ],
   },
 ]);
+
 export default router;
