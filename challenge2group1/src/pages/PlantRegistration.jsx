@@ -8,8 +8,6 @@ import {
 } from "../form/validation";
 import { dynamicPageTitle } from "../util/util";
 
-const regex = /[0-9!@#$%^&*()_+{}\[\]:;<>,.?~\\/`|\=]/;
-
 export default function PlantRegistration() {
   const initialAssembly = useRef(true);
   dynamicPageTitle(window.location.pathname);
@@ -62,6 +60,7 @@ export default function PlantRegistration() {
   }, [watch()]);
 
   useEffect(() => {
+    setValue("label", "indoor");
     setLocalData();
   }, []);
 
@@ -72,9 +71,9 @@ export default function PlantRegistration() {
   function setLocalData() {
     try {
       const data = JSON.parse(localStorage.getItem("form"));
-      setName(data.name);
-      setSubtitle(data.subtitle);
-      setType(data.type);
+      setValue("name", data.name);
+      setValue("subtitle", data.subtitle);
+      setValue("type", data.type);
       setValue("price", data.price);
       setValue("discountPercentage", data.discountPercentage);
       setValue("label", data.label);
@@ -129,7 +128,6 @@ export default function PlantRegistration() {
                   {...register("name")}
                   type="text"
                   placeholder="Echinocereus Cactus"
-                  onChange={(e) => field.onChange(handleIptName(e))}
                 />
               )}
             />
@@ -152,6 +150,7 @@ export default function PlantRegistration() {
               control={control}
               render={({ field }) => (
                 <input
+                  {...field}
                   className={`inputstyle ${
                     !!errors.subtitle?.message ? "input-error-style" : null
                   }`}
@@ -159,7 +158,6 @@ export default function PlantRegistration() {
                   {...register("subtitle")}
                   type="text"
                   placeholder="A majestic addition to your plant collection"
-                  onChange={(e) => field.onChange(handleIptSubtitle(e))}
                 />
               )}
             />
@@ -180,6 +178,7 @@ export default function PlantRegistration() {
               control={control}
               render={({ field }) => (
                 <input
+                  {...field}
                   className={`inputstyle ${
                     !!errors.type?.message ? "input-error-style" : null
                   }`}
@@ -187,7 +186,6 @@ export default function PlantRegistration() {
                   {...register("type")}
                   type="text"
                   placeholder="Cactus"
-                  onChange={(e) => field.onChange(handleIptType(e))}
                 />
               )}
             />

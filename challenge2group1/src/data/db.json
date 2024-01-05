@@ -4,7 +4,10 @@
       "id": 1,
       "name": "Echinocereus Cactus",
       "subtitle": "A Majestic Addition to Your Plant Collection",
-      "label": ["indoor", "cactus"],
+      "label": [
+        "indoor",
+        "cactus"
+      ],
       "price": "$139.99",
       "isInSale": false,
       "discountPercentage": 20,
@@ -22,7 +25,10 @@
       "id": 2,
       "name": "Monstera",
       "subtitle": "It is an easy and rewarding plant.",
-      "label": ["indoor", "perennial"],
+      "label": [
+        "indoor",
+        "perennial"
+      ],
       "price": "$145.99",
       "isInSale": true,
       "discountPercentage": 20,
@@ -42,7 +48,10 @@
       "subtitle": "A Majestic Addition to Your Plant Collection",
       "price": "$74.00",
       "discountPercentage": 10,
-      "label": ["Outdoor", "Annual"],
+      "label": [
+        "Outdoor",
+        "Annual"
+      ],
       "features": [
         "Species: Aphelandra squarrosa.",
         "Mature Size: 1–6 ft. tall, 1–5 ft. wide.",
@@ -57,7 +66,10 @@
       "id": 4,
       "name": "Orchid",
       "subtitle": "A Majestic Addition to Your Plant Collection",
-      "label": ["Outdoor", "Perennial"],
+      "label": [
+        "Outdoor",
+        "Perennial"
+      ],
       "price": "$79.99",
       "isInSale": false,
       "discountPercentage": 20,
@@ -75,7 +87,10 @@
       "id": 5,
       "name": "Christmas star",
       "subtitle": "A Majestic Addition to Your Plant Collection",
-      "label": ["indoor", "shrub"],
+      "label": [
+        "indoor",
+        "shrub"
+      ],
       "price": "$109.99",
       "isInSale": false,
       "discountPercentage": 20,
@@ -92,7 +107,10 @@
       "id": 6,
       "name": "Santa Leopoldina",
       "subtitle": "A Majestic Addition to Your Plant Collection",
-      "label": ["Outdoor", "Loamy"],
+      "label": [
+        "Outdoor",
+        "Loamy"
+      ],
       "price": "$49.99",
       "isInSale": false,
       "discountPercentage": 20,
@@ -110,7 +128,10 @@
       "id": 7,
       "name": "Ixora",
       "subtitle": "Flower with healing properties. Great to have at home.",
-      "label": ["indoor", "shrub"],
+      "label": [
+        "indoor",
+        "shrub"
+      ],
       "price": "$79.99",
       "isInSale": false,
       "discountPercentage": 20,
@@ -128,7 +149,10 @@
       "id": 8,
       "name": "Eucalyptus",
       "subtitle": "The aroma of eucalyptus is very good for calming and relaxing",
-      "label": ["indoor", "tree"],
+      "label": [
+        "indoor",
+        "tree"
+      ],
       "price": "$99.99",
       "isInSale": false,
       "discountPercentage": 10,
@@ -146,7 +170,10 @@
       "id": 9,
       "name": "Mini Monstera",
       "subtitle": "It is believed to bring good luck, good news and hope",
-      "label": ["indoor", "perennial"],
+      "label": [
+        "indoor",
+        "perennial"
+      ],
       "price": "$107.99",
       "isInSale": false,
       "discountPercentage": 20,
@@ -164,7 +191,10 @@
       "id": 10,
       "name": "Crinkle Leaf Plant",
       "subtitle": "Easy maintenance, as it requires little water and a lot of light",
-      "label": ["indoor", "succulent"],
+      "label": [
+        "indoor",
+        "succulent"
+      ],
       "price": "$139.99",
       "isInSale": true,
       "discountPercentage": 20,
@@ -182,7 +212,10 @@
       "id": 11,
       "name": "Crinkle Leaf Plant",
       "subtitle": "Easy maintenance, as it requires little water and a lot of light",
-      "label": ["indoor", "succulent"],
+      "label": [
+        "indoor",
+        "succulent"
+      ],
       "price": "$139.99",
       "isInSale": true,
       "discountPercentage": 20,
@@ -200,7 +233,10 @@
       "id": 12,
       "name": "Crinkle Leaf Plant",
       "subtitle": "Easy maintenance, as it requires little water and a lot of light",
-      "label": ["indoor", "succulent"],
+      "label": [
+        "indoor",
+        "succulent"
+      ],
       "price": "$139.99",
       "isInSale": true,
       "discountPercentage": 20,
@@ -212,6 +248,36 @@
       ],
       "description": "Crinkle leaf plants (Adromischus cristatus) are easygoing, unique-looking succulents that make excellent additions to your home or garden. The crinkle lead plant is a small and slow grower characterized by its fleshy, triangular, gray-green leaves that grow upward out of a central base and are crinkled at the top. The leaves of the crinkle leaf plant are covered in tiny hairs, giving them a fuzzy appearance. The succulent is best planted in the spring, but if grown indoors, it can be planted in any season.",
       "imgUrl": "assets/adromischusCristatus.svg"
+    },
+    {
+      "name": "sdfsd",
+      "subtitle": "asdf",
+      "price": "$3.00",
+      "discountPercentage": 3,
+      "label": [
+        "indoor",
+        "asdf"
+      ],
+      "features": "dd",
+      "description": "d",
+      "isInSale": true,
+      "imgUrl": "assets/EchinocereusCactus.svg",
+      "id": 13
+    },
+    {
+      "name": "ewrw",
+      "subtitle": "wer",
+      "price": "$33.00",
+      "discountPercentage": null,
+      "label": [
+        "indoor",
+        "wer"
+      ],
+      "features": "dfsf",
+      "description": "sdf",
+      "isInSale": false,
+      "imgUrl": "assets/EchinocereusCactus.svg",
+      "id": 14
     }
   ],
   "devs": [
