@@ -116,7 +116,9 @@ export default function Home() {
               support you every step of the way. Get ready to explore our
               virtual garden and discover the joys of gardening with us!
             </p>
+            <Link to="products">
             <HomeButton text="See more photos" />
+            </Link>
           </div>
         </div>
       </HomeContainer>
