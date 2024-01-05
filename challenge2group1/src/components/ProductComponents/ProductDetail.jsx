@@ -3,6 +3,13 @@ import { useLoaderData } from "react-router-dom";
 export const ProductDetail = () => {
   const plant = useLoaderData();
 
+  const price = parseFloat(plant.price.split("$")[1]);
+
+  const discountPrice = (
+    price -
+    price * (plant.discountPercentage / 100)
+  ).toLocaleString("en-US", { style: "currency", currency: "USD" });
+
   return (
     <li className="flex flex-col md:flex-row bg-gelo items-center h-4/6">
       <div className="md:w-1/2">
@@ -26,9 +33,18 @@ export const ProductDetail = () => {
             </p>
           );
         })}
-        <p className="text-lunar text-[24px] font-lato px-3 py-6 font-semibold">
+        {/* <p className="text-lunar text-[24px] font-lato px-3 py-6 font-semibold">
           {plant.price}
-        </p>
+        </p> */}
+        <div className="flex flex-row px-3 py-6">
+          {" "}
+          <p className="text-lunar text-[24px] font-lato font-semibold">{discountPrice}</p>
+          {plant.isInSale && (
+            <p className="discount-card">
+              {plant.price}
+            </p>
+          )}{" "}
+        </div>
         <div>
           <a
             className="flex justify-center items-center w-[191px] h-[60px] bg-lunar text-white shadow-md hover:shadow-lg focus:outline-none"
