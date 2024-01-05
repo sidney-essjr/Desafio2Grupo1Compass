@@ -13,7 +13,7 @@ export default function Home() {
     <main>
       <HomeContainer>
         <HomeItemContainer>
-          <div className="flex w-full grow  justify-center bg-gelo ">
+          <div className="flex w-full grow  justify-center bg-gelo overflow-hidden">
             <div className="md:mt-40 md:ml-20 w-1/2">
               <div className="inline-flex justify-start align-bottom">
                 <img className="ml-1" src="rectangle.svg" alt="a" />
@@ -41,7 +41,7 @@ export default function Home() {
             </div>
 
             <img
-              className="grayscale hover:grayscale-0 hidden md:flex -mt-20 overflow-hidden"
+              className="grayscale hover:grayscale-0 hidden md:flex -mt-20  md:overflow-hidden"
               src="/section-1-right-image-plant.svg"
               alt="various plants"
             />
@@ -88,7 +88,7 @@ export default function Home() {
       </HomeContainer>
 
       <HomeContainer>
-        <div className="flex flex-col md:flex-row gap-20 w-fit mx-auto  items-start mb-10 md:mb-40 justify-between">
+        <div className="flex flex-col md:flex-row gap-20 w-fit   items-start mb-10 md:mb-40 mx-auto px-5 justify-between">
           {/* <div className="flex flex-col h-[857px] md:flex-row gap-5 md:gap-20 md:w-2/3 items-center"> */}
           <img
             className="w-1/4 hidden md:flex max-w-[440px] al"
