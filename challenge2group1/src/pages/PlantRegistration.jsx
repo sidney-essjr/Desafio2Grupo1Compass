@@ -238,7 +238,7 @@ export default function PlantRegistration() {
             </label>
             <div className=" flex flex-row  justify-start  ">
               <input
-                className=" h-4 w-4 mr-1 mt-1  checked:bg-lunar"
+                className=" h-4 w-4 mr-1 mt-1  checked:bg-lunar form-radio text-lunar focus:bg-lunar focus:ring-lunar"
                 id="indoor"
                 {...register("label")}
                 type="radio"
@@ -249,7 +249,7 @@ export default function PlantRegistration() {
               </label>
 
               <input
-                className=" h-4 w-4 mt-1 mr-1 checked:bg-lunar" 
+                className=" h-4 w-4 mt-1 mr-1 checked:bg-lunar form-radio text-lunar focus:bg-lunar focus:ring-lunar"
                 id="outdoor"
                 {...register("label")}
                 type="radio"
