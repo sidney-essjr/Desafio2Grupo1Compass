@@ -23,7 +23,7 @@ export default function About() {
   }, []);
 
   return (
-    <section className="bg-gelo flex flex-wrap justify-center w-[]">
+    <section className="bg-gelo flex flex-wrap justify-center w-[] pb-10 md:b-20">
       {dataNotFetched ? (
         <p>Fetching data...</p>
       ) : (

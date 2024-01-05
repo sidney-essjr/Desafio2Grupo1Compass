@@ -90,7 +90,7 @@ export default function PlantRegistration() {
   }
 
   return (
-    <div className="flex justify-between gap-5 bg-gelo overflow-hidden px-10 md:px-20	w-full">
+    <div className="flex justify-between gap-5 bg-gelo overflow-hidden px-10 md:px-20	w-screen">
       <form
         className="flex-col  mt-5  md:mt-5  grow "
         onSubmit={handleSubmit(hadleChanges)}
@@ -231,8 +231,7 @@ export default function PlantRegistration() {
                 {...register("discountPercentage")}
                 type="number"
                 placeholder="20%"
-                min="0"
-                max="100"
+      
               />
             </div>
           </div>
@@ -324,7 +323,7 @@ export default function PlantRegistration() {
         </button>
       </form>
       <img
-        className="hidden md:flex grayscale  md:shrink"
+        className="hidden md:flex grayscale  ml-20"
         src="section-1-right-image-plant.svg"
       />
     </div>

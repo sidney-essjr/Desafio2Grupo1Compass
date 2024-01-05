@@ -41,7 +41,7 @@ export default function Home() {
             </div>
 
             <img
-              className="grayscale hidden md:flex -mt-20"
+              className="grayscale hidden md:flex -mt-20 overflow-hidden"
               src="/section-1-right-image-plant.svg"
               alt="various plants"
             />
@@ -101,8 +101,8 @@ export default function Home() {
             alt=""
           />{" "}
           <div className="md:w-1/2 flex-col max-w-[440px] grow">
-            <img src="section-2-image-3.svg" className=" w-full mb-1" alt="" />
-            <p className="p-style m-0 flex-wrap">
+            <img src="section-2-image-3.svg" className=" w-11/12 md:w-full mx-auto mt-10 md:mt-0 mb-5" alt="" />
+            <p className="p-style mx-2 md:mx-0 flex-wrap">
               Our website offers a wide array of stunning plants, ranging from
               vibrant flowers to lush indoor foliage, allowing you to create
               your very own green oasis. In addition to our extensive plant
