@@ -13,7 +13,7 @@ export default function Home() {
     <main>
       <HomeContainer>
         <HomeItemContainer>
-          <div className="flex w-full grow  justify-center bg-gelo overflow-hidden">
+          <div className="flex w-full grow  justify-center bg-gelo ">
             <div className="md:mt-40 md:ml-20 w-1/2">
               <div className="inline-flex justify-start align-bottom">
                 <img className="ml-1" src="rectangle.svg" alt="a" />
@@ -34,14 +34,14 @@ export default function Home() {
                 </Link>
               </div>
               <img
-                className="grayscale hover:grayscale-0  -ml-[70px] md:mt-12 "
+                className="grayscale hover:grayscale-0  -ml-[80px] md:mt-12 "
                 src="/leftPlant.svg"
                 alt=""
               />
             </div>
 
             <img
-              className="grayscale hover:grayscale-0 hidden md:flex -mt-20  md:overflow-hidden"
+              className="grayscale hover:grayscale-0 hidden md:flex -mt-20  "
               src="/section-1-right-image-plant.svg"
               alt="various plants"
             />
