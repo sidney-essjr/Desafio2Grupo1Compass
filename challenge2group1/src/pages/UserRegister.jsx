@@ -7,7 +7,7 @@ export default function UserRegister() {
   return (
     <main >
       <div className="bg-[url(src/assets/register-image.svg)] absolute  bg-cover h-[140vh] w-screen opacity-25"></div>
-      <section className="flex mx-auto text-gelo border-solid border-2 relative justify-center">
+      <section className="flex mx-auto text-gelo relative justify-center">
         <section className=" my-20 w-11/12">
           <HeaderLoginSignin />
           <Outlet />

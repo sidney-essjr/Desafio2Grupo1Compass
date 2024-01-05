@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import HomeButton from "../components/HomeComponents/HomeButton";
 import HomeCard from "../components/HomeComponents/HomeCard";
 import HomeContainer from "../components/HomeComponents/HomeContainer";
@@ -28,7 +29,9 @@ export default function Home() {
                   ranging from vibrant flowers to lush indoor foliage, allowing
                   you to create your very own green oasis.{" "}
                 </p>
+                <Link to="products">
                 <HomeButton text="Shop now" />
+                </Link>
               </div>
               <img
                 className="grayscale -ml-[70px] md:mt-12 "
@@ -113,7 +116,9 @@ export default function Home() {
               support you every step of the way. Get ready to explore our
               virtual garden and discover the joys of gardening with us!
             </p>
+            <Link to="products">
             <HomeButton text="See more photos" />
+            </Link>
           </div>
         </div>
       </HomeContainer>
