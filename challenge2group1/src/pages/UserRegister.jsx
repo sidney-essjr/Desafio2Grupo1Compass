@@ -4,9 +4,9 @@ import HeaderLoginSignin from "../components/login-signin-components/HeaderLogin
 export default function UserRegister(){
   return (
     <main >
-      <div className="bg-[url(src/assets/register-image.svg)] absolute  bg-cover h-[100%] w-[100%] opacity-25"></div>
-      <section className="grid place-items-center h-screen text-gelo border-solid border-2 relative ">
-        <section className="shadow-strongShadow">
+      <div className="bg-[url(src/assets/register-image.svg)] absolute  bg-cover h-[140vh] w-screen opacity-25"></div>
+      <section className="flex mx-auto text-gelo border-solid border-2 relative justify-center">
+        <section className=" my-20 w-11/12">
           <HeaderLoginSignin />
           <Outlet />
         </section>
