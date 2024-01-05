@@ -320,7 +320,7 @@ export default function PlantRegistration() {
         </button>
       </form>
       <img
-        className="hidden md:flex grayscale hover:grayscale-0 md:overflow-hidden ml-20"
+        className="hidden md:flex grayscale hover:grayscale-0 -mr-20"
         src="section-1-right-image-plant.svg"
       />
     </div>
