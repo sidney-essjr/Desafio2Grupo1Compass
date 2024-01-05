@@ -25,9 +25,9 @@ export default function Product({ plant }) {
             {plant.price}{" "}
           </span>
         </div>
-        <div className="flex justify-center bg-lunar text-white px-6 py-4">
+        <button className="flex justify-center bg-lunar text-white w-full px-6 py-4">
           <Link to={`${plant.id}`}>Know More</Link>
-        </div>
+        </button>
       </div>
     </li>
   );
