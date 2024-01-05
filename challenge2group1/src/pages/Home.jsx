@@ -13,7 +13,7 @@ export default function Home() {
     <main>
       <HomeContainer>
         <HomeItemContainer>
-          <div className="flex w-[99%] grow  justify-center bg-gelo overflow-hidden">
+          <div className="flex w-full grow  justify-center bg-gelo overflow-hidden">
             <div className="md:mt-40 md:ml-20 w-1/2">
               <div className="inline-flex justify-start align-bottom">
                 <img className="ml-1" src="rectangle.svg" alt="a" />
