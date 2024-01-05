@@ -5,6 +5,7 @@
 .splide__list {
   display: flex;
   gap: 40px;
+ 
 }
 
 @media (max-widht: 768px) {

@@ -4,28 +4,28 @@ export const createRegistrationFormSchema = zod.object({
   name: zod
     .string()
     .trim()
-    .min(1, "Requested field")
+    .min(1, "Requested")
     .refine((val) => !regex.test(val), {
       message: "This field does not accept numbers",
     }),
   subtitle: zod
     .string()
     .trim()
-    .min(1, "Requested field")
+    .min(1, "Requested")
     .refine((val) => !regex.test(val), {
       message: "This field does not accept numbers",
     }),
   type: zod
     .string()
     .trim()
-    .min(1, "Requested field")
+    .min(1, "Requested")
     .refine((val) => !regex.test(val), {
       message: "This field does not accept numbers",
     }),
   price: zod
     .string()
     .transform((val, ctx) =>
-      stringToFloat(val, ctx, "Invalid Price", val < 1)
+      stringToFloat(val, ctx, "Invalid", val < 1)
     ),
   discountPercentage: zod
     .string()
@@ -42,11 +42,11 @@ export const createRegistrationFormSchema = zod.object({
     required_error: "You need to select an option",
   }),
 
-  features: zod.string().trim().min(1, "Requested Field"),
+  features: zod.string().trim().min(1, "Requested"),
   description: zod
     .string()
     .trim()
-    .min(1, "Requested field"),
+    .min(1, "Requested "),
 });
 
 const stringToFloat = (val, ctx, message, validation) => {

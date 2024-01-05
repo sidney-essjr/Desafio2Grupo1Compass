@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
-  theme: {  
+  theme: {
     extend: {
       colors: {
         gelo: "#F0F1EE",
@@ -23,21 +23,21 @@ export default {
       },
       screens: {
         md: "767px",
-        sm: "530px"
+        sm: "530px",
       },
-  
+
       borderRadius: {
         borderFull: "50%",
       },
 
       boxShadow: {
-        strongShadow: '0 25px 16px -13px rgb(0 0 0 / 0.30)',
+        strongShadow: "0 25px 16px -13px rgb(0 0 0 / 0.30)",
       },
-      
+
       backgroundImage: {
-        'register-image': "url(src/assets/register-image.svg)"
-      }
-      
+        "register-image": "url(src/assets/register-image.svg)",
+        "footer-image": "url(footerBG.svg)",
+      },
     },
   },
   plugins: [require("@tailwindcss/forms")],

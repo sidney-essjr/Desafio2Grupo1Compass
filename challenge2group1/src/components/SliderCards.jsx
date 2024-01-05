@@ -34,7 +34,7 @@ export default function SliderCards({ onSale }) {
   }
 
   return (
-    <div className="flex mx-auto md:pt-10 md:pb-20 overflow-hidden">
+    <div className="flex mx-auto md:pt-10 md:pb-20 overflow-hidden ">
       <div className="w-11/12 mx-auto">
         <Splide
           aria-label="Testimonials"

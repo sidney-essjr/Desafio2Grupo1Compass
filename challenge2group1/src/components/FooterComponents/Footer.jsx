@@ -7,8 +7,8 @@ import FooterElement from "./FooterElement";
 const Footer = () => {
   return (
     <div
-      className="flex-col justify-between  bg-lunar pb-11 w-screen"
-      style="background-image: url(footerBG.svg)"
+      className="flex-col justify-between  bg-lunar	pb-11 w-full bg-[url(footerBG.svg)]"
+     
     >
       <div className="flex-col md:flex md:flex-row justify-between pt-5 md:pt-10 pb-5 md:pb-10 bg-local  text-white ">
         <div className="flex mt-2 md:mt-10 ml-10 md:ml-20 mr-20 gap-10 ">

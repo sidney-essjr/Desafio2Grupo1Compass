@@ -231,7 +231,6 @@ export default function PlantRegistration() {
                 {...register("discountPercentage")}
                 type="number"
                 placeholder="20%"
-      
               />
             </div>
           </div>
@@ -239,20 +238,20 @@ export default function PlantRegistration() {
             <label className="mb-2 font-semibold" htmlFor="">
               Label:
             </label>
-            <div className=" flex flex-row gap-3">
+            <div className=" flex flex-row  justify-start  ">
               <input
-                className=" h-4 w-4 mr-1"
+                className=" h-4 w-4 mr-1 mt-1  accent-black"
                 id="indoor"
                 {...register("label")}
                 type="radio"
                 value="indoor"
               />
-              <label className="labelstyle" htmlFor="indoor">
+              <label className="labelstyle mr-2" htmlFor="indoor">
                 Indoor
               </label>
 
               <input
-                className=" h-4 w-4 mr-1"
+                className=" h-4 w-4 mt-1 mr-1"
                 id="outdoor"
                 {...register("label")}
                 type="radio"
@@ -323,7 +322,7 @@ export default function PlantRegistration() {
         </button>
       </form>
       <img
-        className="hidden md:flex grayscale  ml-20"
+        className="hidden md:flex grayscale hover:grayscale-0 md:overflow-hidden ml-20"
         src="section-1-right-image-plant.svg"
       />
     </div>
