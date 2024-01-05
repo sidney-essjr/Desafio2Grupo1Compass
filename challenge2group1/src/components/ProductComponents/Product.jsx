@@ -1,6 +1,13 @@
 import { Link } from "react-router-dom";
 
 export default function Product({ plant }) {
+  const price = parseFloat(plant.price.split("$")[1]);
+
+  const discountPrice = (
+    price -
+    price * (plant.discountPercentage / 100)
+  ).toLocaleString("en-US", { style: "currency", currency: "USD" });
+
   return (
     <li className="px-2 py-2">
       <div className="max-w-sm rounded-[7px] overflow-hidden shadow-lg">
@@ -21,9 +28,18 @@ export default function Product({ plant }) {
               </p>
             );
           })}
-          <span className=" text-lunar text-[20px] rounded-full px-3 py-1 font-semibold">
+          {/* <span className=" text-lunar text-[20px] rounded-full px-3 py-1 font-semibold">
             {plant.price}{" "}
-          </span>
+          </span> */}
+          <div className="flex flex-row px-3 py-6">
+          {" "}
+          <p className="text-lunar text-[20px] font-lato font-semibold">{discountPrice}</p>
+          {plant.isInSale && (
+            <p className="discount-card">
+              {plant.price}
+            </p>
+          )}{" "}
+        </div>
         </div>
         <button className="flex justify-center bg-lunar text-white w-full px-6 py-4">
           <Link to={`${plant.id}`}>Know More</Link>
