@@ -41,7 +41,7 @@ export default function Home() {
             </div>
 
             <img
-              className="grayscale hover:grayscale-0 hidden md:flex -mt-20 mr-20 md:overflow-hidden"
+              className="grayscale hover:grayscale-0 hidden md:flex -mt-20  md:overflow-hidden"
               src="/section-1-right-image-plant.svg"
               alt="various plants"
             />
